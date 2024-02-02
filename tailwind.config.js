@@ -5,6 +5,7 @@ module.exports = {
             fontFamily: {
                 title: ["Dancing Script"],
                 body: ["Lora"],
+                funny: ["Comic Neue"]
             }
         }
     },
