@@ -1,16 +1,15 @@
-/** @type {import('tailwindcss').Config} */
+/** @type {import("tailwindcss").Config} */
 module.exports = {
     theme: {
         extend: {
             fontFamily: {
                 title: ["Dancing Script"],
-                body: ["Lora"],
-                funny: ["Comic Neue"]
+                body: ["Montserrat"]
             }
         }
     },
-    content: ['./src/**/*.{js,ts,jsx,tsx}'],
-    plugins: [require('daisyui')],
+    content: ["./src/**/*.{js,ts,jsx,tsx}"],
+    plugins: [require("daisyui")],
     daisyui: {
         themes: ["light", "dark", "forest", "luxury", 
             {
@@ -18,8 +17,8 @@ module.exports = {
                     "primary": "#1db88e",
                     "secondary": "#1db8ab",
                     "accent": "#5e1cf6",
-                    "neutral": "#99abf7",
-                    "base-100": "#cfd8ff",
+                    "neutral": "#7189F8",
+                    "base-100": "#C6D0FF",
 
                     "--rounded-box": "1rem", // border radius rounded-box utility class, used in card and other large boxes
                     "--rounded-btn": "0.5rem", // border radius rounded-btn utility class, used in buttons and similar element

@@ -3,6 +3,7 @@ import "./App.css";
 
 import SplashScreen from "./components/SplashScreen/SplashScreen";
 import Landing from "./components/Landing/Landing";
+import CustomParticles from "./components/Landing/CustomParticles";
 
 function App(): JSX.Element {
     const [showHomePage, setShowHomePage] = React.useState<boolean>(true);
@@ -18,7 +19,10 @@ function App(): JSX.Element {
             <main data-theme="mytheme" className="bg-background flex flex-col items-center">
                 {showHomePage
                     ? <SplashScreen/>
-                    : <Landing />
+                    : <React.Fragment>
+                        <Landing />
+                        <CustomParticles />
+                    </React.Fragment>
                 }
             </main>
         </React.Fragment>

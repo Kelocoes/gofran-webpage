@@ -2,7 +2,7 @@ import React from "react";
 import TaskAltIcon from "@mui/icons-material/TaskAlt";
 import Zoom from "@mui/material/Zoom";
 
-import star from "../../assets/Imgs/star.png";
+import star from "../../assets/images/star.png";
 
 export default function ChecklistPost(): JSX.Element {
     const [show, setShow] = React.useState<boolean>(false);

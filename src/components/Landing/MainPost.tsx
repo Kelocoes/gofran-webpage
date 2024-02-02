@@ -1,8 +1,10 @@
 import React from "react";
-import TaskAltIcon from "@mui/icons-material/TaskAlt";
 import Zoom from "@mui/material/Zoom";
 
-import toy from "../../assets/Imgs/hilotoys.png";
+import mainPostImage from "../../assets/images/main-post.png";
+import hilotoys from "../../assets/images/hilotoys.png";
+import heart from "../../assets/images/heart-string.png";
+import stars from "../../assets/images/stars.png";
 
 export default function MainPost(): JSX.Element {
     const [show, setShow] = React.useState<boolean>(false);
@@ -15,29 +17,32 @@ export default function MainPost(): JSX.Element {
 
     return (
         <Zoom in={show} timeout={1000}>
-            <div className="bg-white rounded-xl w-4/5 p-10 mb-6 shadow-2xl">
-                <h1 className="text-accent mr-1 font-title font-bold text-3xl">
-                    <span className="underline">Revoluciona</span> tu mente: descubre el <span className="underline">poder</span> de la psicología
+            <div className="w-[85%] my-6 relative z-10">
+                <h1 className="font-title text-7xl text-neutral font-bold mb-4 drop-shadow-lg text-right">
+                    Revoluciona tu mente: descubre el poder de la
+                    Psicología
                 </h1>
-                <p className="font-body text-lg font-semibold">
-                    Sumérgete en un viaje transformador hacia tu bienestar mental.
-                    Explorarás herramientas innovadoras para potenciar tu mente y
-                    alcanzar tu mejor versión.
-                </p>
-                <div className="ml-5 md:ml-10 lg:ml-56 mt-4 flex space-x-4 items-center flex-col lg:flex-row">
-                    <div>
-                        <p className="font-body text-lg font-semibold"><TaskAltIcon className="text-accent mr-1" />
-                            Terapia 100% <span className="underline">online</span>
-                        </p>
-                        <p className="font-body text-lg font-semibold"><TaskAltIcon className="text-accent mr-1" />
-                            <span className="underline">Personalizado</span> y <span className="underline">Flexible</span>
-                        </p>
-                        <p className="font-body text-lg font-semibold"><TaskAltIcon className="text-accent mr-1" />
-                            Variedad de <span className="underline">Recursos</span>
-                            y <span className="underline">soluciones innovadoras</span>
-                        </p>
+                <div className="grid grid-rows-1 lg:grid-cols-2 gap-2 items-center">
+                    <img src={stars} alt="Stars" className="absolute w-1/12 top-24 hidden lg:block" />
+                    <img src={mainPostImage} alt="Main post" className="rounded-lg" />
+                    <div className="flex flex-col justify-center space-y-5 -mt-6">
+                        <img src={hilotoys} alt="Hilo" className="absolute w-[15%] top-24 hidden xl:block" />
+                        <h2 className="font-body font-bold text-white text-3xl 
+                        border-dashed border-neutral border-8 rounded-xl p-4 drop-shadow-md">
+                            Sumérgete en un viaje transformador
+                            hacia tu bienestar mental. Explorarás
+                            herramientas innovadoras para potenciar
+                            tu mente y alcanzar tu mejor versión.
+                        </h2>
+                        <div className="flex flex-col justify-center items-center">
+                            <h2 className="font-body font-bold text-white text-2xl text-center drop-shadow-md">
+                                Terapia 100% online <br />
+                                Personalizado y Flexible <br />
+                                Variedad de recursos y soluciones innovadoras
+                            </h2>
+                            <img src={heart} alt="Heart" className="w-2/3 m-0 lg:-m-4 xl:-m-4" />
+                        </div>
                     </div>
-                    <img src={toy} alt="Toy" className="w-1/2 md:w-1/3 lg:w-1/5 h-auto" />
                 </div>
             </div>
         </Zoom>
