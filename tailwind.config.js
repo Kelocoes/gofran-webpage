@@ -1,5 +1,13 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+    theme: {
+        extend: {
+            fontFamily: {
+                title: ["Dancing Script"],
+                body: ["Lora"],
+            }
+        }
+    },
     content: ['./src/**/*.{js,ts,jsx,tsx}'],
     plugins: [require('daisyui')],
     daisyui: {

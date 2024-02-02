@@ -7,7 +7,7 @@ import SecondPost from "./components/MainPost/SecondPost";
 function App(): JSX.Element {
     return (
         <React.Fragment>
-            <main data-theme="mytheme" className="bg-background h-screen flex flex-col items-center">
+            <main data-theme="mytheme" className="bg-background h-screen flex flex-col items-center space-y-2">
                 <Header />
                 <MainPost />
                 <SecondPost />

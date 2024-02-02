@@ -4,7 +4,7 @@ import TaskAltIcon from "@mui/icons-material/TaskAlt";
 export default function SecondPost(): JSX.Element {
     return (
         <div className="bg-white rounded-xl w-4/5 p-10">
-            <h1 className="italic text-accent mr-1 font-bold">
+            <h1 className="italic text-accent mr-1 font-title font-bold text-3xl">
                 <span className="underline">Revoluciona</span> tu mente: descubre el <span className="underline">poder</span> de la psicología
             </h1>
             <p>
