@@ -18,7 +18,7 @@ export default function MainPost(): JSX.Element {
     return (
         <Zoom in={show} timeout={1000}>
             <div className="w-[85%] my-6 relative z-10">
-                <h1 className="font-title text-7xl text-neutral font-bold mb-4 drop-shadow-lg text-right">
+                <h1 className="font-title text-5xl sm:text-7xl text-neutral font-bold mb-4 drop-shadow-lg text-center lg:text-right">
                     Revoluciona tu mente: descubre el poder de la
                     Psicología
                 </h1>
@@ -27,7 +27,7 @@ export default function MainPost(): JSX.Element {
                     <img src={mainPostImage} alt="Main post" className="rounded-lg" />
                     <div className="flex flex-col justify-center space-y-5 -mt-6">
                         <img src={hilotoys} alt="Hilo" className="absolute w-[15%] top-24 hidden xl:block" />
-                        <h2 className="font-body font-bold text-white text-3xl 
+                        <h2 className="font-body font-bold text-white text-xl sm:text-3xl 
                         border-dashed border-neutral border-8 rounded-xl p-4 drop-shadow-md">
                             Sumérgete en un viaje transformador
                             hacia tu bienestar mental. Explorarás

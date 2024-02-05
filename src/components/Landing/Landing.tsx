@@ -5,7 +5,7 @@ import QuestionMentalHealth from "./QuestionMentalHealth";
 
 export default function Landing(): JSX.Element {
     return (
-        <div className="flex flex-col items-center">
+        <div className="flex flex-col items-center justify-center">
             <Header />
             <MainPost />
             <QuestionMentalHealth />
