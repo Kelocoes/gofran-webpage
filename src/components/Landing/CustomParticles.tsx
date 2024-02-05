@@ -34,7 +34,7 @@ export default function CustomParticles(): JSX.Element {
                             value: 75,
                         },
                         opacity: {
-                            value: 0.5,
+                            value: 0.2,
                         },
                         shape: {
                             type: "circle",
