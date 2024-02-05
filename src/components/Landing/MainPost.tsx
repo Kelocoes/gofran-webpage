@@ -17,7 +17,7 @@ export default function MainPost(): JSX.Element {
 
     return (
         <Zoom in={show} timeout={1000}>
-            <div className="w-[85%] my-6 relative z-10">
+            <div className="w-[95%] md:w-[85%] my-6 relative z-10">
                 <h1 className="font-title text-5xl sm:text-7xl text-neutral font-bold mb-4 drop-shadow-lg text-center lg:text-right">
                     Revoluciona tu mente: descubre el poder de la
                     Psicología

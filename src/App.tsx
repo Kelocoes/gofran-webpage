@@ -15,17 +15,15 @@ function App(): JSX.Element {
     }, []);
 
     return (
-        <React.Fragment>
-            <main data-theme="mytheme" className="bg-background flex flex-col items-center">
-                {showHomePage
-                    ? <SplashScreen/>
-                    : <React.Fragment>
-                        <Landing />
-                        <CustomParticles />
-                    </React.Fragment>
-                }
-            </main>
-        </React.Fragment>
+        <main data-theme="mytheme" className="bg-background flex flex-col items-center">
+            {showHomePage
+                ? <SplashScreen/>
+                : <React.Fragment>
+                    <Landing />
+                    <CustomParticles />
+                </React.Fragment>
+            }
+        </main>
     );
 }
 
