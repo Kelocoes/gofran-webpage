@@ -7,10 +7,10 @@ import plant2 from "../../assets/images/plant-2.png";
 
 export default function QuestionMentalHealth(): JSX.Element {
     return (
-        <div className="flex justify-center z-10 relative">
+        <div className="w-[95%] md:w-[85%] my-6 flex justify-center z-10 relative">
             <img src={plant} alt="Plant" className="absolute top-48 -left-56 md:-left-24" />
-            <img src={plant2} alt="Plant-2" className="absolute top-32 -right-16" />
-            <div className="w-[95%] md:w-[85%] my-6 relative">
+            <img src={plant2} alt="Plant-2" className="absolute top-32 right-0" />
+            <div className="relative">
                 <div className="flex flex-row items-end space-x-5">
                     <h1 className="font-title text-5xl sm:text-7xl text-neutral font-bold mb-4 drop-shadow-lg text-center sm:text-left">
                         ¿Por qué cuidar nuestro bienestar mental?
