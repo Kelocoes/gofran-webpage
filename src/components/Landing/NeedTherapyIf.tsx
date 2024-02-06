@@ -10,7 +10,7 @@ export default function NeedTherapyIf(): JSX.Element {
 
     return (
         <div className="w-[95%] md:w-[85%] my-6 z-10 flex justify-center relative">
-            <img src={plant} alt="Plant" className="absolute top-48 -left-56 md:-left-24" />
+            <img src={plant} alt="Plant" className="absolute top-22 -left-56 md:-left-24" />
             <img src={plant2} alt="Plant-2" className="absolute top-32 right-0" />
             <div className="relative">
                 <img src={stars} alt="Stars" className="absolute top-0 right-0 w-1/12" />
