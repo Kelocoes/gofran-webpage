@@ -1,12 +1,15 @@
 import React from "react";
 import "./App.css";
 
+import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
 import SplashScreen from "./components/SplashScreen/SplashScreen";
 import Landing from "./components/Landing/Landing";
 import CustomParticles from "./components/Landing/CustomParticles";
 
 function App(): JSX.Element {
     const [showHomePage, setShowHomePage] = React.useState<boolean>(true);
+    const [section, setSection] = React.useState<number>(0);
 
     React.useEffect(() => {
         setTimeout(() => {
@@ -19,7 +22,12 @@ function App(): JSX.Element {
             {showHomePage
                 ? <SplashScreen/>
                 : <React.Fragment>
-                    <Landing />
+                    <Header setSection={setSection}/>
+                    {section === 0 && <Landing />}
+                    {section === 1 && <></>}
+                    {section === 2 && <></>}
+                    {section === 3 && <></>}
+                    <Footer />
                     <CustomParticles />
                 </React.Fragment>
             }
