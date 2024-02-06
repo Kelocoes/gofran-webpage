@@ -2,6 +2,7 @@ import React from "react";
 import Header from "../Header/Header";
 import MainPost from "./MainPost";
 import QuestionMentalHealth from "./QuestionMentalHealth";
+import NeedTherapyIf from "./NeedTherapyIf";
 
 export default function Landing(): JSX.Element {
     return (
@@ -9,6 +10,7 @@ export default function Landing(): JSX.Element {
             <Header />
             <MainPost />
             <QuestionMentalHealth />
+            <NeedTherapyIf />
         </div>
     );
 }
