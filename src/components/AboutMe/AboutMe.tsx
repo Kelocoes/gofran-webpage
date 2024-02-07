@@ -9,26 +9,11 @@ import stars from "../../assets/images/stars.png";
 
 import Zoom from "@mui/material/Zoom";
 
+import { useIncrementalIndexEffect } from "../../utils/UseIncrementalEffect";
+
 export default function AboutMe(): JSX.Element {
-    const [currentIndex, setCurrentIndex] = React.useState<number>(0);
     const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.5 });
-
-    React.useEffect(() => {
-        if (inView) {
-            const interval = setInterval(() => {
-                if (currentIndex < 4) {
-                    setCurrentIndex((prevIndex) => prevIndex + 1);
-                } else {
-                    clearInterval(interval);
-                }
-            }, 150);
-
-            return () => {
-                clearInterval(interval);
-            };
-        }
-        // eslint-disable-next-line
-    }, [currentIndex, inView]);
+    const currentIndex = useIncrementalIndexEffect(inView, 4, 150);
 
     return (
         <div ref={ref} className="w-[95%] md:w-[65%] my-6 z-10 flex justify-center relative flex-col">

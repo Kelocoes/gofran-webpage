@@ -9,27 +9,12 @@ import Zoom from "@mui/material/Zoom";
 
 import { useInView } from "react-intersection-observer";
 
+import { useIncrementalIndexEffect } from "../../utils/UseIncrementalEffect";
+
 export default function NeedTherapyIf(): JSX.Element {
     const floatBox: string = "border-4 bg-white rounded-xl p-3 border-secondary w-64 md:w-72 font-body font-bold text-secondary text-lg shadow-xl text-center";
-    const [currentIndex, setCurrentIndex] = React.useState<number>(0);
     const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.5 });
-
-    React.useEffect(() => {
-        if (inView) {
-            const interval = setInterval(() => {
-                if (currentIndex < 5) {
-                    setCurrentIndex((prevIndex) => prevIndex + 1);
-                } else {
-                    clearInterval(interval);
-                }
-            }, 150);
-
-            return () => {
-                clearInterval(interval);
-            };
-        }
-        // eslint-disable-next-line
-    }, [currentIndex, inView]);
+    const currentIndex = useIncrementalIndexEffect(inView, 5, 150);
 
     return (
         <div ref={ref} className="w-[95%] md:w-[65%] my-6 z-10 flex justify-center relative">
