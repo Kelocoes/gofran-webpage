@@ -38,10 +38,10 @@ export default function Header({ setSection }: HeaderProps): JSX.Element {
                                     Menú
                                 </summary>
                                 <ul>
-                                    <li><a className="font-body font-semibold text-lg">Inicio</a></li>
-                                    <li><a className="font-body font-semibold text-lg">Sobre mi</a></li>
-                                    <li><a className="font-body font-semibold text-lg truncate">Tratamientos / Servicios</a></li>
-                                    <li><a className="font-body font-semibold text-lg">Contáctame</a></li>
+                                    <li><button className="font-body font-semibold text-lg" onClick={() => choose(0)} >Inicio</button></li>
+                                    <li><button className="font-body font-semibold text-lg" onClick={() => choose(1)} >Sobre mi</button></li>
+                                    <li><button className="font-body font-semibold text-lg truncate" onClick={() => choose(2)} >Tratamientos / Servicios</button></li>
+                                    <li><button className="font-body font-semibold text-lg" onClick={() => choose(3)} >Contáctame</button></li>
                                 </ul>
                             </details>
                         </li>
