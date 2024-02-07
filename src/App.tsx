@@ -10,17 +10,18 @@ import CustomParticles from "./components/Landing/CustomParticles";
 function App(): JSX.Element {
     const [showHomePage, setShowHomePage] = React.useState<boolean>(true);
     const [section, setSection] = React.useState<number>(0);
+    const [change, setChange] = React.useState<boolean>(false);
 
     React.useEffect(() => {
-        setTimeout(() => {
+        if (change) {
             setShowHomePage(false);
-        }, 1000);
-    }, []);
+        }
+    }, [change]);
 
     return (
         <main data-theme="mytheme" className="bg-background flex flex-col items-center">
             {showHomePage
-                ? <SplashScreen/>
+                ? <SplashScreen setChange={setChange}/>
                 : <React.Fragment>
                     <Header setSection={setSection}/>
                     {section === 0 && <Landing />}

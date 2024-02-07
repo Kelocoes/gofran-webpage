@@ -9,11 +9,11 @@ import tiktok from "../../assets/images/tiktok-color-icon.svg";
 
 export default function Footer(): JSX.Element {
     return (
-        <div className="bg-white items-center grid grid-rows-3 sm:grid-cols-3 sm:grid-rows-1 justify-center z-10 w-full mt-6 py-6 space-y-4">
+        <div className="bg-white items-center grid grid-rows-3 sm:grid-cols-3 sm:grid-rows-1 justify-center z-10 w-full mt-6 space-y-4">
             <div className="flex justify-center">
                 <img src={logo} alt="Logo Psic Gofran" className="w-auto h-28 p-0 mr-2" />
             </div>
-            <p className="font-bold text font-body text-center">
+            <p className="font-bold text-slate-600 font-body text-center">
                 @2024 Psicóloga Gofran. <br />
                 Todos los Derechos Reservados <br />
                 gofranpsicologa@gmail.com
