@@ -6,25 +6,27 @@ import Footer from "./components/Footer/Footer";
 import SplashScreen from "./components/SplashScreen/SplashScreen";
 import Landing from "./components/Landing/Landing";
 import CustomParticles from "./components/Landing/CustomParticles";
+import AboutMe from "./components/AboutMe/AboutMe";
 
 function App(): JSX.Element {
     const [showHomePage, setShowHomePage] = React.useState<boolean>(true);
     const [section, setSection] = React.useState<number>(0);
+    const [change, setChange] = React.useState<boolean>(false);
 
     React.useEffect(() => {
-        setTimeout(() => {
+        if (change) {
             setShowHomePage(false);
-        }, 1000);
-    }, []);
+        }
+    }, [change]);
 
     return (
-        <main data-theme="mytheme" className="bg-background flex flex-col items-center">
+        <main data-theme="mytheme" className="flex flex-col items-center">
             {showHomePage
-                ? <SplashScreen/>
+                ? <SplashScreen setChange={setChange}/>
                 : <React.Fragment>
                     <Header setSection={setSection}/>
                     {section === 0 && <Landing />}
-                    {section === 1 && <></>}
+                    {section === 1 && <AboutMe />}
                     {section === 2 && <></>}
                     {section === 3 && <></>}
                     <Footer />
