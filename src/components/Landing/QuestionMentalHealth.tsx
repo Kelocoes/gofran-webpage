@@ -7,26 +7,31 @@ import plant2 from "../../assets/images/plant-2.png";
 
 import Zoom from "@mui/material/Zoom";
 
+import { useInView } from "react-intersection-observer";
+
 export default function QuestionMentalHealth(): JSX.Element {
     const [currentIndex, setCurrentIndex] = React.useState<number>(0);
+    const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.5 });
 
     React.useEffect(() => {
-        const interval = setInterval(() => {
-            if (currentIndex < 7) {
-                setCurrentIndex((prevIndex) => prevIndex + 1);
-            } else {
-                clearInterval(interval);
-            }
-        }, 150);
+        if (inView) {
+            const interval = setInterval(() => {
+                if (currentIndex < 7) {
+                    setCurrentIndex((prevIndex) => prevIndex + 1);
+                } else {
+                    clearInterval(interval);
+                }
+            }, 150);
 
-        return () => {
-            clearInterval(interval);
-        };
+            return () => {
+                clearInterval(interval);
+            };
+        }
         // eslint-disable-next-line
-    }, [currentIndex]);
+    }, [currentIndex, inView]);
 
     return (
-        <div className="w-[95%] md:w-[65%] my-6 flex justify-center z-10 relative">
+        <div ref={ref} className="w-[95%] md:w-[65%] my-6 flex justify-center z-10 relative">
             <Zoom in={currentIndex >= 2} timeout={500}>
                 <img src={plant} alt="Plant" className="absolute top-48 -left-56 md:-left-24" />
             </Zoom>

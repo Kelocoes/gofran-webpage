@@ -6,26 +6,31 @@ import hilotoys from "../../assets/images/hilotoys.png";
 import heart from "../../assets/images/heart-string.png";
 import stars from "../../assets/images/stars.png";
 
+import { useInView } from "react-intersection-observer";
+
 export default function MainPost(): JSX.Element {
     const [currentIndex, setCurrentIndex] = React.useState<number>(0);
+    const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.5 });
 
     React.useEffect(() => {
-        const interval = setInterval(() => {
-            if (currentIndex < 5) {
-                setCurrentIndex((prevIndex) => prevIndex + 1);
-            } else {
-                clearInterval(interval);
-            }
-        }, 150);
+        if (inView) {
+            const interval = setInterval(() => {
+                if (currentIndex < 5) {
+                    setCurrentIndex((prevIndex) => prevIndex + 1);
+                } else {
+                    clearInterval(interval);
+                }
+            }, 150);
 
-        return () => {
-            clearInterval(interval);
-        };
+            return () => {
+                clearInterval(interval);
+            };
+        }
         // eslint-disable-next-line
-    }, [currentIndex]);
+    }, [currentIndex, inView]);
 
     return (
-        <div className="w-[95%] md:w-[65%] my-6 relative z-10">
+        <div ref={ref} className="w-[95%] md:w-[65%] my-6 relative z-10">
             <Zoom in={currentIndex >= 1} timeout={500}>
                 <h1 className="font-title text-5xl sm:text-6xl text-neutral font-bold mb-4 drop-shadow-lg text-center lg:text-right">
                     Revoluciona tu mente: descubre el poder de la
