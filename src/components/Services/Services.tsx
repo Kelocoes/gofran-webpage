@@ -15,7 +15,7 @@ import virtualtherapy from "../../assets/images/virtual-therapy.png";
 
 export default function Services(): JSX.Element {
     return (
-        <div className="z-10 p-10 flex justify-center items-center flex-col">
+        <div className="z-10 sm:p-10 flex justify-center items-center flex-col">
             <h1 className="font-title text-5xl sm:text-6xl text-neutral font-bold mb-4 drop-shadow-lg text-center lg:text-left">
                 Tratamientos / Servicios
             </h1>
@@ -213,14 +213,13 @@ export default function Services(): JSX.Element {
                                 interdisciplinaria que examina cómo el cerebro
                                 afecta el comportamiento y la cognición.
                             </h2>
-                            <img src={puzzle} alt="Puzzle" className="float-end w-1/3" />
+                            <img src={puzzle} alt="Puzzle" className="float-end w-1/2" />
                             <h2 className="font-body text-left" style={{ color: "#000", fontSize: "17px" }}>
                                 <strong>Causas:</strong> <br />
-                                Lesiones Cerebrales,Traumáticas,
-                                Enfermedades Neurológicas, Trastornosdel
-                                Desarrollo, Accidentes Cerebrovasculares,
-                                Tumores Cerebrales, Infeccionesdel
-                                Sistema Nervioso, Trastornos Genéticos y
+                                Trastornos del Desarrollo, Infecciones del
+                                Sistema Nervioso, Lesiones Cerebrales,Traumáticas,
+                                Enfermedades Neurológicas, Accidentes Cerebrovasculares,
+                                Tumores Cerebrales, Trastornos Genéticos y
                                 Consumo de Sustancias. <br />
                                 <strong>Consulta Online:</strong> <br />
                                 45 minutos/85€
