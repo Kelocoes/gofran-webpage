@@ -94,7 +94,7 @@ export default function Services(): JSX.Element {
                         <div>
                             <h2 className="font-body text-left" style={{ color: "#000", fontSize: "17px" }} >
                                 La autoestima es la valoración y percepción
-                                general que tenemos de <strong>nosotros mismos </strong>
+                                general que tenemos de <strong>nosotros mismos</strong>{" "}
                                 y en la manera en que enfrentamos los
                                 desafíos de la vida.
                             </h2>
@@ -151,8 +151,8 @@ export default function Services(): JSX.Element {
                         </h1>
                         <div>
                             <h2 className="font-body text-left" style={{ color: "#000", fontSize: "17px" }} >
-                                La fobia es un trastorno de ansiedad del
-                                <strong> miedo intenso</strong> hacia un objeto, situación o
+                                La fobia es un trastorno de ansiedad del{" "}
+                                <strong>miedo intenso</strong> hacia un objeto, situación o
                                 actividad específica.Esta reacción de temor
                                 va más allá de lo normal.
                             </h2>
