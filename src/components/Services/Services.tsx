@@ -4,6 +4,14 @@ import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeli
 import "react-vertical-timeline-component/style.min.css";
 
 import anxiety from "../../assets/images/anxiety.png";
+import brainpuzzlecolor from "../../assets/images/brain-puzzle-color.png";
+import selfhug from "../../assets/images/self-hug.png";
+import braincolor from "../../assets/images/brain-color.png";
+import fobia from "../../assets/images/fobia.png";
+import therapy from "../../assets/images/therapy.png";
+import symbol from "../../assets/images/symbol.png";
+import puzzle from "../../assets/images/puzzle.png";
+import virtualtherapy from "../../assets/images/virtual-therapy.png";
 
 export default function Services(): JSX.Element {
     return (
@@ -11,12 +19,13 @@ export default function Services(): JSX.Element {
             <h1 className="font-title text-5xl sm:text-6xl text-neutral font-bold mb-4 drop-shadow-lg text-center lg:text-left">
                 Tratamientos / Servicios
             </h1>
-            <div className="w-3 bg-neutral h-3 rounded-full"></div>
+            <div className="w-3 bg-neutral h-3 rounded-full hidden lg:block"></div>
             <VerticalTimeline
                 lineColor="#7189F8"
             >
                 <VerticalTimelineElement
                     className="vertical-timeline-element--work"
+                    contentStyle={{ boxShadow: "0 0 10px 5px #6e6e6e" }}
                     contentArrowStyle={{ borderRight: "7px solid  #fff" }}
                     iconStyle={{ background: "#C6D0FF", color: "#7189f8", borderWidth: "4px", borderColor: "#7189f8" }}
                 >
@@ -45,6 +54,7 @@ export default function Services(): JSX.Element {
                 </VerticalTimelineElement>
                 <VerticalTimelineElement
                     className="vertical-timeline-element--work"
+                    contentStyle={{ boxShadow: "0 0 10px 5px #6e6e6e" }}
                     contentArrowStyle={{ borderRight: "7px solid  #fff" }}
                     iconStyle={{ background: "#C6D0FF", color: "#7189f8", borderWidth: "4px", borderColor: "#7189f8" }}
                 >
@@ -59,7 +69,7 @@ export default function Services(): JSX.Element {
                                 por pérdidas de interés en las actividades
                                 con las que disfrutabas.
                             </h2>
-                            <img src={anxiety} alt="Anxiety" className="float-start w-1/3" />
+                            <img src={brainpuzzlecolor} alt="Depression image" className="float-start w-1/3" />
                             <h2 className="font-body text-right" style={{ color: "#000", fontSize: "17px" }}>
                                 <strong>Causas:</strong> <br />
                                 La depresión es el resultado de las
@@ -73,6 +83,7 @@ export default function Services(): JSX.Element {
                 </VerticalTimelineElement>
                 <VerticalTimelineElement
                     className="vertical-timeline-element--work"
+                    contentStyle={{ boxShadow: "0 0 10px 5px #6e6e6e" }}
                     contentArrowStyle={{ borderRight: "7px solid  #fff" }}
                     iconStyle={{ background: "#C6D0FF", color: "#7189f8", borderWidth: "4px", borderColor: "#7189f8" }}
                 >
@@ -87,7 +98,7 @@ export default function Services(): JSX.Element {
                                 y en la manera en que enfrentamos los
                                 desafíos de la vida.
                             </h2>
-                            <img src={anxiety} alt="Anxiety" className="float-end w-1/3" />
+                            <img src={selfhug} alt="Self hug" className="float-end w-1/3" />
                             <h2 className="font-body text-left" style={{ color: "#000", fontSize: "17px" }}>
                                 <strong>Causas:</strong> <br />
                                 Críticas Constantes o Desaprobación,
@@ -100,6 +111,7 @@ export default function Services(): JSX.Element {
                 </VerticalTimelineElement>
                 <VerticalTimelineElement
                     className="vertical-timeline-element--work"
+                    contentStyle={{ boxShadow: "0 0 10px 5px #6e6e6e" }}
                     contentArrowStyle={{ borderRight: "7px solid  #fff" }}
                     iconStyle={{ background: "#C6D0FF", color: "#7189f8", borderWidth: "4px", borderColor: "#7189f8" }}
                 >
@@ -116,7 +128,7 @@ export default function Services(): JSX.Element {
                                 controlar la impulsividad y regular la
                                 actividad motora.
                             </h2>
-                            <img src={anxiety} alt="Anxiety" className="float-start w-1/3" />
+                            <img src={braincolor} alt="Brain color image" className="float-start w-1/3" />
                             <h2 className="font-body text-right" style={{ color: "#000", fontSize: "17px" }}>
                                 <strong>Causas:</strong> <br />
                                 Genéticas,factores prenatales o perinatales,
@@ -129,6 +141,7 @@ export default function Services(): JSX.Element {
                 </VerticalTimelineElement>
                 <VerticalTimelineElement
                     className="vertical-timeline-element--work"
+                    contentStyle={{ boxShadow: "0 0 10px 5px #6e6e6e" }}
                     contentArrowStyle={{ borderRight: "7px solid  #fff" }}
                     iconStyle={{ background: "#C6D0FF", color: "#7189f8", borderWidth: "4px", borderColor: "#7189f8" }}
                 >
@@ -143,7 +156,7 @@ export default function Services(): JSX.Element {
                                 actividad específica.Esta reacción de temor
                                 va más allá de lo normal.
                             </h2>
-                            <img src={anxiety} alt="Anxiety" className="float-end w-1/3" />
+                            <img src={fobia} alt="Fobia" className="float-end w-1/3" />
                             <h2 className="font-body text-left" style={{ color: "#000", fontSize: "17px" }}>
                                 <strong>Causas:</strong> <br />
                                 Experiencias Traumáticas, Aprendizaje
@@ -157,6 +170,7 @@ export default function Services(): JSX.Element {
                 </VerticalTimelineElement>
                 <VerticalTimelineElement
                     className="vertical-timeline-element--work"
+                    contentStyle={{ boxShadow: "0 0 10px 5px #6e6e6e" }}
                     contentArrowStyle={{ borderRight: "7px solid  #fff" }}
                     iconStyle={{ background: "#C6D0FF", color: "#7189f8", borderWidth: "4px", borderColor: "#7189f8" }}
                 >
@@ -170,7 +184,7 @@ export default function Services(): JSX.Element {
                                 esuntrastornomental caracterizadopor
                                 lapresenciade obsesiones y compulsiones
                             </h2>
-                            <img src={anxiety} alt="Anxiety" className="float-start w-1/3" />
+                            <img src={therapy} alt="Therapy image" className="float-start w-1/3" />
                             <h2 className="font-body text-right" style={{ color: "#000", fontSize: "17px" }}>
                                 <strong>Causas:</strong> <br />
                                 Factores Genéticos, Neurobiológicas,
@@ -185,6 +199,7 @@ export default function Services(): JSX.Element {
                 </VerticalTimelineElement>
                 <VerticalTimelineElement
                     className="vertical-timeline-element--work"
+                    contentStyle={{ boxShadow: "0 0 10px 5px #6e6e6e" }}
                     contentArrowStyle={{ borderRight: "7px solid  #fff" }}
                     iconStyle={{ background: "#C6D0FF", color: "#7189f8", borderWidth: "4px", borderColor: "#7189f8" }}
                 >
@@ -198,7 +213,7 @@ export default function Services(): JSX.Element {
                                 interdisciplinaria que examina cómo el cerebro
                                 afecta el comportamiento y la cognición.
                             </h2>
-                            <img src={anxiety} alt="Anxiety" className="float-end w-1/3" />
+                            <img src={puzzle} alt="Puzzle" className="float-end w-1/3" />
                             <h2 className="font-body text-left" style={{ color: "#000", fontSize: "17px" }}>
                                 <strong>Causas:</strong> <br />
                                 Lesiones Cerebrales,Traumáticas,
@@ -215,6 +230,7 @@ export default function Services(): JSX.Element {
                 </VerticalTimelineElement>
                 <VerticalTimelineElement
                     className="vertical-timeline-element--work"
+                    contentStyle={{ boxShadow: "0 0 10px 5px #6e6e6e" }}
                     contentArrowStyle={{ borderRight: "7px solid  #fff" }}
                     iconStyle={{ background: "#C6D0FF", color: "#7189f8", borderWidth: "4px", borderColor: "#7189f8" }}
                 >
@@ -233,7 +249,7 @@ export default function Services(): JSX.Element {
                                 trabajar juntos/as para abordar sus
                                 necesidades y metas.
                             </h2>
-                            <img src={anxiety} alt="Anxiety" className="float-start w-1/3" />
+                            <img src={virtualtherapy} alt="Virtual Therapy" className="float-start w-1/3" />
                             <h2 className="font-body text-right" style={{ color: "#000", fontSize: "17px" }}>
                                 <strong>Consulta Online:</strong> <br />
                                 45 minutos/40€
@@ -243,6 +259,7 @@ export default function Services(): JSX.Element {
                 </VerticalTimelineElement>
                 <VerticalTimelineElement
                     className="vertical-timeline-element--work"
+                    contentStyle={{ boxShadow: "0 0 10px 5px #6e6e6e" }}
                     contentArrowStyle={{ borderRight: "7px solid  #fff" }}
                     iconStyle={{ background: "#C6D0FF", color: "#7189f8", borderWidth: "4px", borderColor: "#7189f8" }}
                 >
@@ -258,7 +275,7 @@ export default function Services(): JSX.Element {
                                 reducido, por lo tanto, obteniendo este pack estas
                                 ahorrando!
                             </h2>
-                            <img src={anxiety} alt="Anxiety" className="float-end w-1/3" />
+                            <img src={symbol} alt="Symbol" className="float-end w-1/3" />
                             <h2 className="font-body text-left" style={{ color: "#000", fontSize: "17px" }}>
                                 <strong>Causas:</strong> <br />
                                 Las causas pueden ser debido a dos factores:
@@ -270,7 +287,7 @@ export default function Services(): JSX.Element {
                     </div>
                 </VerticalTimelineElement>
             </VerticalTimeline>
-            <div className="w-3 bg-neutral h-3 rounded-full"></div>
+            <div className="w-3 bg-neutral h-3 rounded-full hidden lg:block"></div>
         </div>
     );
 }
