@@ -31,17 +31,17 @@ export default function Header({ setSection }: HeaderProps): JSX.Element {
                     <ul className="menu rounded-box bg-white text-black lg:w-max items-center shadow-lg py-1">
                         <li>
                             <details>
-                                <summary className="font-body font-semibold text-lg">
+                                <summary className="font-body font-semibold text-lg text-slate-600 ">
                                     <li>
                                         <img src={logo} alt="Logo Psic Gofran" className="w-14 h-auto p-0 mr-2" />
                                     </li>
                                     Menú
                                 </summary>
                                 <ul>
-                                    <li><button className="font-body font-semibold text-lg" onClick={() => choose(0)} >Inicio</button></li>
-                                    <li><button className="font-body font-semibold text-lg" onClick={() => choose(1)} >Sobre mi</button></li>
-                                    <li><button className="font-body font-semibold text-lg truncate" onClick={() => choose(2)} >Tratamientos / Servicios</button></li>
-                                    <li><button className="font-body font-semibold text-lg" onClick={() => choose(3)} >Contáctame</button></li>
+                                    <li><button className="text-slate-600 font-body font-semibold text-lg" onClick={() => choose(0)} >Inicio</button></li>
+                                    <li><button className="text-slate-600 font-body font-semibold text-lg" onClick={() => choose(1)} >Sobre mi</button></li>
+                                    <li><button className="text-slate-600 font-body font-semibold text-lg truncate" onClick={() => choose(2)} >Tratamientos / Servicios</button></li>
+                                    <li><button className="text-slate-600 font-body font-semibold text-lg" onClick={() => choose(3)} >Contáctame</button></li>
                                 </ul>
                             </details>
                         </li>

@@ -52,7 +52,7 @@ export default function NeedTherapyIf(): JSX.Element {
                     </Zoom>
                     <Zoom in={currentIndex >= 4} timeout={500}>
                         <div className="flex justify-center">
-                            <img src={stressedgirl} alt="Stressed girl" className="transform w-2/3 md:w-full sm:scale-100 md:scale-150 w- my-10 md:my-0" />
+                            <img src={stressedgirl} alt="Stressed girl" className="transform w-2/3 md:w-full sm:scale-100 md:scale-150 xl:scale-125 w- my-10 md:my-0" />
                         </div>
                     </Zoom>
                     <Zoom in={currentIndex >= 5} timeout={500}>

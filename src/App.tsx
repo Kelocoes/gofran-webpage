@@ -7,6 +7,7 @@ import SplashScreen from "./components/SplashScreen/SplashScreen";
 import Landing from "./components/Landing/Landing";
 import CustomParticles from "./components/Landing/CustomParticles";
 import AboutMe from "./components/AboutMe/AboutMe";
+import Services from "./components/Services/Services";
 
 function App(): JSX.Element {
     const [showHomePage, setShowHomePage] = React.useState<boolean>(true);
@@ -20,14 +21,14 @@ function App(): JSX.Element {
     }, [change]);
 
     return (
-        <main data-theme="mytheme" className="flex flex-col items-center">
+        <main data-theme="mytheme" className="flex flex-col">
             {showHomePage
                 ? <SplashScreen setChange={setChange}/>
                 : <React.Fragment>
                     <Header setSection={setSection}/>
                     {section === 0 && <Landing />}
                     {section === 1 && <AboutMe />}
-                    {section === 2 && <></>}
+                    {section === 2 && <Services />}
                     {section === 3 && <></>}
                     <Footer />
                     <CustomParticles />
