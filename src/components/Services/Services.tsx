@@ -27,13 +27,13 @@ export default function Services(): JSX.Element {
 
     return (
         <div className="z-10 mt-6 sm:mt-0 sm:p-6 flex justify-center items-center flex-col relative">
-            <Zoom in={currentIndex >= 1} timeout={500}>
+            <Zoom in={currentIndex >= 1} timeout={300}>
                 <img src={plant} alt="Plant" className="absolute top-48 -left-56 md:-left-24" />
             </Zoom>
-            <Zoom in={currentIndex >= 1} timeout={500}>
+            <Zoom in={currentIndex >= 1} timeout={300}>
                 <img src={plant2} alt="Plant-2" className="absolute top-32 right-0" />
             </Zoom>
-            <Zoom in={currentIndex >= 2} timeout={500}>
+            <Zoom in={currentIndex >= 2} timeout={300}>
                 <h1 ref={ref} className="font-title text-5xl sm:text-6xl text-neutral font-bold mb-4 drop-shadow-lg text-center lg:text-left">
                     Tratamientos / Servicios
                 </h1>

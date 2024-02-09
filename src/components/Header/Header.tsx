@@ -18,7 +18,7 @@ export default function Header({ setSection }: HeaderProps): JSX.Element {
 
     return (
         <div className="flex items-center justify-center pt-2 z-10 mx-10">
-            <Zoom in={true} timeout={500}>
+            <Zoom in={true} timeout={300}>
                 {matches ?
                     <ul className="menu menu-vertical sm:menu-horizontal rounded-box bg-white text-slate-600 lg:w-max items-center shadow-lg py-1">
                         <img src={logo} alt="Logo Psic Gofran" className="w-auto h-14 p-0 mr-2" />

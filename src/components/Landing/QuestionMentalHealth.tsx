@@ -17,25 +17,25 @@ export default function QuestionMentalHealth(): JSX.Element {
 
     return (
         <div ref={ref} className="w-[95%] md:w-[65%] my-6 flex justify-center z-10 relative">
-            <Zoom in={currentIndex >= 2} timeout={500}>
+            <Zoom in={currentIndex >= 2} timeout={300}>
                 <img src={plant} alt="Plant" className="absolute top-48 -left-56 md:-left-24" />
             </Zoom>
-            <Zoom in={currentIndex >= 2} timeout={500}>
+            <Zoom in={currentIndex >= 2} timeout={300}>
                 <img src={plant2} alt="Plant-2" className="absolute top-32 right-0" />
             </Zoom>
             <div className="relative">
                 <div className="flex flex-row items-end space-x-5">
-                    <Zoom in={currentIndex >= 1} timeout={500}>
+                    <Zoom in={currentIndex >= 1} timeout={300}>
                         <h1 className="font-title text-5xl sm:text-6xl text-neutral font-bold mb-4 drop-shadow-lg text-center sm:text-left">
                             ¿Por qué cuidar nuestro bienestar mental?
                         </h1>
                     </Zoom>
-                    <Zoom in={currentIndex >= 2} timeout={500}>
+                    <Zoom in={currentIndex >= 2} timeout={300}>
                         <img src={stars} alt="Stars" className="w-1/12 hidden lg:block" />
                     </Zoom>
                 </div>
                 <div className="grid grid-cols-5 gap-4 items-center">
-                    <Zoom in={currentIndex >= 3} timeout={500}>
+                    <Zoom in={currentIndex >= 3} timeout={300}>
                         <h2 className="font-body font-bold text-white text-lg sm:text-2xl text-center sm:text-justify mt-8 drop-shadow-md col-span-5">
                             El bienestar mental constituye el cimiento fundamental de una vida plena y saludable. Al igual
                             que cuidamos nuestro cuerpo a través de la nutrición y el ejercicio, atender nuestra salud
@@ -45,11 +45,11 @@ export default function QuestionMentalHealth(): JSX.Element {
                         </h2>
                     </Zoom>
                     <div className="col-span-2 flex justify-center items-center">
-                        <Zoom in={currentIndex >= 4} timeout={500}>
+                        <Zoom in={currentIndex >= 4} timeout={300}>
                             <img src={brain} alt="Brain" className="w-5/6 md:w-2/5 h-auto" />
                         </Zoom>
                     </div>
-                    <Zoom in={currentIndex >= 5} timeout={500}>
+                    <Zoom in={currentIndex >= 5} timeout={300}>
                         <div className="flex ml-auto my-2 border-[#B6C2FD] border-8 rounded-[60px] p-5 col-span-3">
                             <h2 className="font-body font-bold text-white text-lg sm:text-2xl text-center md:text-justify drop-shadow-md">
                                 «La primera virtud del conocimiento es la capacidad de
@@ -58,7 +58,7 @@ export default function QuestionMentalHealth(): JSX.Element {
                             </h2>
                         </div>
                     </Zoom>
-                    <Zoom in={currentIndex >= 6} timeout={500}>
+                    <Zoom in={currentIndex >= 6} timeout={300}>
                         <div className="my-2 border-[#B6C2FD] border-8 rounded-[60px] p-5 col-span-3">
                             <h2 className="font-body font-bold text-white text-lg sm:text-2xl text-center md:text-justify drop-shadow-md">
                                 «Las emociones inexpresadas nunca mueren.
@@ -68,7 +68,7 @@ export default function QuestionMentalHealth(): JSX.Element {
                         </div>
                     </Zoom>
                     <div className="col-span-2 flex justify-center">
-                        <Zoom in={currentIndex >= 7} timeout={500}>
+                        <Zoom in={currentIndex >= 7} timeout={300}>
                             <img src={brain2} alt="brain2" className="w-5/6 md:w-2/5 h-auto" />
                         </Zoom>
                     </div>

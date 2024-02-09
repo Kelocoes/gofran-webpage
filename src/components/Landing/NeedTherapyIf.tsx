@@ -18,23 +18,23 @@ export default function NeedTherapyIf(): JSX.Element {
 
     return (
         <div ref={ref} className="w-[95%] md:w-[65%] my-6 z-10 flex justify-center relative">
-            <Zoom in={currentIndex >= 2} timeout={500}>
+            <Zoom in={currentIndex >= 2} timeout={300}>
                 <img src={plant} alt="Plant" className="absolute top-22 -left-56 md:-left-24" />
             </Zoom>
-            <Zoom in={currentIndex >= 2} timeout={500}>
+            <Zoom in={currentIndex >= 2} timeout={300}>
                 <img src={plant2} alt="Plant-2" className="absolute top-32 right-0" />
             </Zoom>
             <div className="relative">
-                <Zoom in={currentIndex >= 2} timeout={500}>
+                <Zoom in={currentIndex >= 2} timeout={300}>
                     <img src={stars} alt="Stars" className="absolute top-0 right-0 w-1/12" />
                 </Zoom>
-                <Zoom in={currentIndex >= 1} timeout={500}>
+                <Zoom in={currentIndex >= 1} timeout={300}>
                     <h1 className="font-title text-5xl sm:text-6xl text-neutral font-bold mb-4 drop-shadow-lg text-center lg:text-left">
                         ¿No sabes si necesitas terapia?
                     </h1>
                 </Zoom>
                 <div className="flex flex-col md:flex-row items-center md:space-x-12 md:mt-16">
-                    <Zoom in={currentIndex >= 3} timeout={500}>
+                    <Zoom in={currentIndex >= 3} timeout={300}>
                         <div className="flex flex-col justify-center items-center md:justify-right md:items-end space-y-8">
                             <h2 className={floatBox}>
                                 Necesitas ayuda con tus inseguridades
@@ -50,12 +50,12 @@ export default function NeedTherapyIf(): JSX.Element {
                             </h2>
                         </div>
                     </Zoom>
-                    <Zoom in={currentIndex >= 4} timeout={500}>
+                    <Zoom in={currentIndex >= 4} timeout={300}>
                         <div className="flex justify-center">
                             <img src={stressedgirl} alt="Stressed girl" className="transform w-2/3 md:w-full sm:scale-100 md:scale-150 xl:scale-125 w- my-10 md:my-0" />
                         </div>
                     </Zoom>
-                    <Zoom in={currentIndex >= 5} timeout={500}>
+                    <Zoom in={currentIndex >= 5} timeout={300}>
                         <div className="flex flex-col justify-center items-center md:justify-left md:items-start space-y-8">
                             <h2 className={floatBox}>
                                 Sientes mucha Ansiedad
