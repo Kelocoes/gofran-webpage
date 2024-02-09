@@ -4,7 +4,6 @@ import { useInView } from "react-intersection-observer";
 
 import plant from "../../assets/images/plant.png";
 import plant2 from "../../assets/images/plant-2.png";
-import stars from "../../assets/images/stars.png";
 
 import Zoom from "@mui/material/Zoom";
 
@@ -21,10 +20,7 @@ export default function Description(): JSX.Element {
                     <img src={plant} alt="Plant" className="absolute top-22 -left-56" />
                 </Zoom>
                 <Zoom in={currentIndex >= 2} timeout={500}>
-                    <img src={plant2} alt="Plant-2" className="absolute top-32 right-0" />
-                </Zoom>
-                <Zoom in={currentIndex >= 2} timeout={500}>
-                    <img src={stars} alt="Stars" className="absolute w-1/12 top-24 right-0 hidden lg:block" />
+                    <img src={plant2} alt="Plant-2" className="absolute top-32 -right-8" />
                 </Zoom>
                 <Zoom in={currentIndex >= 1} timeout={500}>
                     <h1 className="font-title text-5xl sm:text-6xl text-neutral font-bold mb-4 drop-shadow-lg text-center lg:text-left">
