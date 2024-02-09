@@ -16,7 +16,9 @@ export default function Footer(): JSX.Element {
             <p className="font-bold text-slate-600 font-body text-center">
                 @2024 Psicóloga Gofran. <br />
                 Todos los Derechos Reservados <br />
-                gofranpsicologa@gmail.com
+                <a href="mailto:gofranpsicologa@gmail.com" target="_blank" rel="noopener noreferrer">
+                    gofranpsicologa@gmail.com
+                </a>
             </p>
             <div className="flex flex-row space-x-4 items-center justify-center">
                 <a href="https://t.me/Psicologa_Gofran" target="_blank" rel="noopener noreferrer">

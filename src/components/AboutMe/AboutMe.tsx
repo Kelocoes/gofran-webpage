@@ -12,7 +12,7 @@ import Zoom from "@mui/material/Zoom";
 import { useIncrementalIndexEffect } from "../../utils/UseIncrementalEffect";
 
 export default function AboutMe(): JSX.Element {
-    const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.5 });
+    const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.35 });
     const currentIndex = useIncrementalIndexEffect(inView, 4, 150);
 
     return (

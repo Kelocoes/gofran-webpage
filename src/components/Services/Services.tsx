@@ -3,6 +3,12 @@ import React from "react";
 import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 
+import Zoom from "@mui/material/Zoom";
+
+import { useInView } from "react-intersection-observer";
+
+import { useIncrementalIndexEffect } from "../../utils/UseIncrementalEffect";
+
 import anxiety from "../../assets/images/anxiety.png";
 import brainpuzzlecolor from "../../assets/images/brain-puzzle-color.png";
 import selfhug from "../../assets/images/self-hug.png";
@@ -12,13 +18,26 @@ import therapy from "../../assets/images/therapy.png";
 import symbol from "../../assets/images/symbol.png";
 import puzzle from "../../assets/images/puzzle.png";
 import virtualtherapy from "../../assets/images/virtual-therapy.png";
+import plant from "../../assets/images/plant.png";
+import plant2 from "../../assets/images/plant-2.png";
 
 export default function Services(): JSX.Element {
+    const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.35 });
+    const currentIndex = useIncrementalIndexEffect(inView, 2, 150);
+
     return (
-        <div className="z-10 sm:p-10 flex justify-center items-center flex-col">
-            <h1 className="font-title text-5xl sm:text-6xl text-neutral font-bold mb-4 drop-shadow-lg text-center lg:text-left">
-                Tratamientos / Servicios
-            </h1>
+        <div className="z-10 mt-6 sm:mt-0 sm:p-6 flex justify-center items-center flex-col relative">
+            <Zoom in={currentIndex >= 1} timeout={500}>
+                <img src={plant} alt="Plant" className="absolute top-48 -left-56 md:-left-24" />
+            </Zoom>
+            <Zoom in={currentIndex >= 1} timeout={500}>
+                <img src={plant2} alt="Plant-2" className="absolute top-32 right-0" />
+            </Zoom>
+            <Zoom in={currentIndex >= 2} timeout={500}>
+                <h1 ref={ref} className="font-title text-5xl sm:text-6xl text-neutral font-bold mb-4 drop-shadow-lg text-center lg:text-left">
+                    Tratamientos / Servicios
+                </h1>
+            </Zoom>
             <div className="w-3 bg-neutral h-3 rounded-full hidden lg:block"></div>
             <VerticalTimeline
                 lineColor="#7189F8"
@@ -213,7 +232,7 @@ export default function Services(): JSX.Element {
                                 interdisciplinaria que examina cómo el cerebro
                                 afecta el comportamiento y la cognición.
                             </h2>
-                            <img src={puzzle} alt="Puzzle" className="float-end w-1/2" />
+                            <img src={puzzle} alt="Puzzle" className="float-end w-1/2 md:w-1/3" />
                             <h2 className="font-body text-left" style={{ color: "#000", fontSize: "17px" }}>
                                 <strong>Causas:</strong> <br />
                                 Trastornos del Desarrollo, Infecciones del
@@ -280,13 +299,13 @@ export default function Services(): JSX.Element {
                                 Las causas pueden ser debido a dos factores:
                                 hereditarias o por causas externas <br />
                                 <strong>Consulta Online:</strong> <br />
-                                45 minutos/55€
+                                4 sesiones de 45minutos/160€ (pago único)
                             </h2>
                         </div>
                     </div>
                 </VerticalTimelineElement>
             </VerticalTimeline>
             <div className="w-3 bg-neutral h-3 rounded-full hidden lg:block"></div>
-        </div>
+        </div >
     );
 }

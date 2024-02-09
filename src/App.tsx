@@ -8,6 +8,7 @@ import Landing from "./components/Landing/Landing";
 import CustomParticles from "./components/Landing/CustomParticles";
 import AboutMe from "./components/AboutMe/AboutMe";
 import Services from "./components/Services/Services";
+import Contact from "./components/Contact/Contact";
 
 function App(): JSX.Element {
     const [showHomePage, setShowHomePage] = React.useState<boolean>(true);
@@ -29,7 +30,7 @@ function App(): JSX.Element {
                     {section === 0 && <Landing />}
                     {section === 1 && <AboutMe />}
                     {section === 2 && <Services />}
-                    {section === 3 && <></>}
+                    {section === 3 && <Contact />}
                     <Footer />
                     <CustomParticles />
                 </React.Fragment>
