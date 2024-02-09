@@ -86,7 +86,6 @@ export default function ContactForm(): JSX.Element {
                                         <button
                                             className={`btn ${!isActive ? "btn-disabled" : ""} btn-secondary`}
                                             tabIndex={-1}
-                                            role="button"
                                             aria-disabled="true"
                                             type="submit"
                                         >
