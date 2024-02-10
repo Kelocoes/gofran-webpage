@@ -34,9 +34,9 @@ export default function AboutMe(): JSX.Element {
                 </Zoom>
                 <div className="flex flex-col-reverse lg:flex-row justify-center items-center space-x-8 space-y-5">
                     <Zoom in={currentIndex >= 3} timeout={300}>
-                        <div className="relative flex justify-center pt-6 w-3/4 md:w-2/3">
+                        <div className="relative flex justify-center pt-6 w-[85%] md:w-2/3 ml-10 sm:ml-0">
                             <div className="border-4 border-white bg-neutral p-10 absolute z-0 -left-8 top-0 bottom-8 w-full"></div>
-                            <h2 className="border-4 border-white bg-[#dce2ff] text-neutral font-body text-lg font-bold p-5 z-10 w-full ">
+                            <h2 className="border-4 border-white bg-[#dce2ff] text-neutral font-body text-lg font-bold p-5 z-10 w-full">
                                 Hola soy Gofran Rawas Neuropsicóloga, decidí estudiar
                                 psicología por la empatía que siempre tuve con los demás
                                 y por la curiosidad sobre la mente humana. <br /><br />
@@ -57,7 +57,7 @@ export default function AboutMe(): JSX.Element {
                     <Zoom in={currentIndex >= 4} timeout={300}>
                         <div className="flex flex-col w-2/3 md:w-1/3 h-auto">
                             <img src={photo} alt="Gofran photo" />
-                            <h2 className="border-8 border-white bg-neutral p-4 font-body text-white font-bold text-md">
+                            <h2 className="border-8 border-white bg-neutral p-4 font-body text-white font-bold text-md  mb-5">
                                 Enhorabuena por estar aquí, si has decidido
                                 buscar una ayuda profesional, ya has hecho el
                                 paso más difícil

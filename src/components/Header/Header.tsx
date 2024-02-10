@@ -4,6 +4,8 @@ import logo from "../../assets/images/logo.png";
 
 import useMediaQuery from "@mui/material/useMediaQuery";
 import Zoom from "@mui/material/Zoom";
+import { Accordion, AccordionSummary, MenuItem } from "@mui/material";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 type HeaderProps = {
     readonly setSection: React.Dispatch<React.SetStateAction<number>>;
@@ -11,6 +13,7 @@ type HeaderProps = {
 
 export default function Header({ setSection }: HeaderProps): JSX.Element {
     const matches = useMediaQuery("(min-width:600px)");
+    const [expandedAccordion, setExpandedAccordion] = React.useState(false);
 
     const choose = (index: number): void => {
         setSection(index);
@@ -28,24 +31,34 @@ export default function Header({ setSection }: HeaderProps): JSX.Element {
                         <li><button className="font-body font-semibold text-lg" onClick={() => choose(3)} >Contáctame</button></li>
                     </ul>
                     :
-                    <ul className="menu rounded-box bg-white text-black lg:w-max items-center shadow-lg py-1">
-                        <li>
-                            <details>
-                                <summary className="font-body font-semibold text-lg text-slate-600 ">
-                                    <li>
-                                        <img src={logo} alt="Logo Psic Gofran" className="w-14 h-auto p-0 mr-2" />
-                                    </li>
-                                    Menú
-                                </summary>
-                                <ul>
-                                    <li><button className="text-slate-600 font-body font-semibold text-lg" onClick={() => choose(0)} >Inicio</button></li>
-                                    <li><button className="text-slate-600 font-body font-semibold text-lg" onClick={() => choose(1)} >Sobre mi</button></li>
-                                    <li><button className="text-slate-600 font-body font-semibold text-lg truncate" onClick={() => choose(2)} >Tratamientos / Servicios</button></li>
-                                    <li><button className="text-slate-600 font-body font-semibold text-lg" onClick={() => choose(3)} >Contáctame</button></li>
-                                </ul>
-                            </details>
-                        </li>
-                    </ul>
+                    <Accordion
+                        square = {true}
+                        sx={{ width: "70%", borderRadius: "20px" }}
+                        expanded={expandedAccordion}
+                        onClick={() => setExpandedAccordion(prevState => !prevState)}
+                    >
+                        <AccordionSummary
+                            expandIcon={<ExpandMoreIcon />}
+                            aria-controls="panel1a-content"
+                            id="panel1a-header"
+                            sx={{ alignItems: "center"}}
+                        >
+                            <img
+                                style={{ width: "50px", marginLeft: 22, marginTop: 3, marginRight: 10 }}
+                                src={logo}
+                                alt="Logo"
+                            />
+                            <h2 className="font-body font-semibold text-lg">
+                                Menú
+                            </h2>
+                        </AccordionSummary>
+                        <div>
+                            <MenuItem onClick={() => choose(0)}><h2 className="font-body font-semibold text-lg">Inicio</h2></MenuItem>
+                            <MenuItem onClick={() => choose(1)}><h2 className="font-body font-semibold text-lg">Sobre mi</h2></MenuItem>
+                            <MenuItem onClick={() => choose(2)}><h2 className="font-body font-semibold text-lg">Servicios</h2></MenuItem>
+                            <MenuItem onClick={() => choose(3)}><h2 className="font-body font-semibold text-lg">Contáctame</h2></MenuItem>
+                        </div>
+                    </Accordion>
                 }
             </Zoom>
         </div>

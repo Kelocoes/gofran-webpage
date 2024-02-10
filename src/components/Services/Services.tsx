@@ -295,9 +295,6 @@ export default function Services(): JSX.Element {
                             </h2>
                             <img src={symbol} alt="Symbol" className="float-end w-1/3" />
                             <h2 className="font-body text-left" style={{ color: "#000", fontSize: "17px" }}>
-                                <strong>Causas:</strong> <br />
-                                Las causas pueden ser debido a dos factores:
-                                hereditarias o por causas externas <br />
                                 <strong>Consulta Online:</strong> <br />
                                 4 sesiones de 45minutos/160€ (pago único)
                             </h2>
