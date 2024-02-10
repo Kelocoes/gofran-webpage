@@ -32,7 +32,7 @@ export default function Header({ setSection }: HeaderProps): JSX.Element {
                     </ul>
                     :
                     <Accordion
-                        square = {true}
+                        square={true}
                         sx={{ width: "70%", borderRadius: "20px" }}
                         expanded={expandedAccordion}
                         onClick={() => setExpandedAccordion(prevState => !prevState)}
@@ -41,16 +41,17 @@ export default function Header({ setSection }: HeaderProps): JSX.Element {
                             expandIcon={<ExpandMoreIcon />}
                             aria-controls="panel1a-content"
                             id="panel1a-header"
-                            sx={{ alignItems: "center"}}
                         >
-                            <img
-                                style={{ width: "50px", marginLeft: 22, marginTop: 3, marginRight: 10 }}
-                                src={logo}
-                                alt="Logo"
-                            />
-                            <h2 className="font-body font-semibold text-lg">
-                                Menú
-                            </h2>
+                            <div className="items-center flex flex-row">
+                                <img
+                                    style={{ width: "50px", marginLeft: 22, marginTop: 3, marginRight: 10 }}
+                                    src={logo}
+                                    alt="Logo"
+                                />
+                                <h2 className="font-body font-semibold text-lg">
+                                    Menú
+                                </h2>
+                            </div>
                         </AccordionSummary>
                         <div>
                             <MenuItem onClick={() => choose(0)}><h2 className="font-body font-semibold text-lg">Inicio</h2></MenuItem>

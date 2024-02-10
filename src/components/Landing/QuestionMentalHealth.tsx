@@ -12,7 +12,7 @@ import { useInView } from "react-intersection-observer";
 import { useIncrementalIndexEffect } from "../../utils/UseIncrementalEffect";
 
 export default function QuestionMentalHealth(): JSX.Element {
-    const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.35 });
+    const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.15 });
     const currentIndex = useIncrementalIndexEffect(inView, 7, 150);
 
     return (
