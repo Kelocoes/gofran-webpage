@@ -296,7 +296,7 @@ export default function Services(): JSX.Element {
                             <img src={symbol} alt="Symbol" className="float-end w-1/3" />
                             <h2 className="font-body text-left" style={{ color: "#000", fontSize: "17px" }}>
                                 <strong>Consulta Online:</strong> <br />
-                                4 sesiones de 45minutos/160€ (pago único)
+                                4 sesiones de 45 minutos/160€ (pago único)
                             </h2>
                         </div>
                     </div>

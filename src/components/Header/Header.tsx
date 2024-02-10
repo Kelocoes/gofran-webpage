@@ -20,7 +20,7 @@ export default function Header({ setSection }: HeaderProps): JSX.Element {
     };
 
     return (
-        <div className="flex items-center justify-center pt-2 z-10 mx-10">
+        <div className="flex items-center justify-center pt-2 z-20 mx-10 fixed">
             <Zoom in={true} timeout={300}>
                 {matches ?
                     <ul className="menu menu-vertical sm:menu-horizontal rounded-box bg-white text-slate-600 lg:w-max items-center shadow-lg py-1">
@@ -33,7 +33,7 @@ export default function Header({ setSection }: HeaderProps): JSX.Element {
                     :
                     <Accordion
                         square={true}
-                        sx={{ width: "70%", borderRadius: "20px" }}
+                        sx={{ borderRadius: "20px" }}
                         expanded={expandedAccordion}
                         onClick={() => setExpandedAccordion(prevState => !prevState)}
                     >
@@ -44,7 +44,7 @@ export default function Header({ setSection }: HeaderProps): JSX.Element {
                         >
                             <div className="items-center flex flex-row">
                                 <img
-                                    style={{ width: "50px", marginLeft: 22, marginTop: 3, marginRight: 10 }}
+                                    style={{ width: "50px"}}
                                     src={logo}
                                     alt="Logo"
                                 />

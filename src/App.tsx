@@ -26,7 +26,9 @@ function App(): JSX.Element {
             {showHomePage
                 ? <SplashScreen setChange={setChange}/>
                 : <React.Fragment>
-                    <Header setSection={setSection}/>
+                    <div className="flex justify-center mb-16">
+                        <Header setSection={setSection}/>
+                    </div>
                     {section === 0 && <Landing />}
                     {section === 1 && <AboutMe />}
                     {section === 2 && <Services />}
