@@ -22,7 +22,7 @@ import plant from "../../assets/images/plant.png";
 import plant2 from "../../assets/images/plant-2.png";
 
 export default function Services(): JSX.Element {
-    const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.35 });
+    const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.15 });
     const currentIndex = useIncrementalIndexEffect(inView, 2, 150);
 
     return (

@@ -15,8 +15,8 @@ import { useEnv } from "../EnvContext";
 import verticalstars from "../../assets/images/vertical-stars.png";
 
 export default function ContactForm(): JSX.Element {
-    const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.35 });
-    const [ref2, inView2] = useInView({ triggerOnce: true, threshold: 0.35 });
+    const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.15 });
+    const [ref2, inView2] = useInView({ triggerOnce: true, threshold: 0.15 });
     const currentIndex = useIncrementalIndexEffect(inView, 3, 150);
     const currentIndex2 = useIncrementalIndexEffect(inView2, 4, 150);
     const { serviceId, templateId, mailPublicKey } = useEnv();

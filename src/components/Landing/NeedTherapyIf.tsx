@@ -13,7 +13,7 @@ import { useIncrementalIndexEffect } from "../../utils/UseIncrementalEffect";
 
 export default function NeedTherapyIf(): JSX.Element {
     const floatBox: string = "border-4 bg-white rounded-xl p-3 border-secondary w-64 md:w-72 font-body font-bold text-secondary text-lg shadow-xl text-center";
-    const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.35 });
+    const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.15 });
     const currentIndex = useIncrementalIndexEffect(inView, 5, 150);
 
     return (
