@@ -44,13 +44,13 @@ export default function ContactForm(): JSX.Element {
     return (
         <div className="flex flex-col items-center justify-center">
             <div ref={ref} className="w-[80%] md:w-[65%] my-6 z-10 flex justify-center relative flex-col">
-                <Zoom in={currentIndex >= 1} timeout={500}>
+                <Zoom in={currentIndex >= 1} timeout={300}>
                     <h1 className="font-title text-5xl sm:text-6xl text-neutral font-bold mb-4 drop-shadow-lg text-center lg:text-left">
                         Cuéntame en qué puedo ayudarte
                     </h1>
                 </Zoom>
                 <div className="flex flex-col lg:flex-row justify-center items-center space-x-8 space-y-5">
-                    <Zoom in={currentIndex >= 3} timeout={500}>
+                    <Zoom in={currentIndex >= 3} timeout={300}>
                         <div className="relative flex justify-center pt-6">
                             <div className="border-4 border-white bg-neutral p-10 absolute z-0 -left-8 top-0 bottom-8 w-full"></div>
                             <h2 className="border-4 border-white bg-[#dce2ff] text-neutral font-body text-xl font-bold p-5 z-10 w-full text-center">
@@ -63,13 +63,13 @@ export default function ContactForm(): JSX.Element {
                 </div>
             </div>
             <div ref={ref2} className="w-[80%] md:w-[65%] my-6 z-10 flex justify-center relative flex-col">
-                <Zoom in={currentIndex2 >= 1} timeout={500}>
+                <Zoom in={currentIndex2 >= 1} timeout={300}>
                     <h1 className="font-title text-5xl sm:text-6xl text-neutral font-bold mb-4 drop-shadow-lg text-center lg:text-left">
                         Contacto
                     </h1>
                 </Zoom>
                 <div className="flex flex-col lg:flex-row items-center justify-center space-x-0 lg:space-x-16 space-y-5 lg:space-y-0">
-                    <Zoom in={currentIndex2 >= 3} timeout={500}>
+                    <Zoom in={currentIndex2 >= 3} timeout={300}>
                         <div className="relative flex justify-center pt-6 w-full md:w-1/2">
                             <div className="border-4 border-white bg-neutral p-10 absolute z-0 -left-8 top-0 bottom-8 w-full"></div>
                             <div className="border-4 border-white bg-[#dce2ff] text-neutral font-body text-xl font-bold p-5 z-10 w-full text-center">
@@ -96,7 +96,7 @@ export default function ContactForm(): JSX.Element {
                             </div>
                         </div>
                     </Zoom>
-                    <Zoom in={currentIndex2 >= 4} timeout={500}>
+                    <Zoom in={currentIndex2 >= 4} timeout={300}>
                         <div className="relative flex justify-center pt-6 w-full md:w-1/2">
                             <div className="border-4 border-white bg-neutral p-10 absolute z-0 -left-8 top-0 bottom-8 w-full"></div>
                             <div className="border-4 border-white bg-[#dce2ff] p-5 z-10 w-full flex flex-row items-center">

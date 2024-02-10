@@ -10,25 +10,25 @@ import Zoom from "@mui/material/Zoom";
 import { useIncrementalIndexEffect } from "../../utils/UseIncrementalEffect";
 
 export default function Description(): JSX.Element {
-    const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.35 });
+    const [ref, inView] = useInView({ triggerOnce: true, threshold: 0 });
     const currentIndex = useIncrementalIndexEffect(inView, 3, 150);
 
     return (
-        <div className="flex flex-col items-center justify-center">
-            <div ref={ref} className="w-[80%] md:w-[65%] my-6 z-10 flex justify-center relative flex-col">
-                <Zoom in={currentIndex >= 2} timeout={500}>
+        <div ref={ref} className="flex flex-col items-center justify-center">
+            <div className="w-[80%] md:w-[65%] my-6 z-10 flex justify-center relative flex-col">
+                <Zoom in={currentIndex >= 2} timeout={300}>
                     <img src={plant} alt="Plant" className="absolute top-22 -left-56" />
                 </Zoom>
-                <Zoom in={currentIndex >= 2} timeout={500}>
+                <Zoom in={currentIndex >= 2} timeout={300}>
                     <img src={plant2} alt="Plant-2" className="absolute top-32 -right-8" />
                 </Zoom>
-                <Zoom in={currentIndex >= 1} timeout={500}>
+                <Zoom in={currentIndex >= 1} timeout={300}>
                     <h1 className="font-title text-5xl sm:text-6xl text-neutral font-bold mb-4 drop-shadow-lg text-center lg:text-left">
                         No es como empiezas sino como continúas
                     </h1>
                 </Zoom>
                 <div className="flex flex-col-reverse lg:flex-row justify-center items-center space-x-8 space-y-5">
-                    <Zoom in={currentIndex >= 3} timeout={500}>
+                    <Zoom in={currentIndex >= 3} timeout={300}>
                         <div className="relative flex justify-center pt-6">
                             <div className="border-4 border-white bg-neutral p-10 absolute z-0 -left-8 top-0 bottom-8 w-full"></div>
                             <h2 className="border-4 border-white bg-[#dce2ff] text-neutral font-body text-lg font-bold p-5 z-10 w-full ">
