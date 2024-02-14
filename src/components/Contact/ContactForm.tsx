@@ -14,6 +14,8 @@ import { useEnv } from "../EnvContext";
 
 import verticalstars from "../../assets/images/vertical-stars.png";
 
+import { useForm } from "react-hook-form";
+
 export default function ContactForm(): JSX.Element {
     const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.15 });
     const [ref2, inView2] = useInView({ triggerOnce: true, threshold: 0.15 });
@@ -21,14 +23,14 @@ export default function ContactForm(): JSX.Element {
     const currentIndex2 = useIncrementalIndexEffect(inView2, 4, 150);
     const { serviceId, templateId, mailPublicKey } = useEnv();
     const [isActive, setIsActive] = React.useState(true);
+    const { handleSubmit: getInfo, register: registro, reset } = useForm();
     const form = React.useRef<HTMLFormElement>(null);
 
-    const sendEmail = (e: React.FormEvent<HTMLFormElement>): void => {
-        e.preventDefault();
+    const sendEmail = (data: object): void => {
+        console.log(data);
 
         const currentForm = form.current;
         if (currentForm == null) return;
-
 
         emailjs.sendForm(serviceId, templateId, currentForm, mailPublicKey)
             .then((result) => {
@@ -37,6 +39,7 @@ export default function ContactForm(): JSX.Element {
                 console.log(error.text);
             });
 
+        reset();
         setIsActive(false);
     };
 
@@ -70,19 +73,19 @@ export default function ContactForm(): JSX.Element {
                 </Zoom>
                 <div className="flex flex-col lg:flex-row items-center justify-center space-x-0 lg:space-x-16 space-y-5 lg:space-y-0">
                     <Zoom in={currentIndex2 >= 3} timeout={300}>
-                        <div className="relative flex justify-center pt-6 w-full md:w-1/3">
+                        <div className="relative flex justify-center pt-6 w-full md:w-2/3 lg:w-[40%] xl:w-1/3">
                             <div className="border-4 border-white bg-neutral p-10 absolute z-0 -left-8 top-0 bottom-8 w-full"></div>
                             <div className="border-4 border-white bg-[#dce2ff] text-neutral font-body text-xl font-bold p-5 z-10 w-full text-center">
                                 <h2 className="font-body text-4xl py-2">
                                     Contacto
                                 </h2>
-                                <form ref={form} onSubmit={sendEmail}>
+                                <form ref={form} onSubmit={getInfo(sendEmail)}>
                                     <div className="flex flex-col space-y-3 justify-center items-center">
-                                        <input type="text" name="name" placeholder="Nombre" className="input w-full max-w-sm" maxLength={50} />
-                                        <input type="text" name="email" placeholder="Email" className="input w-full max-w-sm" maxLength={50} />
-                                        <input type="text" name="cellphone" placeholder="Teléfono" className="input w-full max-w-sm" maxLength={20} />
-                                        <input type="text" name="subject" placeholder="Asunto" className="input w-full max-w-sm" maxLength={20} />
-                                        <textarea name="message" className="textarea textarea-secondary w-full max-w-sm" placeholder="Descripción"></textarea>
+                                        <input type="text" placeholder="Nombre" className="input w-full max-w-sm" maxLength={40} {...registro("name", { required: true })}/>
+                                        <input type="text" placeholder="Email" className="input w-full max-w-sm" maxLength={40} {...registro("email", { required: true })}/>
+                                        <input type="text" placeholder="Teléfono" className="input w-full max-w-sm" maxLength={20} {...registro("cellphone", { required: true })}/>
+                                        <input type="text" placeholder="Asunto" className="input w-full max-w-sm" maxLength={20} {...registro("subject", { required: true })}/>
+                                        <textarea className="textarea textarea-secondary w-full max-w-sm" placeholder="Descripción" {...registro("message", { required: true })}></textarea>
                                         <button
                                             className={`btn ${!isActive ? "btn-disabled" : ""} btn-secondary`}
                                             tabIndex={-1}
@@ -97,11 +100,11 @@ export default function ContactForm(): JSX.Element {
                         </div>
                     </Zoom>
                     <Zoom in={currentIndex2 >= 4} timeout={300}>
-                        <div className="relative flex justify-center pt-6 w-full md:w-2/5">
+                        <div className="relative flex justify-center pt-6 w-full md:w-2/3 lg:w-1/3">
                             <div className="border-4 border-white bg-neutral p-10 absolute z-0 -left-8 top-0 bottom-8 w-full"></div>
                             <div className="border-4 border-white bg-[#dce2ff] p-5 z-10 w-full flex flex-row items-center">
-                                <img src={verticalstars} alt="Vertical stars" className="h-2/3 mr-3"/>
-                                <h2 className="text-neutral font-body font-bold text-left lg:text-lg xl:text-2xl">
+                                <img src={verticalstars} alt="Vertical stars" className="w-1/12 mr-3" />
+                                <h2 className="text-neutral font-body font-bold text-left text-xl lg:text-sm">
                                     Sesión privada y personalizada. <br />
                                     Evaluación Integral. <br />
                                     Plan de tratamiento personalizado. <br />

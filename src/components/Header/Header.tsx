@@ -24,7 +24,7 @@ export default function Header({ setSection }: HeaderProps): JSX.Element {
             <Zoom in={true} timeout={300}>
                 {matches ?
                     <ul className="menu menu-vertical sm:menu-horizontal rounded-box bg-white text-slate-600 lg:w-max items-center shadow-lg py-1">
-                        <img src={logo} alt="Logo Psic Gofran" className="w-auto h-14 p-0 mr-2" />
+                        <button onClick={() => choose(0)}><img src={logo} alt="Logo Psic Gofran" className="w-auto h-14 p-0 mr-2" /></button>
                         <li><button className="font-body font-semibold text-lg" onClick={() => choose(0)} >Inicio</button></li>
                         <li><button className="font-body font-semibold text-lg" onClick={() => choose(1)} >Sobre mi</button></li>
                         <li><button className="font-body font-semibold text-lg truncate" onClick={() => choose(2)} >Tratamientos / Servicios</button></li>
