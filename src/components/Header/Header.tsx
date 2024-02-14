@@ -16,6 +16,10 @@ export default function Header({ setSection }: HeaderProps): JSX.Element {
     const [expandedAccordion, setExpandedAccordion] = React.useState(false);
 
     const choose = (index: number): void => {
+        window.scrollTo({
+            top: 0,
+            behavior: "auto",
+        });
         setSection(index);
     };
 
