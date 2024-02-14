@@ -70,7 +70,7 @@ export default function ContactForm(): JSX.Element {
                 </Zoom>
                 <div className="flex flex-col lg:flex-row items-center justify-center space-x-0 lg:space-x-16 space-y-5 lg:space-y-0">
                     <Zoom in={currentIndex2 >= 3} timeout={300}>
-                        <div className="relative flex justify-center pt-6 w-full md:w-1/2">
+                        <div className="relative flex justify-center pt-6 w-full md:w-1/3">
                             <div className="border-4 border-white bg-neutral p-10 absolute z-0 -left-8 top-0 bottom-8 w-full"></div>
                             <div className="border-4 border-white bg-[#dce2ff] text-neutral font-body text-xl font-bold p-5 z-10 w-full text-center">
                                 <h2 className="font-body text-4xl py-2">
@@ -97,7 +97,7 @@ export default function ContactForm(): JSX.Element {
                         </div>
                     </Zoom>
                     <Zoom in={currentIndex2 >= 4} timeout={300}>
-                        <div className="relative flex justify-center pt-6 w-full md:w-1/2">
+                        <div className="relative flex justify-center pt-6 w-full md:w-2/5">
                             <div className="border-4 border-white bg-neutral p-10 absolute z-0 -left-8 top-0 bottom-8 w-full"></div>
                             <div className="border-4 border-white bg-[#dce2ff] p-5 z-10 w-full flex flex-row items-center">
                                 <img src={verticalstars} alt="Vertical stars" className="h-2/3 mr-3"/>
