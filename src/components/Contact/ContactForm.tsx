@@ -100,8 +100,8 @@ export default function ContactForm(): JSX.Element {
                         <div className="relative flex justify-center pt-6 w-full md:w-2/5">
                             <div className="border-4 border-white bg-neutral p-10 absolute z-0 -left-8 top-0 bottom-8 w-full"></div>
                             <div className="border-4 border-white bg-[#dce2ff] p-5 z-10 w-full flex flex-row items-center">
-                                <img src={verticalstars} alt="Vertical stars" className="h-2/3 mr-3"/>
-                                <h2 className="text-neutral font-body font-bold text-left lg:text-lg xl:text-2xl">
+                                <img src={verticalstars} alt="Vertical stars" className="w-1/12 mr-3" />
+                                <h2 className="text-neutral font-body font-bold text-left text-xl lg:text-lg">
                                     Sesión privada y personalizada. <br />
                                     Evaluación Integral. <br />
                                     Plan de tratamiento personalizado. <br />
