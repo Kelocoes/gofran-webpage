@@ -68,6 +68,7 @@ export default function Services(): JSX.Element {
                                 <strong>Consulta Online:</strong> <br />
                                 45 minutos/55€
                             </h2>
+                            <button className="btn btn-sm btn-neutral text-white">Pedir cita</button>
                         </div>
                     </div>
                 </VerticalTimelineElement>
@@ -95,7 +96,8 @@ export default function Services(): JSX.Element {
                                 interacciones entre los factores sociales,
                                 psicológicos y biológicos. <br />
                                 <strong>Consulta Online:</strong> <br />
-                                45 minutos/55€
+                                45 minutos/55€ <br />
+                                <button className="btn btn-sm btn-neutral text-white">Pedir cita</button>
                             </h2>
                         </div>
                     </div>
@@ -125,6 +127,7 @@ export default function Services(): JSX.Element {
                                 <strong>Consulta Online:</strong> <br />
                                 45 minutos/55€
                             </h2>
+                            <button className="btn btn-sm btn-neutral text-white">Pedir cita</button>
                         </div>
                     </div>
                 </VerticalTimelineElement>
@@ -153,7 +156,8 @@ export default function Services(): JSX.Element {
                                 Genéticas,factores prenatales o perinatales,
                                 factores sociales y ambientales. <br />
                                 <strong>Consulta Online:</strong> <br />
-                                45 minutos/55€
+                                45 minutos/55€ <br />
+                                <button className="btn btn-sm btn-neutral text-white">Pedir cita</button>
                             </h2>
                         </div>
                     </div>
@@ -184,6 +188,7 @@ export default function Services(): JSX.Element {
                                 <strong>Consulta Online:</strong> <br />
                                 45 minutos/55€
                             </h2>
+                            <button className="btn btn-sm btn-neutral text-white">Pedir cita</button>
                         </div>
                     </div>
                 </VerticalTimelineElement>
@@ -211,7 +216,8 @@ export default function Services(): JSX.Element {
                                 Anómalas, Aprendizaje y Condicionamiento
                                 y Neuroplasticidad. <br />
                                 <strong>Consulta Online:</strong> <br />
-                                45 minutos/60€
+                                45 minutos/60€ <br />
+                                <button className="btn btn-sm btn-neutral text-white">Pedir cita</button>
                             </h2>
                         </div>
                     </div>
@@ -243,6 +249,7 @@ export default function Services(): JSX.Element {
                                 <strong>Consulta Online:</strong> <br />
                                 45 minutos/85€
                             </h2>
+                            <button className="btn btn-sm btn-neutral text-white">Pedir cita</button>
                         </div>
                     </div>
                 </VerticalTimelineElement>
@@ -270,7 +277,8 @@ export default function Services(): JSX.Element {
                             <img src={virtualtherapy} alt="Virtual Therapy" className="float-start w-1/3" />
                             <h2 className="font-body text-right" style={{ color: "#000", fontSize: "17px" }}>
                                 <strong>Consulta Online:</strong> <br />
-                                45 minutos/40€
+                                45 minutos/40€ <br />
+                                <button className="btn btn-sm btn-neutral text-white">Pedir cita</button>
                             </h2>
                         </div>
                     </div>
@@ -298,6 +306,7 @@ export default function Services(): JSX.Element {
                                 <strong>Consulta Online:</strong> <br />
                                 4 sesiones de 45 minutos/160€ (pago único)
                             </h2>
+                            <button className="btn btn-sm btn-neutral text-white">Pedir cita</button>
                         </div>
                     </div>
                 </VerticalTimelineElement>

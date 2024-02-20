@@ -36,7 +36,7 @@ export default function QuestionMentalHealth(): JSX.Element {
                 </div>
                 <div className="grid grid-cols-5 gap-4 items-center">
                     <Zoom in={currentIndex >= 3} timeout={300}>
-                        <h2 className="font-body font-bold text-white text-lg sm:text-2xl text-center sm:text-justify mt-8 drop-shadow-md col-span-5">
+                        <h2 className="font-body text-white text-lg sm:text-2xl text-center sm:text-justify mt-8 drop-shadow-md col-span-5">
                             El bienestar mental constituye el cimiento fundamental de una vida plena y saludable. Al igual
                             que cuidamos nuestro cuerpo a través de la nutrición y el ejercicio, atender nuestra salud
                             mental es esencial para alcanzar un equilibrio integral. Una mente equilibrada no solo influye
@@ -51,7 +51,7 @@ export default function QuestionMentalHealth(): JSX.Element {
                     </div>
                     <Zoom in={currentIndex >= 5} timeout={300}>
                         <div className="flex ml-auto my-2 border-[#B6C2FD] border-8 rounded-[60px] p-5 col-span-3">
-                            <h2 className="font-body font-bold text-white text-lg sm:text-2xl text-center md:text-justify drop-shadow-md">
+                            <h2 className="font-body text-white text-lg sm:text-2xl text-center md:text-justify drop-shadow-md">
                                 «La primera virtud del conocimiento es la capacidad de
                                 enfrentarse a lo que no es evidente.» <br />
                                 - Jacques Lacan
@@ -60,7 +60,7 @@ export default function QuestionMentalHealth(): JSX.Element {
                     </Zoom>
                     <Zoom in={currentIndex >= 6} timeout={300}>
                         <div className="my-2 border-[#B6C2FD] border-8 rounded-[60px] p-5 col-span-3">
-                            <h2 className="font-body font-bold text-white text-lg sm:text-2xl text-center md:text-justify drop-shadow-md">
+                            <h2 className="font-body text-white text-lg sm:text-2xl text-center md:text-justify drop-shadow-md">
                                 «Las emociones inexpresadas nunca mueren.
                                 Son enterradas vivas y salen más tarde de peores formas.» <br />
                                 -Sigmund Freud

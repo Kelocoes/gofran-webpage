@@ -34,7 +34,7 @@ export default function MainPost(): JSX.Element {
                         <img src={hilotoys} alt="Hilo" className="absolute w-[15%] top-14 hidden xl:block" />
                     </Zoom>
                     <Zoom in={currentIndex >= 3} timeout={300}>
-                        <h2 className="font-body font-bold text-white text-lg sm:text-2xl 
+                        <h2 className="font-body text-white text-lg sm:text-2xl 
                         border-dashed border-neutral border-8 rounded-xl p-4 drop-shadow-md">
                             Sumérgete en un viaje transformador
                             hacia tu bienestar mental. Explorarás
@@ -44,7 +44,7 @@ export default function MainPost(): JSX.Element {
                     </Zoom>
                     <div className="flex flex-col justify-center items-center">
                         <Zoom in={currentIndex >= 4} timeout={300}>
-                            <h2 className="font-body font-bold text-white text-2xl text-center drop-shadow-md">
+                            <h2 className="font-body text-white text-2xl text-center drop-shadow-md">
                                 Terapia 100% online <br />
                                 Personalizado y Flexible <br />
                                 Variedad de recursos y soluciones innovadoras
