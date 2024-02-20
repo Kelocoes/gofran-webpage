@@ -35,7 +35,7 @@ export default function MainPost(): JSX.Element {
                     </Zoom>
                     <Zoom in={currentIndex >= 3} timeout={300}>
                         <h2 className="font-body text-white text-lg sm:text-2xl 
-                        border-dashed border-neutral border-8 rounded-xl p-4 drop-shadow-md">
+                        border-dashed border-neutral border-8 rounded-xl p-4 drop-shadow-md font-bold">
                             Sumérgete en un viaje transformador
                             hacia tu bienestar mental. Explorarás
                             herramientas innovadoras para potenciar
@@ -44,7 +44,7 @@ export default function MainPost(): JSX.Element {
                     </Zoom>
                     <div className="flex flex-col justify-center items-center">
                         <Zoom in={currentIndex >= 4} timeout={300}>
-                            <h2 className="font-body text-white text-2xl text-center drop-shadow-md">
+                            <h2 className="font-body text-white text-2xl text-center drop-shadow-md font-bold">
                                 Terapia 100% online <br />
                                 Personalizado y Flexible <br />
                                 Variedad de recursos y soluciones innovadoras

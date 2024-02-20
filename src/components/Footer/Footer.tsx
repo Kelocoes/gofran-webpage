@@ -13,7 +13,7 @@ export default function Footer(): JSX.Element {
             <div className="flex justify-center">
                 <img src={logo} alt="Logo Psic Gofran" className="w-auto h-20 p-0 mr-2" />
             </div>
-            <p className="text-slate-600 font-body text-center text-sm">
+            <p className="text-slate-600 font-body text-center text-sm font-bold">
                 @2024 Psicóloga Gofran. <br />
                 Todos los Derechos Reservados <br />
                 <a href="mailto:gofranpsicologa@gmail.com" target="_blank" rel="noopener noreferrer">
