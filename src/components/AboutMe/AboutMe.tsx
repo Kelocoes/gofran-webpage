@@ -35,7 +35,7 @@ export default function AboutMe(): JSX.Element {
                 <div className="flex flex-col-reverse lg:flex-row justify-center space-x-8 space-y-5">
                     <Zoom in={currentIndex >= 3} timeout={300}>
                         <div className="relative flex justify-center pt-6 w-[85%] md:w-2/3 ml-10 sm:ml-0">
-                            <h2 className="text-white font-body text-lg p-5 z-10 w-full text-justify">
+                            <h2 className="text-white font-body text-lg p-5 z-10 w-full text-justify font-bold drop-shadow-md ">
                                 Hola soy Gofran Rawas Neuropsicóloga, decidí estudiar
                                 psicología por la empatía que siempre tuve con los demás
                                 y por la curiosidad sobre la mente humana. <br /><br />
