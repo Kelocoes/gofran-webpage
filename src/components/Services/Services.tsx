@@ -21,9 +21,12 @@ import virtualtherapy from "../../assets/images/virtual-therapy.png";
 import plant from "../../assets/images/plant.png";
 import plant2 from "../../assets/images/plant-2.png";
 
+import { useNavigate } from "react-router-dom";
+
 export default function Services(): JSX.Element {
     const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.15 });
     const currentIndex = useIncrementalIndexEffect(inView, 2, 150);
+    const navigate = useNavigate();
 
     return (
         <div className="z-10 mt-6 sm:mt-0 sm:p-6 flex justify-center items-center flex-col relative">
@@ -68,7 +71,7 @@ export default function Services(): JSX.Element {
                                 <strong>Consulta Online:</strong> <br />
                                 45 minutos/55€
                             </h2>
-                            <button className="btn btn-sm btn-neutral text-white">Pedir cita</button>
+                            <button className="btn btn-sm btn-neutral text-white" onClick={() => navigate("/contacto")}>Pedir cita</button>
                         </div>
                     </div>
                 </VerticalTimelineElement>
@@ -97,7 +100,7 @@ export default function Services(): JSX.Element {
                                 psicológicos y biológicos. <br />
                                 <strong>Consulta Online:</strong> <br />
                                 45 minutos/55€ <br />
-                                <button className="btn btn-sm btn-neutral text-white">Pedir cita</button>
+                                <button className="btn btn-sm btn-neutral text-white" onClick={() => navigate("/contacto")}>Pedir cita</button>
                             </h2>
                         </div>
                     </div>
@@ -127,7 +130,7 @@ export default function Services(): JSX.Element {
                                 <strong>Consulta Online:</strong> <br />
                                 45 minutos/55€
                             </h2>
-                            <button className="btn btn-sm btn-neutral text-white">Pedir cita</button>
+                            <button className="btn btn-sm btn-neutral text-white" onClick={() => navigate("/contacto")}>Pedir cita</button>
                         </div>
                     </div>
                 </VerticalTimelineElement>
@@ -157,7 +160,7 @@ export default function Services(): JSX.Element {
                                 factores sociales y ambientales. <br />
                                 <strong>Consulta Online:</strong> <br />
                                 45 minutos/55€ <br />
-                                <button className="btn btn-sm btn-neutral text-white">Pedir cita</button>
+                                <button className="btn btn-sm btn-neutral text-white" onClick={() => navigate("/contacto")}>Pedir cita</button>
                             </h2>
                         </div>
                     </div>
@@ -188,7 +191,7 @@ export default function Services(): JSX.Element {
                                 <strong>Consulta Online:</strong> <br />
                                 45 minutos/55€
                             </h2>
-                            <button className="btn btn-sm btn-neutral text-white">Pedir cita</button>
+                            <button className="btn btn-sm btn-neutral text-white" onClick={() => navigate("/contacto")}>Pedir cita</button>
                         </div>
                     </div>
                 </VerticalTimelineElement>
@@ -217,7 +220,7 @@ export default function Services(): JSX.Element {
                                 y Neuroplasticidad. <br />
                                 <strong>Consulta Online:</strong> <br />
                                 45 minutos/60€ <br />
-                                <button className="btn btn-sm btn-neutral text-white">Pedir cita</button>
+                                <button className="btn btn-sm btn-neutral text-white" onClick={() => navigate("/contacto")}>Pedir cita</button>
                             </h2>
                         </div>
                     </div>
@@ -249,7 +252,7 @@ export default function Services(): JSX.Element {
                                 <strong>Consulta Online:</strong> <br />
                                 45 minutos/85€
                             </h2>
-                            <button className="btn btn-sm btn-neutral text-white">Pedir cita</button>
+                            <button className="btn btn-sm btn-neutral text-white" onClick={() => navigate("/contacto")}>Pedir cita</button>
                         </div>
                     </div>
                 </VerticalTimelineElement>
@@ -278,7 +281,7 @@ export default function Services(): JSX.Element {
                             <h2 className="font-body text-right" style={{ color: "#000", fontSize: "17px" }}>
                                 <strong>Consulta Online:</strong> <br />
                                 45 minutos/40€ <br />
-                                <button className="btn btn-sm btn-neutral text-white">Pedir cita</button>
+                                <button className="btn btn-sm btn-neutral text-white" onClick={() => navigate("/contacto")}>Pedir cita</button>
                             </h2>
                         </div>
                     </div>
@@ -306,7 +309,7 @@ export default function Services(): JSX.Element {
                                 <strong>Consulta Online:</strong> <br />
                                 4 sesiones de 45 minutos/160€ (pago único)
                             </h2>
-                            <button className="btn btn-sm btn-neutral text-white">Pedir cita</button>
+                            <button className="btn btn-sm btn-neutral text-white" onClick={() => navigate("/contacto")}>Pedir cita</button>
                         </div>
                     </div>
                 </VerticalTimelineElement>
