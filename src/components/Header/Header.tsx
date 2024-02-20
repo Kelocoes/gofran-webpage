@@ -12,7 +12,15 @@ import { useNavigate } from "react-router-dom";
 export default function Header(): JSX.Element {
     const matches = useMediaQuery("(min-width:600px)");
     const [expandedAccordion, setExpandedAccordion] = React.useState(false);
-    const navigate = useNavigate();
+    const nav = useNavigate();
+
+    const navigate = (path: string): void => {
+        window.scrollTo({
+            top: 0,
+            behavior: "auto",
+        });
+        nav(path);
+    };
 
     return (
         <div className="flex items-center justify-center pt-2 z-20 mx-10 fixed">

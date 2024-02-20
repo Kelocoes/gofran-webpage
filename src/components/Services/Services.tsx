@@ -26,7 +26,15 @@ import { useNavigate } from "react-router-dom";
 export default function Services(): JSX.Element {
     const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.15 });
     const currentIndex = useIncrementalIndexEffect(inView, 2, 150);
-    const navigate = useNavigate();
+    const nav = useNavigate();
+
+    const navigate = (path: string): void => {
+        window.scrollTo({
+            top: 0,
+            behavior: "auto",
+        });
+        nav(path);
+    };
 
     return (
         <div className="z-10 mt-6 sm:mt-0 sm:p-6 flex justify-center items-center flex-col relative">
@@ -71,6 +79,8 @@ export default function Services(): JSX.Element {
                                 <strong>Consulta Online:</strong> <br />
                                 45 minutos/55€
                             </h2>
+                        </div>
+                        <div className="w-full flex justify-end">
                             <button className="btn btn-sm btn-neutral text-white" onClick={() => navigate("/contacto")}>Pedir cita</button>
                         </div>
                     </div>
@@ -130,6 +140,8 @@ export default function Services(): JSX.Element {
                                 <strong>Consulta Online:</strong> <br />
                                 45 minutos/55€
                             </h2>
+                        </div>
+                        <div className="w-full flex justify-end">
                             <button className="btn btn-sm btn-neutral text-white" onClick={() => navigate("/contacto")}>Pedir cita</button>
                         </div>
                     </div>
@@ -191,6 +203,8 @@ export default function Services(): JSX.Element {
                                 <strong>Consulta Online:</strong> <br />
                                 45 minutos/55€
                             </h2>
+                        </div>
+                        <div className="w-full flex justify-end">
                             <button className="btn btn-sm btn-neutral text-white" onClick={() => navigate("/contacto")}>Pedir cita</button>
                         </div>
                     </div>
@@ -252,6 +266,8 @@ export default function Services(): JSX.Element {
                                 <strong>Consulta Online:</strong> <br />
                                 45 minutos/85€
                             </h2>
+                        </div>
+                        <div className="w-full flex justify-end">
                             <button className="btn btn-sm btn-neutral text-white" onClick={() => navigate("/contacto")}>Pedir cita</button>
                         </div>
                     </div>
@@ -309,6 +325,8 @@ export default function Services(): JSX.Element {
                                 <strong>Consulta Online:</strong> <br />
                                 4 sesiones de 45 minutos/160€ (pago único)
                             </h2>
+                        </div>
+                        <div className="w-full flex justify-end">
                             <button className="btn btn-sm btn-neutral text-white" onClick={() => navigate("/contacto")}>Pedir cita</button>
                         </div>
                     </div>
