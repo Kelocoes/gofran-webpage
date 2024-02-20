@@ -12,8 +12,6 @@ import emailjs from "@emailjs/browser";
 
 import { useEnv } from "../EnvContext";
 
-import verticalstars from "../../assets/images/vertical-stars.png";
-
 import { useForm } from "react-hook-form";
 
 export default function ContactForm(): JSX.Element {
@@ -96,24 +94,6 @@ export default function ContactForm(): JSX.Element {
                                         </button>
                                     </div>
                                 </form>
-                            </div>
-                        </div>
-                    </Zoom>
-                    <Zoom in={currentIndex2 >= 4} timeout={300}>
-                        <div className="relative flex justify-center pt-6 w-full md:w-2/3 lg:w-1/3">
-                            <div className="border-4 border-white bg-neutral p-10 absolute z-0 -left-8 top-0 bottom-8 w-full"></div>
-                            <div className="border-4 border-white bg-[#dce2ff] p-5 z-10 w-full flex flex-row items-center">
-                                <img src={verticalstars} alt="Vertical stars" className="w-1/12 mr-3" />
-                                <h2 className="text-neutral font-body font-bold text-left text-xl lg:text-sm">
-                                    Sesión privada y personalizada. <br />
-                                    Evaluación Integral. <br />
-                                    Plan de tratamiento personalizado. <br />
-                                    Recursos Adicionales. <br />
-                                    Apoyo Emocional. <br />
-                                    Desarrollo de Habilidades y Estrategias. <br />
-                                    Planificación y Establecimiento de Objetivos. <br />
-                                    Confidencialidad y Ética.
-                                </h2>
                             </div>
                         </div>
                     </Zoom>
