@@ -59,7 +59,7 @@ export default function Header(): JSX.Element {
                         <div>
                             <MenuItem onClick={() => navigate("/")}><h2 className="font-body font-semibold text-lg">Inicio</h2></MenuItem>
                             <MenuItem onClick={() => navigate("/sobre-mi")}><h2 className="font-body font-semibold text-lg">Sobre mi</h2></MenuItem>
-                            <MenuItem onClick={() => navigate("/servicio")}><h2 className="font-body font-semibold text-lg">Servicios</h2></MenuItem>
+                            <MenuItem onClick={() => navigate("/servicios")}><h2 className="font-body font-semibold text-lg">Servicios</h2></MenuItem>
                             <MenuItem onClick={() => navigate("/contacto")}><h2 className="font-body font-semibold text-lg">Contáctame</h2></MenuItem>
                         </div>
                     </Accordion>
