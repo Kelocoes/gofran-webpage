@@ -10,9 +10,11 @@ import AboutMe from "./components/AboutMe/AboutMe";
 import Services from "./components/Services/Services";
 import Contact from "./components/Contact/Contact";
 
+import { Routes, Route } from "react-router-dom";
+
 function App(): JSX.Element {
     const [showHomePage, setShowHomePage] = React.useState<boolean>(true);
-    const [section, setSection] = React.useState<number>(0);
+    // const [section, setSection] = React.useState<number>(0);
     const [change, setChange] = React.useState<boolean>(false);
 
     React.useEffect(() => {
@@ -27,12 +29,14 @@ function App(): JSX.Element {
                 ? <SplashScreen setChange={setChange}/>
                 : <React.Fragment>
                     <div className="flex justify-center mb-16">
-                        <Header setSection={setSection}/>
+                        <Header />
                     </div>
-                    {section === 0 && <Landing />}
-                    {section === 1 && <AboutMe />}
-                    {section === 2 && <Services />}
-                    {section === 3 && <Contact />}
+                    <Routes>
+                        <Route path="/" element={<Landing />} />
+                        <Route path="/sobre-mi" element={<AboutMe />} />
+                        <Route path="/servicios" element={<Services />} />
+                        <Route path="/contacto" element={<Contact />} />
+                    </Routes>
                     <Footer />
                     <CustomParticles />
                 </React.Fragment>

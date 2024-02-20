@@ -7,10 +7,10 @@ import { EnvProvider } from "../EnvContext";
 export default function Contact(): JSX.Element {
     return (
         <div className="z-10">
-            <Description />
             <EnvProvider>
                 <ContactForm />
             </EnvProvider>
+            <Description />
         </div>
     );
 }

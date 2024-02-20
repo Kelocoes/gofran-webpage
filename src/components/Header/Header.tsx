@@ -7,32 +7,23 @@ import Zoom from "@mui/material/Zoom";
 import { Accordion, AccordionSummary, MenuItem } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
-type HeaderProps = {
-    readonly setSection: React.Dispatch<React.SetStateAction<number>>;
-};
+import { useNavigate } from "react-router-dom";
 
-export default function Header({ setSection }: HeaderProps): JSX.Element {
+export default function Header(): JSX.Element {
     const matches = useMediaQuery("(min-width:600px)");
     const [expandedAccordion, setExpandedAccordion] = React.useState(false);
-
-    const choose = (index: number): void => {
-        window.scrollTo({
-            top: 0,
-            behavior: "auto",
-        });
-        setSection(index);
-    };
+    const navigate = useNavigate();
 
     return (
         <div className="flex items-center justify-center pt-2 z-20 mx-10 fixed">
             <Zoom in={true} timeout={300}>
                 {matches ?
                     <ul className="menu menu-vertical sm:menu-horizontal rounded-box bg-white text-slate-600 lg:w-max items-center shadow-lg py-1">
-                        <button onClick={() => choose(0)}><img src={logo} alt="Logo Psic Gofran" className="w-auto h-14 p-0 mr-2" /></button>
-                        <li><button className="font-body font-semibold text-lg" onClick={() => choose(0)} >Inicio</button></li>
-                        <li><button className="font-body font-semibold text-lg" onClick={() => choose(1)} >Sobre mi</button></li>
-                        <li><button className="font-body font-semibold text-lg truncate" onClick={() => choose(2)} >Tratamientos / Servicios</button></li>
-                        <li><button className="font-body font-semibold text-lg" onClick={() => choose(3)} >Contáctame</button></li>
+                        <button onClick={() => navigate("/")}><img src={logo} alt="Logo Psic Gofran" className="w-auto h-14 p-0 mr-2" /></button>
+                        <li><button className="font-body font-semibold text-lg" onClick={() => navigate("/")} >Inicio</button></li>
+                        <li><button className="font-body font-semibold text-lg" onClick={() => navigate("/sobre-mi")} >Sobre mi</button></li>
+                        <li><button className="font-body font-semibold text-lg truncate" onClick={() => navigate("/servicios")} >Tratamientos / Servicios</button></li>
+                        <li><button className="font-body font-semibold text-lg" onClick={() => navigate("/contacto")} >Contáctame</button></li>
                     </ul>
                     :
                     <Accordion
@@ -58,10 +49,10 @@ export default function Header({ setSection }: HeaderProps): JSX.Element {
                             </div>
                         </AccordionSummary>
                         <div>
-                            <MenuItem onClick={() => choose(0)}><h2 className="font-body font-semibold text-lg">Inicio</h2></MenuItem>
-                            <MenuItem onClick={() => choose(1)}><h2 className="font-body font-semibold text-lg">Sobre mi</h2></MenuItem>
-                            <MenuItem onClick={() => choose(2)}><h2 className="font-body font-semibold text-lg">Servicios</h2></MenuItem>
-                            <MenuItem onClick={() => choose(3)}><h2 className="font-body font-semibold text-lg">Contáctame</h2></MenuItem>
+                            <MenuItem onClick={() => navigate("/")}><h2 className="font-body font-semibold text-lg">Inicio</h2></MenuItem>
+                            <MenuItem onClick={() => navigate("/sobre-mi")}><h2 className="font-body font-semibold text-lg">Sobre mi</h2></MenuItem>
+                            <MenuItem onClick={() => navigate("/servicio")}><h2 className="font-body font-semibold text-lg">Servicios</h2></MenuItem>
+                            <MenuItem onClick={() => navigate("/contacto")}><h2 className="font-body font-semibold text-lg">Contáctame</h2></MenuItem>
                         </div>
                     </Accordion>
                 }
