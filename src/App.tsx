@@ -14,7 +14,6 @@ import { Routes, Route } from "react-router-dom";
 
 function App(): JSX.Element {
     const [showHomePage, setShowHomePage] = React.useState<boolean>(true);
-    // const [section, setSection] = React.useState<number>(0);
     const [change, setChange] = React.useState<boolean>(false);
 
     React.useEffect(() => {
