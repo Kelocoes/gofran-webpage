@@ -36,7 +36,7 @@ export default function AboutMe(): JSX.Element {
                     <Zoom in={currentIndex >= 3} timeout={300}>
                         <div className="relative flex justify-center pt-6 w-[85%] md:w-2/3 ml-10 sm:ml-0">
                             <h2 className="text-white font-body text-lg p-5 z-10 w-full text-justify font-bold drop-shadow-md ">
-                                Hola soy Gofran Rawas Neuropsicóloga, decidí estudiar
+                                Hola soy Gofran Rawas Neuropsicóloga musulmana, decidí estudiar
                                 psicología por la empatía que siempre tuve con los demás
                                 y por la curiosidad sobre la mente humana. <br /><br />
                                 He nacido y crecido en Barcelona, pero soy de origen Sirio,
