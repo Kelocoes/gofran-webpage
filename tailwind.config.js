@@ -3,8 +3,8 @@ module.exports = {
     theme: {
         extend: {
             fontFamily: {
-                title: ["Dancing Script"],
-                body: ["Montserrat"]
+                title: ["Roboto"],
+                body: ["Poppins"]
             }
         }
     },

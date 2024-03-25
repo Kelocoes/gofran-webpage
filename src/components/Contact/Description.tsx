@@ -4,6 +4,7 @@ import { useInView } from "react-intersection-observer";
 
 import plant from "../../assets/images/plant.png";
 import plant2 from "../../assets/images/plant-2.png";
+import horizontalDiamond from "../../assets/images/horizontal-diamond.png";
 
 import Zoom from "@mui/material/Zoom";
 
@@ -15,7 +16,7 @@ export default function Description(): JSX.Element {
 
     return (
         <div ref={ref} className="flex flex-col items-center justify-center">
-            <div className="w-[80%] md:w-[65%] my-6 z-10 flex justify-center relative flex-col">
+            <div className="w-[95%] my-6 z-10 flex justify-center relative flex-col">
                 <Zoom in={currentIndex >= 2} timeout={300}>
                     <img src={plant} alt="Plant" className="absolute top-22 -left-56" />
                 </Zoom>
@@ -23,16 +24,19 @@ export default function Description(): JSX.Element {
                     <img src={plant2} alt="Plant-2" className="absolute top-32 -right-8" />
                 </Zoom>
                 <Zoom in={currentIndex >= 1} timeout={300}>
-                    <h1 className="font-title text-5xl sm:text-6xl text-neutral font-bold mb-4 drop-shadow-lg text-center lg:text-left">
-                        No es como empiezas sino como continúas
+                    <h1 className="font-title text-5xl sm:text-6xl text-[#6543AD] drop-shadow-lg text-center lg:text-right">
+                        <div className="flex items-center justify-end">
+                            <img src={horizontalDiamond} alt="Horizontal Diamond" className="w-1/12 ml-1 hidden sm:block" />
+                            No es como empiezas sino como continúas
+                        </div>
+                        <div className="float-right h-1 w-[30%] bg-[#6543AD] my-6"></div>
                     </h1>
                 </Zoom>
                 <div className="flex flex-col-reverse lg:flex-row justify-center items-center space-x-8 space-y-5">
                     <Zoom in={currentIndex >= 3} timeout={300}>
                         <div className="relative flex justify-center pt-6">
-                            <div className="border-4 border-white bg-neutral p-10 absolute z-0 -left-8 top-0 bottom-8 w-full"></div>
-                            <h2 className="border-4 border-white bg-[#dce2ff] text-neutral font-body text-lg p-5 z-10 w-full text-justify font-bold">
-                                La obtención de resultados en las sesiones clínicas es un proceso que requiere paciencia y compromiso, tanto por parte
+                            <h2 className="border-4 text-[#6543AD] font-body text-2xl p-5 z-10 w-full text-justify ">
+                                La obtención de resultados en las sesiones clínicas es un <strong>proceso que requiere paciencia y compromiso</strong>, tanto por parte
                                 del terapeuta como del paciente. Es esencial reconocer que el cambio psicológico y emocional a menudo se desarrolla de
                                 manera gradual (no tenemos una barita mágica) y que la evolución del individuo a lo largo del tiempo puede ser un
                                 indicador más fiable de los resultados terapéuticos que expectativas inmediatas. <br /><br />

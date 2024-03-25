@@ -45,19 +45,19 @@ export default function Services(): JSX.Element {
                 <img src={plant2} alt="Plant-2" className="absolute top-32 right-0" />
             </Zoom>
             <Zoom in={currentIndex >= 2} timeout={300}>
-                <h1 ref={ref} className="font-title text-5xl sm:text-6xl text-neutral font-bold mb-4 drop-shadow-lg text-center lg:text-left">
+                <h1 ref={ref} className="font-title text-5xl sm:text-6xl text-[#6543AD] font-bold mb-4 drop-shadow-lg text-center lg:text-left">
                     Tratamientos / Servicios
                 </h1>
             </Zoom>
-            <div className="w-3 bg-neutral h-3 rounded-full hidden lg:block"></div>
+            <div className="w-3 bg-[#6543AD] h-3 rounded-full hidden lg:block"></div>
             <VerticalTimeline
-                lineColor="#7189F8"
+                lineColor="#6543AD"
             >
                 <VerticalTimelineElement
                     className="vertical-timeline-element--work"
                     contentStyle={{ boxShadow: "0 0 10px 5px #6e6e6e" }}
                     contentArrowStyle={{ borderRight: "7px solid  #fff" }}
-                    iconStyle={{ background: "#C6D0FF", color: "#7189f8", borderWidth: "4px", borderColor: "#7189f8" }}
+                    iconStyle={{ background: "#FED8B1", borderWidth: "4px", borderColor: "#6543AD" }}
                 >
                     <div className="flex flex-col justify-center items-center">
                         <h1 className="font-body text-4xl font-bold pb-4" style={{ color: "#000" }}>
@@ -89,7 +89,7 @@ export default function Services(): JSX.Element {
                     className="vertical-timeline-element--work"
                     contentStyle={{ boxShadow: "0 0 10px 5px #6e6e6e" }}
                     contentArrowStyle={{ borderRight: "7px solid  #fff" }}
-                    iconStyle={{ background: "#C6D0FF", color: "#7189f8", borderWidth: "4px", borderColor: "#7189f8" }}
+                    iconStyle={{ background: "#C6D0FF", borderWidth: "4px", borderColor: "#6543AD" }}
                 >
                     <div className="flex flex-col justify-center items-center">
                         <h1 className="font-body text-4xl font-bold pb-4" style={{ color: "#000" }}>
@@ -119,7 +119,7 @@ export default function Services(): JSX.Element {
                     className="vertical-timeline-element--work"
                     contentStyle={{ boxShadow: "0 0 10px 5px #6e6e6e" }}
                     contentArrowStyle={{ borderRight: "7px solid  #fff" }}
-                    iconStyle={{ background: "#C6D0FF", color: "#7189f8", borderWidth: "4px", borderColor: "#7189f8" }}
+                    iconStyle={{ background: "#FED8B1", borderWidth: "4px", borderColor: "#6543AD" }}
                 >
                     <div className="flex flex-col justify-center items-center">
                         <h1 className="font-body text-4xl font-bold pb-4" style={{ color: "#000" }}>
@@ -150,7 +150,7 @@ export default function Services(): JSX.Element {
                     className="vertical-timeline-element--work"
                     contentStyle={{ boxShadow: "0 0 10px 5px #6e6e6e" }}
                     contentArrowStyle={{ borderRight: "7px solid  #fff" }}
-                    iconStyle={{ background: "#C6D0FF", color: "#7189f8", borderWidth: "4px", borderColor: "#7189f8" }}
+                    iconStyle={{ background: "#C6D0FF", borderWidth: "4px", borderColor: "#6543AD" }}
                 >
                     <div className="flex flex-col justify-center items-center">
                         <h1 className="font-body text-4xl font-bold pb-4" style={{ color: "#000" }}>
@@ -181,7 +181,7 @@ export default function Services(): JSX.Element {
                     className="vertical-timeline-element--work"
                     contentStyle={{ boxShadow: "0 0 10px 5px #6e6e6e" }}
                     contentArrowStyle={{ borderRight: "7px solid  #fff" }}
-                    iconStyle={{ background: "#C6D0FF", color: "#7189f8", borderWidth: "4px", borderColor: "#7189f8" }}
+                    iconStyle={{ background: "#FED8B1", borderWidth: "4px", borderColor: "#6543AD" }}
                 >
                     <div className="flex flex-col justify-center items-center">
                         <h1 className="font-body text-4xl font-bold pb-4" style={{ color: "#000" }}>
@@ -213,7 +213,7 @@ export default function Services(): JSX.Element {
                     className="vertical-timeline-element--work"
                     contentStyle={{ boxShadow: "0 0 10px 5px #6e6e6e" }}
                     contentArrowStyle={{ borderRight: "7px solid  #fff" }}
-                    iconStyle={{ background: "#C6D0FF", color: "#7189f8", borderWidth: "4px", borderColor: "#7189f8" }}
+                    iconStyle={{ background: "#C6D0FF", borderWidth: "4px", borderColor: "#6543AD" }}
                 >
                     <div className="flex flex-col justify-center items-center">
                         <h1 className="font-body text-4xl font-bold pb-4" style={{ color: "#000" }}>
@@ -243,7 +243,7 @@ export default function Services(): JSX.Element {
                     className="vertical-timeline-element--work"
                     contentStyle={{ boxShadow: "0 0 10px 5px #6e6e6e" }}
                     contentArrowStyle={{ borderRight: "7px solid  #fff" }}
-                    iconStyle={{ background: "#C6D0FF", color: "#7189f8", borderWidth: "4px", borderColor: "#7189f8" }}
+                    iconStyle={{ background: "#FED8B1", borderWidth: "4px", borderColor: "#6543AD" }}
                 >
                     <div className="flex flex-col justify-center items-center">
                         <h1 className="font-body text-4xl font-bold pb-4" style={{ color: "#000" }}>
@@ -276,7 +276,7 @@ export default function Services(): JSX.Element {
                     className="vertical-timeline-element--work"
                     contentStyle={{ boxShadow: "0 0 10px 5px #6e6e6e" }}
                     contentArrowStyle={{ borderRight: "7px solid  #fff" }}
-                    iconStyle={{ background: "#C6D0FF", color: "#7189f8", borderWidth: "4px", borderColor: "#7189f8" }}
+                    iconStyle={{ background: "#C6D0FF", borderWidth: "4px", borderColor: "#6543AD" }}
                 >
                     <div className="flex flex-col justify-center items-center">
                         <h1 className="font-body text-4xl font-bold pb-4" style={{ color: "#000" }}>
@@ -306,7 +306,7 @@ export default function Services(): JSX.Element {
                     className="vertical-timeline-element--work"
                     contentStyle={{ boxShadow: "0 0 10px 5px #6e6e6e" }}
                     contentArrowStyle={{ borderRight: "7px solid  #fff" }}
-                    iconStyle={{ background: "#C6D0FF", color: "#7189f8", borderWidth: "4px", borderColor: "#7189f8" }}
+                    iconStyle={{ background: "#FED8B1", borderWidth: "4px", borderColor: "#6543AD" }}
                 >
                     <div className="flex flex-col justify-center items-center">
                         <h1 className="font-body text-4xl font-bold pb-4" style={{ color: "#000" }}>
@@ -332,7 +332,7 @@ export default function Services(): JSX.Element {
                     </div>
                 </VerticalTimelineElement>
             </VerticalTimeline>
-            <div className="w-3 bg-neutral h-3 rounded-full hidden lg:block"></div>
+            <div className="w-3 bg-[#6543AD] h-3 rounded-full hidden lg:block"></div>
         </div >
     );
 }

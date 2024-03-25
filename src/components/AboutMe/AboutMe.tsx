@@ -6,6 +6,9 @@ import photo from "../../assets/images/gofran-photo.png";
 import plant from "../../assets/images/plant.png";
 import plant2 from "../../assets/images/plant-2.png";
 import stars from "../../assets/images/stars.png";
+import horizontalDiamond from "../../assets/images/horizontal-diamond.png";
+
+import { useNavigate } from "react-router-dom";
 
 import Zoom from "@mui/material/Zoom";
 
@@ -15,9 +18,19 @@ export default function AboutMe(): JSX.Element {
     const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.15 });
     const currentIndex = useIncrementalIndexEffect(inView, 4, 150);
 
+    const nav = useNavigate();
+
+    const navigate = (path: string): void => {
+        window.scrollTo({
+            top: 0,
+            behavior: "auto",
+        });
+        nav(path);
+    };
+
     return (
         <div className="flex flex-col items-center justify-center">
-            <div ref={ref} className="w-[95%] md:w-[65%] my-6 z-10 flex justify-center relative flex-col">
+            <div ref={ref} className="w-[95%] my-6 z-10 flex justify-center relative flex-col">
                 <Zoom in={currentIndex >= 2} timeout={300}>
                     <img src={plant} alt="Plant" className="absolute top-22 -left-56" />
                 </Zoom>
@@ -28,39 +41,46 @@ export default function AboutMe(): JSX.Element {
                     <img src={stars} alt="Stars" className="absolute w-1/12 top-24 right-0 hidden lg:block" />
                 </Zoom>
                 <Zoom in={currentIndex >= 1} timeout={300}>
-                    <h1 className="font-title text-5xl sm:text-6xl text-neutral font-bold mb-4 drop-shadow-lg text-center lg:text-left">
-                        Sobre mí
+                    <h1 className="font-title text-5xl sm:text-6xl text-[#6543AD]  mb-4 drop-shadow-lg text-center lg:text-left">
+                        <div className="flex items-center">
+                            Hola, soy Gofran Rawas
+                            <img src={horizontalDiamond} alt="Horizontal Diamond" className="w-1/12 ml-1 hidden sm:block" />
+                        </div>
                     </h1>
                 </Zoom>
                 <div className="flex flex-col-reverse lg:flex-row justify-center space-x-8 space-y-5">
                     <Zoom in={currentIndex >= 3} timeout={300}>
-                        <div className="relative flex justify-center pt-6 w-[85%] md:w-2/3 ml-10 sm:ml-0">
-                            <h2 className="text-white font-body text-lg p-5 z-10 w-full text-justify font-bold drop-shadow-md ">
-                                Hola soy Gofran Rawas, psicóloga musulmana, decidí estudiar
-                                psicología por la empatía que siempre tuve con los demás
-                                y por la curiosidad sobre la mente humana. <br /><br />
-                                He nacido y crecido en Barcelona, pero soy de origen Sirio,
-                                por lo tanto, hablo: Castellano, Árabe (sirio y entiendo el
-                                marroquí) y Catalán. <br /><br />
-                                El año pasado decidí empezar en las redes sociales (ya
-                                somos + de 10k), esta aplicación va dedicada a aquellas
-                                personas que quieran conocer más sobre este ámbito, en
-                                la cual, explico algunos trastornos, comparto tips y
-                                herramientas, te invito a visitar mi perfil de Instagram:
-                                @Psicologa Gofran <br /><br />
-                                Estudios: Grado en Psicología, Master en Neuropsicología
-                                y Master en Psicología Infanto - Juvenil.
+                        <div className="relative flex flex-col justify-center pt-6 w-[85%] md:w-2/3 ml-10 sm:ml-0">
+                            <h2 className="text-[#6543AD] font-body text-3xl p-5 z-10 w-full text-justify  drop-shadow-md ">
+                            Soy <strong>psicóloga musulmana</strong>, decidí estudiar psicología por la <strong>empatía</strong> que
+                            siempre tuve con los demás y por la <strong>curiosidad sobre la mente humana.</strong>
+                                <br /><br />
+                            He nacido y crecido en Barcelona, pero soy de origen Sirio, por lo tanto, hablo:
+                            Castellano, Árabe (sirio y entiendo el marroquí) y Catalán.
+                                <br /><br />
+                            El año pasado decidí empezar en las redes sociales (ya somos + de <strong>12k</strong>),
+                            explico algunos trastornos, comparto tips y herramientas, te invito a visitar mi
+                            perfil de <strong><a href="https://www.instagram.com/psicologa_gofran/" target="_blank" rel="noopener noreferrer">Instagram: @Psicologa_Gofran.</a></strong>
+                                <br /><br />
+                            Estudios: Grado en Psicología, Master en Neuropsicología, Master en Psicología
+                            Infanto - Juvenil y Experta en apego y Psicología Perinatal.
+                                <br /><br />
+                            Estoy participando en un <strong>programa de investigación en ECEERS</strong> sobre los
+                            efectos neuropsicológicos de los psicodélicos.
                             </h2>
+                            <div className="flex justify-center mt-4">
+                                <button
+                                    className="font-body text-[#6543AD] text-md sm:text-2xl sm:py-5 px-6 text-center border-4 rounded-3xl bg-[#FED8B1] border-[#FABC7B] w-max"
+                                    onClick={() => navigate("/contacto")}
+                                >
+                                    Pedir Cita
+                                </button>
+                            </div>
                         </div>
                     </Zoom>
                     <Zoom in={currentIndex >= 4} timeout={300}>
                         <div className="flex flex-col w-2/3 md:w-1/3 h-auto">
-                            <img src={photo} alt="Gofran photo" />
-                            <h2 className="border-8 border-white bg-neutral p-4 font-body text-white font-bold text-md  mb-5">
-                                Enhorabuena por estar aquí, si has decidido
-                                buscar una ayuda profesional, ya has hecho el
-                                paso más difícil
-                            </h2>
+                            <img src={photo} alt="Gofran photo" className="transform -scale-x-100" />
                         </div>
                     </Zoom>
                 </div>
