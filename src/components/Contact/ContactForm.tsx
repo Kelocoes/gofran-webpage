@@ -60,7 +60,7 @@ export default function ContactForm(): JSX.Element {
                     <h1 className="font-title text-5xl sm:text-6xl text-[#6543AD] drop-shadow-lg text-center lg:text-right">
                         <div className="flex items-center justify-end">
                             <img src={horizontalDiamond} alt="Horizontal Diamond" className="w-1/12 ml-1 hidden sm:block" />
-                            Pasos a seguir para la Reserva
+                            <h1> Pasos a seguir para la&nbsp;<strong>Reserva</strong> </h1>
                         </div>
                         <div className="float-right h-1 w-[30%] bg-[#6543AD] my-6"></div>
                     </h1>
@@ -86,7 +86,7 @@ export default function ContactForm(): JSX.Element {
                 <Zoom in={currentIndex2 >= 1} timeout={300}>
                     <h1 className="font-title text-5xl sm:text-6xl text-[#6543AD]  mb-4 drop-shadow-lg text-center lg:text-left">
                         <div className="flex items-center">
-                            Contacta conmigo
+                            <strong>Contacta</strong>&nbsp;conmigo
                             <img src={horizontalDiamond} alt="Horizontal Diamond" className="w-1/12 ml-1 hidden sm:block" />
                         </div>
                         <div className="h-1 w-[30%] bg-[#6543AD] my-6" />

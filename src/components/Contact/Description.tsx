@@ -35,7 +35,7 @@ export default function Description(): JSX.Element {
                 <div className="flex flex-col-reverse lg:flex-row justify-center items-center space-x-8 space-y-5">
                     <Zoom in={currentIndex >= 3} timeout={300}>
                         <div className="relative flex justify-center pt-6">
-                            <h2 className="border-4 text-[#6543AD] font-body text-2xl p-5 z-10 w-full text-justify ">
+                            <h2 className="border-4 text-[#6543AD] font-body text-lg sm:text-2xl p-5 z-10 w-full text-justify ">
                                 La obtención de resultados en las sesiones clínicas es un <strong>proceso que requiere paciencia y compromiso</strong>, tanto por parte
                                 del terapeuta como del paciente. Es esencial reconocer que el cambio psicológico y emocional a menudo se desarrolla de
                                 manera gradual (no tenemos una barita mágica) y que la evolución del individuo a lo largo del tiempo puede ser un

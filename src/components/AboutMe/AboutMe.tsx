@@ -51,7 +51,7 @@ export default function AboutMe(): JSX.Element {
                 <div className="flex flex-col-reverse lg:flex-row justify-center space-x-8 space-y-5">
                     <Zoom in={currentIndex >= 3} timeout={300}>
                         <div className="relative flex flex-col justify-center pt-6 w-[85%] md:w-2/3 ml-10 sm:ml-0">
-                            <h2 className="text-[#6543AD] font-body text-3xl p-5 z-10 w-full text-justify  drop-shadow-md ">
+                            <h2 className="text-[#6543AD] font-body text-lg sm:text-3xl p-5 z-10 w-full text-justify  drop-shadow-md ">
                             Soy <strong>psicóloga musulmana</strong>, decidí estudiar psicología por la <strong>empatía</strong> que
                             siempre tuve con los demás y por la <strong>curiosidad sobre la mente humana.</strong>
                                 <br /><br />
