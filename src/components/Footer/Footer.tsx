@@ -4,6 +4,7 @@ import logo from "../../assets/images/logo.png";
 
 import TelegramIcon from "@mui/icons-material/Telegram";
 import InstagramIcon from "@mui/icons-material/Instagram";
+import LinkedinIcon from "@mui/icons-material/LinkedIn";
 import threads from "../../assets/images/threads-icon.svg";
 import tiktok from "../../assets/images/tiktok-color-icon.svg";
 
@@ -32,6 +33,9 @@ export default function Footer(): JSX.Element {
                 </a>
                 <a href="https://www.instagram.com/psicologa_gofran/" target="_blank" rel="noopener noreferrer">
                     <InstagramIcon sx={{ fontSize: 34, "&:hover": { transform: "scale(1.5)" }, transition: "transform  0.2s ease" }} />
+                </a>
+                <a href="https://www.linkedin.com/in/gofran-rawas-karbouje-0519b5228/" target="_blank" rel="noopener noreferrer">
+                    <LinkedinIcon sx={{ fontSize: 34, "&:hover": { transform: "scale(1.5)" }, transition: "transform  0.2s ease" }} />
                 </a>
             </div>
         </div>
