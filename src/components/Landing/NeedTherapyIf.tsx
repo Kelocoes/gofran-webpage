@@ -15,7 +15,7 @@ import { useIncrementalIndexEffect } from "../../utils/UseIncrementalEffect";
 
 export default function NeedTherapyIf(): JSX.Element {
     const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.15 });
-    const currentIndex = useIncrementalIndexEffect(inView, 11, 150);
+    const currentIndex = useIncrementalIndexEffect(inView, 12, 150);
     const nav = useNavigate();
 
     const navigate = (path: string): void => {
@@ -25,7 +25,7 @@ export default function NeedTherapyIf(): JSX.Element {
         });
         nav(path);
     };
-    
+
     const phrases = [
         "Quieres empieza a trabajar en ti, crecer y florecer.",
         "No sabes como establecer vínculos con los demás.",
@@ -77,14 +77,16 @@ export default function NeedTherapyIf(): JSX.Element {
                                 </div>
                             </Zoom>
                         ))}
-                        <div className="flex justify-center mt-4">
-                            <button
-                                className="font-body text-[#6543AD] text-md sm:text-2xl sm:py-5 px-6 text-center border-4 rounded-3xl bg-[#FED8B1] border-[#FABC7B] w-max sm:mr-64"
-                                onClick={() => navigate("/contacto")}
-                            >
-                                Pedir Cita
-                            </button>
-                        </div>
+                        <Zoom in={currentIndex >= 12} timeout={300}>
+                            <div className="flex justify-center mt-4">
+                                <button
+                                    className="font-body text-[#6543AD] text-md sm:text-2xl sm:py-5 px-6 text-center border-4 rounded-3xl bg-[#FED8B1] border-[#FABC7B] w-max sm:mr-64"
+                                    onClick={() => navigate("/contacto")}
+                                >
+                                    Pedir Cita
+                                </button>
+                            </div>
+                        </Zoom>
                     </div>
                 </div>
             </div>
