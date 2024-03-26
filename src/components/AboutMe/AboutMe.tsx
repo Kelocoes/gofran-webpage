@@ -70,7 +70,7 @@ export default function AboutMe(): JSX.Element {
                             </h2>
                             <div className="flex justify-center mt-4">
                                 <button
-                                    className="font-body text-[#6543AD] text-md sm:text-2xl sm:py-5 px-6 text-center border-4 rounded-3xl bg-[#FED8B1] border-[#FABC7B] w-max"
+                                    className="font-body text-[#6543AD] text-md sm:text-2xl py-3 sm:py-5 px-6 text-center border-4 rounded-3xl bg-[#FED8B1] border-[#FABC7B] w-max"
                                     onClick={() => navigate("/contacto")}
                                 >
                                     Pedir Cita

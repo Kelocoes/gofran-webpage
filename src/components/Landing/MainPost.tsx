@@ -14,7 +14,7 @@ export default function MainPost(): JSX.Element {
 
     return (
         <div ref={ref} className="w-[95%] my-6 z-10">
-            <div className="absolute right-0 w-1/2 sm:w-1/3">
+            <div className="absolute top-36 right-0 w-1/2 sm:w-1/3">
                 <Zoom in={currentIndex >= 4} timeout={300}>
                     <img src={gofranMain} alt="Main post"/>
                 </Zoom>

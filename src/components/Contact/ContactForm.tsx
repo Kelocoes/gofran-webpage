@@ -16,6 +16,13 @@ import { useEnv } from "../EnvContext";
 
 import { useForm } from "react-hook-form";
 
+type FormValues = {
+    name: string;
+    email: string;
+    cellphone: string;
+    subject: string;
+    message: string;
+};
 
 export default function ContactForm(): JSX.Element {
     const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.15 });
@@ -36,20 +43,27 @@ export default function ContactForm(): JSX.Element {
     ];
 
     const sendEmail = (data: object): void => {
-        console.log(data);
 
-        const currentForm = form.current;
-        if (currentForm == null) return;
+        try {
+            const dataTyped = data as FormValues;
+            console.log(data);
 
-        emailjs.sendForm(serviceId, templateId, currentForm, mailPublicKey)
-            .then((result) => {
-                console.log(result.text);
-            }, (error) => {
-                console.log(error.text);
-            });
+            const currentForm = form.current;
+            if (currentForm == null || dataTyped.subject === "Horario") return;
+            reset();
+            setIsActive(false);
+            
+            emailjs.sendForm(serviceId, templateId, currentForm, mailPublicKey)
+                .then((result) => {
+                    console.log(result.text);
+                }, (error) => {
+                    console.log(error.text);
+                });
+            
+        } catch (error) {
+            console.error(error);
+        }
 
-        reset();
-        setIsActive(false);
     };
 
 
@@ -104,8 +118,12 @@ export default function ContactForm(): JSX.Element {
                                         <input type="text" placeholder="Nombre" className="input bg-white w-full max-w-sm" maxLength={40} {...registro("name", { required: true })} />
                                         <input type="text" placeholder="Email" className="input bg-white w-full max-w-sm" maxLength={40} {...registro("email", { required: true })} />
                                         <input type="text" placeholder="Teléfono" className="input bg-white w-full max-w-sm" maxLength={20} {...registro("cellphone", { required: true })} />
-                                        <input type="text" placeholder="Asunto" className="input bg-white w-full max-w-sm" maxLength={20} {...registro("subject", { required: true })} />
-                                        <textarea className="textarea textarea-secondary bg-white w-full max-w-sm" placeholder="Descripción" {...registro("message", { required: true })}></textarea>
+                                        <select className="select bg-white w-full max-w-sm" {...registro("subject", { required: true })}>
+                                            <option disabled selected>Horario</option>
+                                            <option>Mañana</option>
+                                            <option>Tarde</option>
+                                        </select>
+                                        <textarea className="textarea bg-white w-full max-w-sm" placeholder="Descripción" {...registro("message", { required: true })}></textarea>
                                         <button
                                             className={`btn ${!isActive ? "btn-disabled" : ""} btn-secondary`}
                                             tabIndex={-1}
