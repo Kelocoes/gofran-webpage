@@ -39,7 +39,7 @@ export default function NeedTherapyIf(): JSX.Element {
     ];
 
     return (
-        <div ref={ref} className="w-[95%] my-6 z-10 flex justify-center relative mt-0 sm:mt-24">
+        <div ref={ref} className="w-[95%] my-6 z-10 flex justify-center relative mt-0 sm:mt-32">
             <Zoom in={currentIndex >= 2} timeout={300}>
                 <img src={plant} alt="Plant" className="absolute top-22 -left-56 md:-left-24" />
             </Zoom>
@@ -63,7 +63,7 @@ export default function NeedTherapyIf(): JSX.Element {
                 <div className="flex flex-row items-center">
                     <Zoom in={currentIndex >= 3} timeout={300}>
                         <div className="flex items-center justify-end">
-                            <img src={lavanda} alt="Lavanda" className="w-[90%] hidden sm:block" />
+                            <img src={lavanda} alt="Lavanda" className="w-[80%] hidden sm:block" />
                         </div>
                     </Zoom>
                     <div className="mt-8 sm:ml-32 flex flex-col justify-center">
@@ -71,7 +71,7 @@ export default function NeedTherapyIf(): JSX.Element {
                             <Zoom in={currentIndex >= 3 + index} timeout={300} key={index}>
                                 <div className="flex items-center">
                                     <img src={orangeStar} alt="Orange Star" className="w-[5%]" />
-                                    <h2 className="font-body text-[#6543AD] text-md sm:text-3xl ml-2">
+                                    <h2 className="font-body text-[#6543AD] text-md sm:text-2xl ml-2">
                                         {phrase}
                                     </h2>
                                 </div>
