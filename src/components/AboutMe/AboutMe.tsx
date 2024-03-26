@@ -10,7 +10,7 @@ import horizontalDiamond from "../../assets/images/horizontal-diamond.png";
 
 import { useNavigate } from "react-router-dom";
 
-import Zoom from "@mui/material/Zoom";
+import Grow from "@mui/material/Grow";
 
 import { useIncrementalIndexEffect } from "../../utils/UseIncrementalEffect";
 
@@ -29,29 +29,29 @@ export default function AboutMe(): JSX.Element {
     };
 
     return (
-        <div className="flex flex-col items-center justify-center">
+        <div className="flex flex-col items-center justify-center mt-10">
             <div ref={ref} className="w-[95%] my-6 z-10 flex justify-center relative flex-col">
-                <Zoom in={currentIndex >= 2} timeout={300}>
+                <Grow in={currentIndex >= 2} timeout={300}>
                     <img src={plant} alt="Plant" className="absolute top-22 -left-56" />
-                </Zoom>
-                <Zoom in={currentIndex >= 2} timeout={300}>
+                </Grow>
+                <Grow in={currentIndex >= 2} timeout={300}>
                     <img src={plant2} alt="Plant-2" className="absolute top-32 right-0" />
-                </Zoom>
-                <Zoom in={currentIndex >= 2} timeout={300}>
+                </Grow>
+                <Grow in={currentIndex >= 2} timeout={300}>
                     <img src={stars} alt="Stars" className="absolute w-1/12 top-24 right-0 hidden lg:block" />
-                </Zoom>
-                <Zoom in={currentIndex >= 1} timeout={300}>
+                </Grow>
+                <Grow in={currentIndex >= 1} timeout={300}>
                     <h1 className="font-title text-5xl sm:text-6xl text-[#6543AD]  mb-4 drop-shadow-lg text-center lg:text-left">
                         <div className="flex items-center">
                             Hola, soy Gofran Rawas
                             <img src={horizontalDiamond} alt="Horizontal Diamond" className="w-1/12 ml-1 hidden sm:block" />
                         </div>
                     </h1>
-                </Zoom>
-                <div className="flex flex-col-reverse lg:flex-row justify-center space-x-8 space-y-5">
-                    <Zoom in={currentIndex >= 3} timeout={300}>
-                        <div className="relative flex flex-col justify-center pt-6 w-[85%] md:w-2/3 ml-10 sm:ml-0">
-                            <h2 className="text-[#6543AD] font-body text-lg sm:text-3xl p-5 z-10 w-full text-justify  drop-shadow-md ">
+                </Grow>
+                <div className="flex flex-col-reverse lg:flex-row justify-center space-y-5">
+                    <Grow in={currentIndex >= 3} timeout={300}>
+                        <div className="relative flex flex-col justify-center pt-6 w-[85%] ml-10 sm:ml-0">
+                            <h2 className="text-[#6543AD] font-body text-lg sm:text-2xl p-5 z-10 w-full text-justify  drop-shadow-md ">
                             Soy <strong>psicóloga musulmana</strong>, decidí estudiar psicología por la <strong>empatía</strong> que
                             siempre tuve con los demás y por la <strong>curiosidad sobre la mente humana.</strong>
                                 <br /><br />
@@ -77,12 +77,12 @@ export default function AboutMe(): JSX.Element {
                                 </button>
                             </div>
                         </div>
-                    </Zoom>
-                    <Zoom in={currentIndex >= 4} timeout={300}>
-                        <div className="flex flex-col w-2/3 md:w-1/3 h-auto">
+                    </Grow>
+                    <Grow in={currentIndex >= 4} timeout={300}>
+                        <div className="flex flex-col w-2/3 md:w-1/3 h-auto sm:-ml-44">
                             <img src={photo} alt="Gofran photo" className="transform -scale-x-100" />
                         </div>
-                    </Zoom>
+                    </Grow>
                 </div>
             </div>
         </div>

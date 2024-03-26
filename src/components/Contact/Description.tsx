@@ -6,7 +6,7 @@ import plant from "../../assets/images/plant.png";
 import plant2 from "../../assets/images/plant-2.png";
 import horizontalDiamond from "../../assets/images/horizontal-diamond.png";
 
-import Zoom from "@mui/material/Zoom";
+import Grow from "@mui/material/Grow";
 
 import { useIncrementalIndexEffect } from "../../utils/UseIncrementalEffect";
 
@@ -17,13 +17,13 @@ export default function Description(): JSX.Element {
     return (
         <div ref={ref} className="flex flex-col items-center justify-center">
             <div className="w-[95%] my-6 z-10 flex justify-center relative flex-col">
-                <Zoom in={currentIndex >= 2} timeout={300}>
+                <Grow in={currentIndex >= 2} timeout={300}>
                     <img src={plant} alt="Plant" className="absolute top-22 -left-56" />
-                </Zoom>
-                <Zoom in={currentIndex >= 2} timeout={300}>
+                </Grow>
+                <Grow in={currentIndex >= 2} timeout={300}>
                     <img src={plant2} alt="Plant-2" className="absolute top-32 -right-8" />
-                </Zoom>
-                <Zoom in={currentIndex >= 1} timeout={300}>
+                </Grow>
+                <Grow in={currentIndex >= 1} timeout={300}>
                     <h1 className="font-title text-5xl sm:text-6xl text-[#6543AD] drop-shadow-lg text-center lg:text-right">
                         <div className="flex items-center justify-end">
                             <img src={horizontalDiamond} alt="Horizontal Diamond" className="w-1/12 ml-1 hidden sm:block" />
@@ -31,9 +31,9 @@ export default function Description(): JSX.Element {
                         </div>
                         <div className="float-right h-1 w-[30%] bg-[#6543AD] my-6"></div>
                     </h1>
-                </Zoom>
+                </Grow>
                 <div className="flex flex-col-reverse lg:flex-row justify-center items-center space-x-8 space-y-5">
-                    <Zoom in={currentIndex >= 3} timeout={300}>
+                    <Grow in={currentIndex >= 3} timeout={300}>
                         <div className="relative flex justify-center pt-6">
                             <h2 className="border-4 text-[#6543AD] font-body text-lg sm:text-2xl p-5 z-10 w-full text-justify ">
                                 La obtención de resultados en las sesiones clínicas es un <strong>proceso que requiere paciencia y compromiso</strong>, tanto por parte
@@ -55,7 +55,7 @@ export default function Description(): JSX.Element {
                                 se desarrolle de manera orgánica y sostenible a lo largo plazo.
                             </h2>
                         </div>
-                    </Zoom>
+                    </Grow>
                 </div>
             </div>
         </div>

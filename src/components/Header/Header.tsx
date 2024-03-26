@@ -3,7 +3,7 @@ import React from "react";
 import logo from "../../assets/images/logo.png";
 
 import useMediaQuery from "@mui/material/useMediaQuery";
-import Zoom from "@mui/material/Zoom";
+import Grow from "@mui/material/Grow";
 import { Accordion, AccordionSummary, MenuItem } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
@@ -24,7 +24,7 @@ export default function Header(): JSX.Element {
 
     return (
         <div className="flex items-center justify-center pt-2 z-20 mx-10 fixed">
-            <Zoom in={true} timeout={300}>
+            <Grow in={true} timeout={300}>
                 {matches ?
                     <ul className="menu menu-vertical sm:menu-horizontal rounded-box bg-white text-slate-600 lg:w-max items-center shadow-lg py-1">
                         <button onClick={() => navigate("/")}><img src={logo} alt="Logo Psic Gofran" className="w-auto h-14 p-0 mr-2" /></button>
@@ -64,7 +64,7 @@ export default function Header(): JSX.Element {
                         </div>
                     </Accordion>
                 }
-            </Zoom>
+            </Grow>
         </div>
     );
 }

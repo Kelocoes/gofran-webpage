@@ -2,7 +2,7 @@ import React from "react";
 
 import { useInView } from "react-intersection-observer";
 
-import Zoom from "@mui/material/Zoom";
+import Grow from "@mui/material/Grow";
 
 import { useIncrementalIndexEffect } from "../../utils/UseIncrementalEffect";
 
@@ -68,9 +68,9 @@ export default function ContactForm(): JSX.Element {
 
 
     return (
-        <div className="flex flex-col items-center justify-center">
+        <div className="flex flex-col items-center justify-center mt-10">
             <div ref={ref} className="w-[95%] my-6 z-10 flex justify-center relative flex-col">
-                <Zoom in={currentIndex >= 1} timeout={300}>
+                <Grow in={currentIndex >= 1} timeout={300}>
                     <h1 className="font-title text-5xl sm:text-6xl text-[#6543AD] drop-shadow-lg text-center lg:text-right">
                         <div className="flex items-center justify-end">
                             <img src={horizontalDiamond} alt="Horizontal Diamond" className="w-1/12 ml-1 hidden sm:block" />
@@ -78,26 +78,26 @@ export default function ContactForm(): JSX.Element {
                         </div>
                         <div className="float-right h-1 w-[30%] bg-[#6543AD] my-6"></div>
                     </h1>
-                </Zoom>
+                </Grow>
                 <div className="flex flex-col lg:flex-row justify-center items-center space-x-8 space-y-5 w-[90%]">
-                    <Zoom in={currentIndex >= 2} timeout={300}>
+                    <Grow in={currentIndex >= 2} timeout={300}>
                         <div className="mt-8 sm:ml-32 flex flex-col justify-center">
                             {phrases.map((phrase, index) => (
-                                <Zoom in={currentIndex >= 2 + index} timeout={300} key={index}>
+                                <Grow in={currentIndex >= 2 + index} timeout={300} key={index}>
                                     <div className="flex items-center mb-2">
                                         <img src={orangeStar} alt="Orange Star" className="w-[3%]" />
                                         <h2 className="font-body text-[#6543AD] text-md sm:text-3xl ml-3 ">
                                             <strong>{phrase.split(":")[0]}</strong>:{phrase.split(":")[1]}
                                         </h2>
                                     </div>
-                                </Zoom>
+                                </Grow>
                             ))}
                         </div>
-                    </Zoom>
+                    </Grow>
                 </div>
             </div>
             <div ref={ref2} className="w-[95%] my-6 z-10 flex justify-center relative flex-col">
-                <Zoom in={currentIndex2 >= 1} timeout={300}>
+                <Grow in={currentIndex2 >= 1} timeout={300}>
                     <h1 className="font-title text-5xl sm:text-6xl text-[#6543AD]  mb-4 drop-shadow-lg text-center lg:text-left">
                         <div className="flex items-center">
                             <strong>Contacta</strong>&nbsp;conmigo
@@ -105,9 +105,9 @@ export default function ContactForm(): JSX.Element {
                         </div>
                         <div className="h-1 w-[30%] bg-[#6543AD] my-6" />
                     </h1>
-                </Zoom>
+                </Grow>
                 <div className="flex flex-col lg:flex-row items-center justify-center space-x-0 lg:space-x-16 space-y-5 lg:space-y-0">
-                    <Zoom in={currentIndex2 >= 2} timeout={300}>
+                    <Grow in={currentIndex2 >= 2} timeout={300}>
                         <div className="relative flex justify-center pt-6 w-full md:w-2/3 lg:w-[40%] xl:w-[45%]">
                             <div className="border-4 border-white bg-[#FED8B1] text-[#6543AD] font-body text-xl  p-5 z-10 w-[80%] text-center">
                                 <h2 className="font-body text-4xl py-2">
@@ -136,7 +136,7 @@ export default function ContactForm(): JSX.Element {
                                 </form>
                             </div>
                         </div>
-                    </Zoom>
+                    </Grow>
                 </div>
             </div>
         </div>
