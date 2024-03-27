@@ -37,7 +37,7 @@ export default function Services(): JSX.Element {
     };
 
     return (
-        <div className="z-10 mt-6 sm:mt-0 sm:p-6 flex justify-center items-center flex-col relative">
+        <div className="z-10 mt-6 sm:mt-10 sm:p-6 flex justify-center items-center flex-col relative">
             <Grow in={currentIndex >= 1} timeout={300}>
                 <img src={plant} alt="Plant" className="absolute top-48 -left-56 md:-left-24" />
             </Grow>
