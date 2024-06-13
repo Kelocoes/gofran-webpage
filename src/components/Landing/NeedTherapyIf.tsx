@@ -53,7 +53,7 @@ export default function NeedTherapyIf(): JSX.Element {
                     </div>
                 </Grow>
                 <Grow in={currentIndex >= 1} timeout={300}>
-                    <h1 className="font-title text-4xl sm:text-6xl text-[#6543AD] font-bold mb-4 drop-shadow-lg text-left lg:text-right">
+                    <h1 className="font-title text-4xl sm:text-5xl text-[#6543AD] font-bold mt-10 -mb-6 drop-shadow-lg text-left lg:text-right">
                         <div className="flex items-center justify-end">
                             <img src={horizontalDiamond} alt="Horizontal Diamond" className="w-1/12 ml-1 hidden sm:block" />
                             Situaciones en las que puedo ayudarte

@@ -16,7 +16,7 @@ export default function Description(): JSX.Element {
 
     return (
         <div ref={ref} className="flex flex-col items-center justify-center">
-            <div className="w-[95%] my-6 z-10 flex justify-center relative flex-col">
+            <div className="w-[80%] my-6 z-10 flex justify-center relative flex-col">
                 <Grow in={currentIndex >= 2} timeout={300}>
                     <img src={plant} alt="Plant" className="absolute top-22 -left-56" />
                 </Grow>
@@ -24,7 +24,7 @@ export default function Description(): JSX.Element {
                     <img src={plant2} alt="Plant-2" className="absolute top-32 -right-8" />
                 </Grow>
                 <Grow in={currentIndex >= 1} timeout={300}>
-                    <h1 className="font-title text-5xl sm:text-6xl text-[#6543AD] drop-shadow-lg text-center lg:text-right">
+                    <h1 className="font-title text-5xl sm:text-5xl text-[#6543AD] drop-shadow-lg text-center lg:text-right">
                         <div className="flex items-center justify-end">
                             <img src={horizontalDiamond} alt="Horizontal Diamond" className="w-1/12 ml-1 hidden sm:block" />
                             No es como empiezas sino como continúas
@@ -35,7 +35,7 @@ export default function Description(): JSX.Element {
                 <div className="flex flex-col-reverse lg:flex-row justify-center items-center space-x-8 space-y-5">
                     <Grow in={currentIndex >= 3} timeout={300}>
                         <div className="relative flex justify-center pt-6">
-                            <h2 className="border-4 text-[#6543AD] font-body text-lg sm:text-2xl p-5 z-10 w-full text-justify ">
+                            <h2 className="border-4 text-[#6543AD] font-body text-lg sm:text-lg p-5 z-10 w-full text-justify ">
                                 La obtención de resultados en las sesiones clínicas es un <strong>proceso que requiere paciencia y compromiso</strong>, tanto por parte
                                 del terapeuta como del paciente. Es esencial reconocer que el cambio psicológico y emocional a menudo se desarrolla de
                                 manera gradual (no tenemos una barita mágica) y que la evolución del individuo a lo largo del tiempo puede ser un

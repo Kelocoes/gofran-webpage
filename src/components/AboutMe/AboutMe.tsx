@@ -30,7 +30,7 @@ export default function AboutMe(): JSX.Element {
 
     return (
         <div className="flex flex-col items-center justify-center mt-10">
-            <div ref={ref} className="w-[95%] my-6 z-10 flex justify-center relative flex-col">
+            <div ref={ref} className="w-[90%] my-6 z-10 flex justify-center relative flex-col">
                 <Grow in={currentIndex >= 2} timeout={300}>
                     <img src={plant} alt="Plant" className="absolute top-22 -left-56" />
                 </Grow>
@@ -41,17 +41,17 @@ export default function AboutMe(): JSX.Element {
                     <img src={stars} alt="Stars" className="absolute w-1/12 top-24 right-0 hidden lg:block" />
                 </Grow>
                 <Grow in={currentIndex >= 1} timeout={300}>
-                    <h1 className="font-title text-5xl sm:text-6xl text-[#6543AD]  mb-4 drop-shadow-lg text-center lg:text-left">
+                    <h1 className="font-title text-5xl sm:text-5xl text-[#6543AD] drop-shadow-lg text-center lg:text-left">
                         <div className="flex items-center">
                             Hola, soy Gofran Rawas
                             <img src={horizontalDiamond} alt="Horizontal Diamond" className="w-1/12 ml-1 hidden sm:block" />
                         </div>
                     </h1>
                 </Grow>
-                <div className="flex flex-col-reverse lg:flex-row justify-center space-y-5">
+                <div className="flex flex-col-reverse lg:flex-row justify-center">
                     <Grow in={currentIndex >= 3} timeout={300}>
                         <div className="relative flex flex-col justify-center pt-6 w-[85%] ml-10 sm:ml-0">
-                            <h2 className="text-[#6543AD] font-body text-lg sm:text-2xl p-5 z-10 w-full text-justify  drop-shadow-md ">
+                            <h2 className="text-[#6543AD] font-body text-lg sm:text-xl p-5 z-10 w-full text-justify  drop-shadow-md ">
                             Soy <strong>psicóloga musulmana</strong>, decidí estudiar psicología por la <strong>empatía</strong> que
                             siempre tuve con los demás y por la <strong>curiosidad sobre la mente humana.</strong>
                                 <br /><br />
@@ -70,7 +70,7 @@ export default function AboutMe(): JSX.Element {
                             </h2>
                             <div className="flex justify-center mt-4">
                                 <button
-                                    className="font-body text-[#6543AD] text-md sm:text-2xl py-3 sm:py-5 px-6 text-center border-4 rounded-3xl bg-[#FED8B1] border-[#FABC7B] w-max"
+                                    className="font-body text-[#6543AD] text-md sm:text-xl py-3 sm:py-5 px-6 text-center border-4 rounded-3xl bg-[#FED8B1] border-[#FABC7B] w-max"
                                     onClick={() => navigate("/contacto")}
                                 >
                                     Pedir Cita

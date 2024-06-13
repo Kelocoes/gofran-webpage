@@ -60,11 +60,11 @@ export default function Services(): JSX.Element {
                     iconStyle={{ background: "#FED8B1", borderWidth: "4px", borderColor: "#6543AD" }}
                 >
                     <div className="flex flex-col justify-center items-center">
-                        <h1 className="font-body text-4xl font-bold pb-4" style={{ color: "#000" }}>
+                        <h1 className="font-body text-4xl font-bold pb-4" style={{ color: "#475569" }}>
                             Ansiedad
                         </h1>
                         <div>
-                            <h2 className="font-body text-left" style={{ color: "#000", fontSize: "17px" }} >
+                            <h2 className="font-body text-left" style={{ color: "#475569", fontSize: "17px" }} >
                                 La ansiedad es una <strong>respuesta natural</strong> del
                                 organismo ante situaciones percibidas
                                 como amenazantes o desafiantes. Es una
@@ -72,7 +72,7 @@ export default function Services(): JSX.Element {
                                 preocupación, nerviosismo o inquietud.
                             </h2>
                             <img src={anxiety} alt="Anxiety" className="float-end w-1/3" />
-                            <h2 className="font-body text-left" style={{ color: "#000", fontSize: "17px" }}>
+                            <h2 className="font-body text-left" style={{ color: "#475569", fontSize: "17px" }}>
                                 <strong>Causas:</strong> <br />
                                 Las causas pueden ser debido a dos factores:
                                 hereditarias o por causas externas. <br />
@@ -92,18 +92,18 @@ export default function Services(): JSX.Element {
                     iconStyle={{ background: "#C6D0FF", borderWidth: "4px", borderColor: "#6543AD" }}
                 >
                     <div className="flex flex-col justify-center items-center">
-                        <h1 className="font-body text-4xl font-bold pb-4" style={{ color: "#000" }}>
+                        <h1 className="font-body text-4xl font-bold pb-4" style={{ color: "#475569" }}>
                             Depresión
                         </h1>
                         <div>
-                            <h2 className="font-body text-right" style={{ color: "#000", fontSize: "17px" }} >
+                            <h2 className="font-body text-right" style={{ color: "#475569", fontSize: "17px" }} >
                                 La depresión es un trastorno mental
                                 caracterizada por una <strong>tristeza persistente</strong> y
                                 por pérdidas de interés en las actividades
                                 con las que disfrutabas.
                             </h2>
                             <img src={brainpuzzlecolor} alt="Depression image" className="float-start w-1/3" />
-                            <h2 className="font-body text-right" style={{ color: "#000", fontSize: "17px" }}>
+                            <h2 className="font-body text-right" style={{ color: "#475569", fontSize: "17px" }}>
                                 <strong>Causas:</strong> <br />
                                 La depresión es el resultado de las
                                 interacciones entre los factores sociales,
@@ -122,18 +122,18 @@ export default function Services(): JSX.Element {
                     iconStyle={{ background: "#FED8B1", borderWidth: "4px", borderColor: "#6543AD" }}
                 >
                     <div className="flex flex-col justify-center items-center">
-                        <h1 className="font-body text-4xl font-bold pb-4" style={{ color: "#000" }}>
+                        <h1 className="font-body text-4xl font-bold pb-4" style={{ color: "#475569" }}>
                             Autoestima
                         </h1>
                         <div>
-                            <h2 className="font-body text-left" style={{ color: "#000", fontSize: "17px" }} >
+                            <h2 className="font-body text-left" style={{ color: "#475569", fontSize: "17px" }} >
                                 La autoestima es la valoración y percepción
                                 general que tenemos de <strong>nosotros mismos</strong>{" "}
                                 y en la manera en que enfrentamos los
                                 desafíos de la vida.
                             </h2>
                             <img src={selfhug} alt="Self hug" className="float-end w-1/3" />
-                            <h2 className="font-body text-left" style={{ color: "#000", fontSize: "17px" }}>
+                            <h2 className="font-body text-left" style={{ color: "#475569", fontSize: "17px" }}>
                                 <strong>Causas:</strong> <br />
                                 Críticas Constantes o Desaprobación,
                                 Compararse conotros y rechazos repetidos. <br />
@@ -153,11 +153,11 @@ export default function Services(): JSX.Element {
                     iconStyle={{ background: "#C6D0FF", borderWidth: "4px", borderColor: "#6543AD" }}
                 >
                     <div className="flex flex-col justify-center items-center">
-                        <h1 className="font-body text-4xl font-bold pb-4" style={{ color: "#000" }}>
+                        <h1 className="font-body text-4xl font-bold pb-4" style={{ color: "#475569" }}>
                             TDAH
                         </h1>
                         <div>
-                            <h2 className="font-body text-right" style={{ color: "#000", fontSize: "17px" }} >
+                            <h2 className="font-body text-right" style={{ color: "#475569", fontSize: "17px" }} >
                                 Trastorno por Déficit de Atención e
                                 Hiperactividad (TDAH) es una condición
                                 neurobiologica que afecta la capacidad de
@@ -166,7 +166,7 @@ export default function Services(): JSX.Element {
                                 actividad motora.
                             </h2>
                             <img src={braincolor} alt="Brain color image" className="float-start w-1/3" />
-                            <h2 className="font-body text-right" style={{ color: "#000", fontSize: "17px" }}>
+                            <h2 className="font-body text-right" style={{ color: "#475569", fontSize: "17px" }}>
                                 <strong>Causas:</strong> <br />
                                 Genéticas,factores prenatales o perinatales,
                                 factores sociales y ambientales. <br />
@@ -184,18 +184,18 @@ export default function Services(): JSX.Element {
                     iconStyle={{ background: "#FED8B1", borderWidth: "4px", borderColor: "#6543AD" }}
                 >
                     <div className="flex flex-col justify-center items-center">
-                        <h1 className="font-body text-4xl font-bold pb-4" style={{ color: "#000" }}>
+                        <h1 className="font-body text-4xl font-bold pb-4" style={{ color: "#475569" }}>
                             Fobias
                         </h1>
                         <div>
-                            <h2 className="font-body text-left" style={{ color: "#000", fontSize: "17px" }} >
+                            <h2 className="font-body text-left" style={{ color: "#475569", fontSize: "17px" }} >
                                 La fobia es un trastorno de ansiedad del{" "}
                                 <strong>miedo intenso</strong> hacia un objeto, situación o
                                 actividad específica.Esta reacción de temor
                                 va más allá de lo normal.
                             </h2>
                             <img src={fobia} alt="Fobia" className="float-end w-1/3" />
-                            <h2 className="font-body text-left" style={{ color: "#000", fontSize: "17px" }}>
+                            <h2 className="font-body text-left" style={{ color: "#475569", fontSize: "17px" }}>
                                 <strong>Causas:</strong> <br />
                                 Experiencias Traumáticas, Aprendizaje
                                 por Observación, Experiencias Negativas y
@@ -216,17 +216,17 @@ export default function Services(): JSX.Element {
                     iconStyle={{ background: "#C6D0FF", borderWidth: "4px", borderColor: "#6543AD" }}
                 >
                     <div className="flex flex-col justify-center items-center">
-                        <h1 className="font-body text-4xl font-bold pb-4" style={{ color: "#000" }}>
+                        <h1 className="font-body text-4xl font-bold pb-4" style={{ color: "#475569" }}>
                             T.O.C
                         </h1>
                         <div>
-                            <h2 className="font-body text-right" style={{ color: "#000", fontSize: "17px" }} >
+                            <h2 className="font-body text-right" style={{ color: "#475569", fontSize: "17px" }} >
                                 El Trastorno Obsesivo-Compulsivo (TOC)
                                 esuntrastornomental caracterizadopor
                                 lapresenciade obsesiones y compulsiones
                             </h2>
                             <img src={therapy} alt="Therapy image" className="float-start w-1/3" />
-                            <h2 className="font-body text-right" style={{ color: "#000", fontSize: "17px" }}>
+                            <h2 className="font-body text-right" style={{ color: "#475569", fontSize: "17px" }}>
                                 <strong>Causas:</strong> <br />
                                 Factores Genéticos, Neurobiológicas,
                                 Factores Ambientales, Cogniciones
@@ -246,17 +246,17 @@ export default function Services(): JSX.Element {
                     iconStyle={{ background: "#FED8B1", borderWidth: "4px", borderColor: "#6543AD" }}
                 >
                     <div className="flex flex-col justify-center items-center">
-                        <h1 className="font-body text-4xl font-bold pb-4" style={{ color: "#000" }}>
+                        <h1 className="font-body text-4xl font-bold pb-4" style={{ color: "#475569" }}>
                             Neuropsicología
                         </h1>
                         <div>
-                            <h2 className="font-body text-left" style={{ color: "#000", fontSize: "17px" }} >
+                            <h2 className="font-body text-left" style={{ color: "#475569", fontSize: "17px" }} >
                                 La neuropsicología es una disciplina
                                 interdisciplinaria que examina cómo el cerebro
                                 afecta el comportamiento y la cognición.
                             </h2>
                             <img src={puzzle} alt="Puzzle" className="float-end w-1/2 md:w-1/3" />
-                            <h2 className="font-body text-left" style={{ color: "#000", fontSize: "17px" }}>
+                            <h2 className="font-body text-left" style={{ color: "#475569", fontSize: "17px" }}>
                                 <strong>Causas:</strong> <br />
                                 Trastornos del Desarrollo, Infecciones del
                                 Sistema Nervioso, Lesiones Cerebrales,Traumáticas,
@@ -279,11 +279,11 @@ export default function Services(): JSX.Element {
                     iconStyle={{ background: "#C6D0FF", borderWidth: "4px", borderColor: "#6543AD" }}
                 >
                     <div className="flex flex-col justify-center items-center">
-                        <h1 className="font-body text-4xl font-bold pb-4" style={{ color: "#000" }}>
+                        <h1 className="font-body text-4xl font-bold pb-4" style={{ color: "#475569" }}>
                             Primera visita
                         </h1>
                         <div>
-                            <h2 className="font-body text-right" style={{ color: "#000", fontSize: "17px" }} >
+                            <h2 className="font-body text-right" style={{ color: "#475569", fontSize: "17px" }} >
                                 Comprendo que el primer encuentro puede
                                 generar algunas expectativas e incluso cierta
                                 preocupación, y quiero asegurarle que estoy
@@ -294,7 +294,7 @@ export default function Services(): JSX.Element {
                                 necesidades y metas.
                             </h2>
                             <img src={virtualtherapy} alt="Virtual Therapy" className="float-start w-1/3" />
-                            <h2 className="font-body text-right" style={{ color: "#000", fontSize: "17px" }}>
+                            <h2 className="font-body text-right" style={{ color: "#475569", fontSize: "17px" }}>
                                 <strong>Consulta Online:</strong> <br />
                                 45 minutos/40€ <br />
                                 <button className="btn btn-sm btn-neutral text-white" onClick={() => navigate("/contacto")}>Pedir cita</button>
@@ -309,11 +309,11 @@ export default function Services(): JSX.Element {
                     iconStyle={{ background: "#FED8B1", borderWidth: "4px", borderColor: "#6543AD" }}
                 >
                     <div className="flex flex-col justify-center items-center">
-                        <h1 className="font-body text-4xl font-bold pb-4" style={{ color: "#000" }}>
+                        <h1 className="font-body text-4xl font-bold pb-4" style={{ color: "#475569" }}>
                             Pack mensual
                         </h1>
                         <div>
-                            <h2 className="font-body text-left" style={{ color: "#000", fontSize: "17px" }} >
+                            <h2 className="font-body text-left" style={{ color: "#475569", fontSize: "17px" }} >
                                 Para aquellas personas,que necesiten sesiones
                                 semanales, tienen disponible el pack mensual, en el
                                 cual, se compone por cuatro sesiones a un precio
@@ -321,7 +321,7 @@ export default function Services(): JSX.Element {
                                 ahorrando!
                             </h2>
                             <img src={symbol} alt="Symbol" className="float-end w-1/3" />
-                            <h2 className="font-body text-left" style={{ color: "#000", fontSize: "17px" }}>
+                            <h2 className="font-body text-left" style={{ color: "#475569", fontSize: "17px" }}>
                                 <strong>Consulta Online:</strong> <br />
                                 4 sesiones de 45 minutos/160€ (pago único)
                             </h2>
