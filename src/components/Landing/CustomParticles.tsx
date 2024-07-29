@@ -44,7 +44,7 @@ export default function CustomParticles(): JSX.Element {
                         },
                     },
                     background: {
-                        color: "#C6D0FF",
+                        color: "#E6EAFF",
                     }
                 }}
             />
