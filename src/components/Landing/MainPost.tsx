@@ -1,8 +1,9 @@
 import React from "react";
 import Grow from "@mui/material/Grow";
-
+import CustomButton from "../Common/CustomButton";
 import gofranMain from "../../assets/images/gofran-main.png";
 import horizontalDiamond from "../../assets/images/horizontal-diamond.png";
+import Quote from "../Common/Quote";
 
 import { useInView } from "react-intersection-observer";
 
@@ -10,59 +11,95 @@ import { useIncrementalIndexEffect } from "../../utils/UseIncrementalEffect";
 
 export default function MainPost(): JSX.Element {
     const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.15 });
-    const currentIndex = useIncrementalIndexEffect(inView, 5, 150);
+    const currentIndex = useIncrementalIndexEffect(inView, 7, 150);
 
     return (
         <div ref={ref} className="w-[90%] my-6 z-10 mt-10">
-            <div className="absolute top-36 right-0 w-1/2 sm:w-[30%]">
-                <Grow in={currentIndex >= 4} timeout={300}>
-                    <img src={gofranMain} alt="Main post"/>
-                </Grow>
-            </div>
-            <Grow in={currentIndex >= 1} timeout={300}>
-                <h1 className="font-title text-4xl sm:text-5xl leading-[5rem] text-[#6543AD] drop-shadow-lg text-left mb-2">
-                    Revoluciona <strong className="underline">tu mente</strong>: descubre el poder 
-                    <div className="flex items-center">
-                        de la Psicología <img src={horizontalDiamond} alt="Horizontal Diamond" className="w-1/12 ml-1 hidden sm:block" />
-                    </div>
-                </h1>
-            </Grow>
-            <Grow in={currentIndex >= 2} timeout={300}>
-                <div className="h-1 w-[30%] bg-[#6543AD] my-6" />
-            </Grow>
-            <div className="sm:w-[80%] gap-2 items-center">
-                <div className="flex flex-col justify-center space-y-6 ">
-                    <Grow in={currentIndex >= 3} timeout={300}>
-                        <h2 className="font-body text-[#6543AD] text-lg sm:text-xl rounded-xl drop-shadow-md w-[90%]">
-                            Sumérgete en un viaje transformador
-                            hacia tu bienestar mental. Explorarás
-                            herramientas innovadoras para potenciar
-                            tu mente y alcanzar tu mejor versión.
-                        </h2>
-                    </Grow>
-                    <Grow in={currentIndex >= 5} timeout={300}>
-                        <div className="flex justify-center">
-                            <div className="flex flex-col sm:px-20 sm:w-[60%] sm:mr-16">
-                                <div className="flex justify-center sm:justify-start my-2">
-                                    <h2 className="font-body text-[#6543AD] text-lg sm:text-xl py-5 px-6 text-center border-4 rounded-3xl bg-[#FED8B1] border-[#FABC7B] w-max">
-                                        Terapia 100% online
-                                    </h2>
-                                </div>
-                                <div className="flex justify-center sm:justify-end my-2">
-                                    <h2 className="font-body text-[#6543AD] text-lg sm:text-xl py-5 px-6 text-center border-4 rounded-3xl border-[#6543AD] w-max">
-                                        Variedad de recursos y <br /> soluciones innovadoras
-                                    </h2>
-                                </div>
-                                <div className="flex justify-center sm:justify-start my-2">
-                                    <h2 className="font-body text-[#6543AD] text-lg sm:text-xl py-5 px-6 text-center border-4 rounded-3xl bg-[#FED8B1] border-[#FABC7B] w-max">
-                                        Personalizado y Flexible
-                                    </h2>
-                                </div>
+            <div className="grid grid-cols-1 sm:grid-cols-6 gap-4">
+                <div className="col-span-1 sm:col-span-6">
+                    <Grow in={currentIndex >= 1} timeout={300}>
+                        <h1 className="font-title text-4xl sm:text-5xl leading-[5rem] text-[#7087ff] drop-shadow-lg text-left mb-2">
+                            <div className="flex items-center">
+                                <strong>Tus heridas no te definen</strong> 
+                                <img src={horizontalDiamond} alt="Horizontal Diamond" className="w-1/12 ml-1 hidden sm:block" />
                             </div>
-                        </div>
+                        </h1>
                     </Grow>
                 </div>
+                <div className="col-span-1 sm:col-span-4 flex flex-col py-9">
+                    <Grow in={currentIndex >= 2} timeout={300}>
+                        <h2 className="font-body text-[#4e5e9d] text-lg sm:text-2xl rounded-xl drop-shadow-md text-justify">
+                            Aprende a trabajar desde la raíz del problema con la psicología online,
+                            aprovechando la flexibilidad y accesibilidad que te permite conectarte
+                            con profesionales desde la comodidad dese cualquier sitio.
+                        </h2>
+                    </Grow>
+                    <br></br>
+                    <Grow in={currentIndex >= 3} timeout={300}>
+                        <h2 className="font-body text-[#4e5e9d] text-lg sm:text-2xl rounded-xl drop-shadow-md text-justify">
+                            Empieza hoy este viaje hacia una mente más saludable y equilibrada,
+                            y desbloquea todo tu potencial.
+                        </h2>
+                    </Grow>
+                    <div className="col-span-1 sm:col-span-2 flex justify-center sm:justify-end sm:w-[80%] md:hidden">
+                        <div className="relative">
+                            <Grow in={currentIndex >= 4} timeout={300}>
+                                <img src={gofranMain} alt="Main post" className="max-w-full"/>
+                            </Grow>
+                        </div>
+                    </div>
+                    {/* Botones debajo ocupando toda la fila */}
+                    <div className="flex justify-center py-20">
+                        <Grow in={currentIndex >= 5} timeout={300}>
+                            <div className="flex items-stretch w-full">
+                                <div className="grid grid-cols-1 md:grid-cols-3 w-full">
+                                    <div className="justify-center my-2">
+                                        <CustomButton
+                                            text="Leer más sobre mí"
+                                            path="/sobre-mi"
+                                        />
+                                    </div>
+                                    <div className="justify-center my-2">
+                                        <CustomButton
+                                            bgColor="#ffddb9"
+                                            borderColor="#ffca92"
+                                            text="Hablar conmigo"
+                                            path="/contacto"
+                                        />
+                                    </div>
+                                    <div className="justify-center my-2">
+                                        <CustomButton
+                                            text="Tratamientos"
+                                            path="/servicios"
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+                        </Grow>
+                    </div>
+                </div>
+
+                <div className="col-span-1 sm:col-span-2 flex justify-center sm:justify-end sm:w-[100%] hidden md:block">
+                    <div className="relative">
+                        <Grow in={currentIndex >= 4} timeout={300}>
+                            <img src={gofranMain} alt="Main post" className="max-w-full sm:w-[90%]"/>
+                        </Grow>
+                    </div>
+                </div>
             </div>
+
+            <Grow in={currentIndex>=6} timeout={300}>
+                <div className="mb-10 w-[90%]">
+                    <Quote>
+                        <strong>
+                            &quot;El <strong className="underline">verdadero viaje</strong> de descubrimiento no consiste en buscar nuevos paisajes,
+                            sino en tener una <strong className="underline">nueva perspectiva</strong>.&quot;                                    
+                        </strong>
+                    </Quote>
+                </div>
+            </Grow>
         </div>
     );
 }
+
+

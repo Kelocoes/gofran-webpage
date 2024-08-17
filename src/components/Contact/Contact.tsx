@@ -1,16 +1,11 @@
 import React from "react";
-
-import Description from "./Description";
-import ContactForm from "./ContactForm";
-import { EnvProvider } from "../EnvContext";
+import LetsTalk from "./LetsTalk";
+//import AskForDate from "./AskForDate";
 
 export default function Contact(): JSX.Element {
     return (
-        <div className="z-10">
-            <EnvProvider>
-                <ContactForm />
-            </EnvProvider>
-            <Description />
+        <div data-theme="mythemeAlt" className="bg-[#ffeedd] flex flex-col items-center justify-center min-h-screen">
+            <LetsTalk />
         </div>
     );
 }

@@ -6,15 +6,13 @@ import Grow from "@mui/material/Grow";
 
 import { useIncrementalIndexEffect } from "../../utils/UseIncrementalEffect";
 
-
-import horizontalDiamond from "../../assets/images/horizontal-diamond.png";
-import orangeStar from "../../assets/images/orange-star.png";
-
 import emailjs from "@emailjs/browser";
 
 import { useEnv } from "../EnvContext";
 
 import { useForm } from "react-hook-form";
+
+import orangeStar from "../../assets/images/orange-star.png";
 
 type FormValues = {
     name: string;
@@ -25,23 +23,22 @@ type FormValues = {
 };
 
 export default function ContactForm(): JSX.Element {
-    const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.15 });
     const [ref2, inView2] = useInView({ triggerOnce: true, threshold: 0.15 });
-    const currentIndex = useIncrementalIndexEffect(inView, 6, 150);
     const currentIndex2 = useIncrementalIndexEffect(inView2, 4, 150);
     const { serviceId, templateId, mailPublicKey } = useEnv();
     const [isActive, setIsActive] = React.useState(true);
     const { handleSubmit: getInfo, register: registro, reset } = useForm();
     const form = React.useRef<HTMLFormElement>(null);
-
+    const [isOpen, setIsOpen] = React.useState(false);
     const phrases = [
-        "Paso 1: Rellenar y enviar el formulario.",
-        "Paso 2: Cuadrar día y hora para empezar la terapia.",
-        "Paso 3: La reserva se finaliza cuando se realice el pago.",
-        "Paso 4: Una vez reciba el comprobante de pago, te enviaré el documento de consentimiento de atención psicológica informado y protección de datos.",
-        "Paso 5: Comenzar el proceso."
+        "Responsable: Gofran Rawas Karbouje.",
+        "Finalidad del tratamiento de los datos para la que usted da su consentimiento será la de gestionar los datos de los pacientes que accedan al formulario de contacto de la página web de la entidad, contestar sus consultas.",
+        "CESIONES: No se prevén cesiones, excepto por obligación legal o requerimiento judicial.",
+        "Cualquier duda pueden ponerse en contacto conmigo a través de gofranpsicologa@gmail.com.",
     ];
-
+    const toggleOpen = ():void => {
+        setIsOpen(!isOpen);
+    };
     const sendEmail = (data: object): void => {
 
         try {
@@ -68,51 +65,17 @@ export default function ContactForm(): JSX.Element {
 
 
     return (
-        <div className="flex flex-col items-center justify-center mt-10">
-            <div ref={ref} className="w-[90%] my-6 z-10 flex justify-center relative flex-col">
-                <Grow in={currentIndex >= 1} timeout={300}>
-                    <h1 className="font-title text-5xl sm:text-5xl text-[#6543AD] drop-shadow-lg text-center lg:text-right">
-                        <div className="flex items-center justify-end">
-                            <img src={horizontalDiamond} alt="Horizontal Diamond" className="w-1/12 ml-1 hidden sm:block" />
-                            <h1> Pasos a seguir para la&nbsp;<strong>Reserva</strong> </h1>
-                        </div>
-                        <div className="float-right h-1 w-[30%] bg-[#6543AD] my-6"></div>
-                    </h1>
-                </Grow>
-                <div className="flex flex-col lg:flex-row justify-center items-center space-x-8 space-y-5 w-[90%]">
-                    <Grow in={currentIndex >= 2} timeout={300}>
-                        <div className="mt-8 sm:ml-32 flex flex-col justify-center">
-                            {phrases.map((phrase, index) => (
-                                <Grow in={currentIndex >= 2 + index} timeout={300} key={index}>
-                                    <div className="flex items-center mb-2">
-                                        <img src={orangeStar} alt="Orange Star" className="w-[3%]" />
-                                        <h2 className="font-body text-[#6543AD] text-md sm:text-2xl ml-3 ">
-                                            <strong>{phrase.split(":")[0]}</strong>:{phrase.split(":")[1]}
-                                        </h2>
-                                    </div>
-                                </Grow>
-                            ))}
-                        </div>
-                    </Grow>
-                </div>
-            </div>
-            <div ref={ref2} className="w-[90%] my-6 z-10 flex justify-center relative flex-col">
-                <Grow in={currentIndex2 >= 1} timeout={300}>
-                    <h1 className="font-title text-5xl sm:text-5xl text-[#6543AD] mb-4 drop-shadow-lg text-center lg:text-left">
-                        <div className="flex items-center">
-                            <strong>Contacta</strong>&nbsp;conmigo
-                            <img src={horizontalDiamond} alt="Horizontal Diamond" className="w-1/12 ml-1 hidden sm:block" />
-                        </div>
-                        <div className="h-1 w-[30%] bg-[#6543AD] my-6" />
-                    </h1>
-                </Grow>
-                <div className="flex flex-col lg:flex-row items-center justify-center space-x-0 lg:space-x-16 space-y-5 lg:space-y-0">
+        <div className="flex flex-col items-center justify-center">
+            <div ref={ref2} className="w-[90%] flex justify-center relative flex-col">
+                <div className="flex flex-col lg:flex-row items-center justify-center space-x-0 lg:space-x-16">
                     <Grow in={currentIndex2 >= 2} timeout={300}>
-                        <div className="relative flex justify-center pt-6 w-full md:w-2/3 lg:w-[40%] xl:w-[45%]">
-                            <div className="border-4 border-white bg-[#FED8B1] text-[#6543AD] font-body text-xl  p-5 z-10 w-[80%] text-center">
-                                <h2 className="font-body text-4xl py-2">
-                                    Contacto
-                                </h2>
+                        <div className="relative flex justify-center pt-6 w-full lg:w-[80%] xl:w-[90%]">
+                            <div className="border-4 border-white bg-[#d8dffe] text-[#6543AD] font-body text-xl  p-5 z-10 w-[80%] text-center">
+                                <h1 className="font-title text-2xl sm:text-6xl text-[#4d4b44] font-bold mb-5 drop-shadow-lg text-left lg:text-left divide-y divide-solid">
+                                    <div className="flex items-center justify-center">
+                                        Contacto
+                                    </div>
+                                </h1>
                                 <form ref={form} onSubmit={getInfo(sendEmail)}>
                                     <div className="flex flex-col space-y-3 justify-center items-center">
                                         <input type="text" placeholder="Nombre" className="input bg-white w-full max-w-sm" maxLength={40} {...registro("name", { required: true })} />
@@ -124,6 +87,25 @@ export default function ContactForm(): JSX.Element {
                                             <option>Tarde</option>
                                         </select>
                                         <textarea className="textarea bg-white w-full max-w-sm" placeholder="Descripción" {...registro("message", { required: true })}></textarea>
+                                        {/* Desplegable aqui */}
+                                        <div className="mt-2 ml-6 mr-8 md:col-span-4 flex flex-col justify-left space-y-4 row-span-2">
+                                            <button
+                                                onClick={toggleOpen}
+                                                className="px-4 py-2 rounded-md"
+                                            >
+                                                {isOpen ? "Cerrar" : "Ver más"}
+                                            </button>
+                                            <div className={`transition-all duration-300 ease-in-out overflow-hidden ${isOpen ? "max-h-screen" : "max-h-0"}`}>
+                                                {phrases.map((phrase, index) => (
+                                                    <div className="flex items-center text-justify" key={index}>
+                                                        <img src={orangeStar} alt="Orange Star" className="w-[3%]" />
+                                                        <h2 className="font-body text-[#6543AD] text-sm sm:text-xl ml-2">
+                                                            {phrase}
+                                                        </h2>
+                                                    </div>
+                                                ))}
+                                            </div>
+                                        </div>
                                         <button
                                             className={`btn ${!isActive ? "btn-disabled" : ""} btn-secondary`}
                                             tabIndex={-1}

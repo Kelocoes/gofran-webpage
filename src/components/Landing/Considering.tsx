@@ -3,7 +3,7 @@ import React from "react";
 import plant from "../../assets/images/plant.png";
 import plant2 from "../../assets/images/plant-2.png";
 import horizontalDiamond from "../../assets/images/horizontal-diamond.png";
-import gofran from "../../assets/images/gofran-needtherapyif.png";
+import heart from "../../assets/images/Considering-heart.png";
 import orangeStar from "../../assets/images/orange-star.png";
 import CustomButton from "../Common/CustomButton";
 
@@ -13,24 +13,25 @@ import { useInView } from "react-intersection-observer";
 
 import { useIncrementalIndexEffect } from "../../utils/UseIncrementalEffect";
 
-export default function NeedTherapyIf(): JSX.Element {
+export default function Considering(): JSX.Element {
     const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.15 });
-    const currentIndex = useIncrementalIndexEffect(inView, 13, 150);
+    const currentIndex = useIncrementalIndexEffect(inView, 12, 150);
 
     const phrases = [
-        "Quieres empieza a trabajar en ti, crecer y florecer.",
-        "No sabes como establecer vínculos con los demás.",
-        "Quieres aprender a poner límites.",
-        "Quieres aumentar tu autoestima para tu bien estar.",
-        "No sabes como expresar tus sentimientos.",
-        "Quieres aprender a gestionar tus emociones.",
-        "Sientes un nudo en la garganta y no sabes por qué.",
-        "Te duelen cosas del pasado y sientes que no avanzas.",
-        "Dudas de tus capacidades."
+        "Apoyo Profesional.",
+        "Desarrollo de Habilidades de Afrontamiento.",
+        "Autoconocimiento y Autocomprensión.",
+        "Mejora de las Relaciones.",
+        "Reducción de Síntomas de Salud Mental.",
+        "Apoyo en Momentos Difíciles.",
+        "Fomento de la Salud Emocional.",
+        "Prevención de Problemas Futuros.",
+        "Apoyo Integral.",
+        "Fomento de la Resiliencia."
     ];
 
     return (
-        <div ref={ref} className="w-[90%] my-6 z-10 flex justify-center relative mt-[300px] sm:mt-32">
+        <div ref={ref} className="w-[90%] my-6 z-10 flex justify-center relative mt-0 sm:mt-32">
             <Grow in={currentIndex >= 2} timeout={300}>
                 <img src={plant} alt="Plant" className="absolute top-22 -left-56 md:-left-24" />
             </Grow>
@@ -42,10 +43,14 @@ export default function NeedTherapyIf(): JSX.Element {
                     <Grow in={currentIndex >= 1} timeout={300}>
                         <h1 className="font-title text-4xl sm:text-5xl text-[#4d4b44] font-bold mt-10 drop-shadow-lg text-left lg:text-left">
                             <div className="flex items-center justify-left">
+                                ¿Todavia estas considerando ir?
                                 <img src={horizontalDiamond} alt="Horizontal Diamond" className="w-1/12 ml-1 hidden sm:block" />
-                                Situaciones en las que puedo ayudarte
+                            </div>
+                            <div className="flex items-center text-3xl sm:text-3xl leading-[5rem] text-[#7087ff] drop-shadow-sm text-left mb-2 mt-8">
+                                <strong>Si tienes malestar y vas, consigues: </strong> 
                             </div>
                         </h1>
+
                     </Grow>
                 </div>
 
@@ -61,21 +66,30 @@ export default function NeedTherapyIf(): JSX.Element {
                             </div>
                         </Grow>
                     ))}
+                    <div className="col-span-6 md:col-span-2 flex flex-col items-center justify-center space-y-4 md:hidden">
+                        <Grow in={currentIndex >= 3} timeout={300}>
+                            <div className="flex items-center justify-center">
+                                <img src={heart} alt="gofran" className="w-full" />
+                            </div>
+                        </Grow>
+                    </div>
+                    <Grow in={currentIndex >= 12} timeout={300}>
+                        <div className="flex justify-left mt-4 ms-8">
+                            <CustomButton
+                                bgColor="#ffddb9"
+                                borderColor="#ffca92"
+                                text="Pedir cita"
+                                path="/contacto"
+                            />
+                        </div>
+                    </Grow>
                 </div>
 
 
-                <div className="col-span-6 md:col-span-2 flex flex-col items-center justify-center space-y-4">
-                    <Grow in={currentIndex >= 4} timeout={300}>
+                <div className="col-span-6 md:col-span-2 flex flex-col items-center justify-center space-y-4 hidden md:block">
+                    <Grow in={currentIndex >= 3} timeout={300}>
                         <div className="flex items-center justify-center">
-                            <img src={gofran} alt="gofran" className="w-full" />
-                        </div>
-                    </Grow>
-                    <Grow in={currentIndex >= 10} timeout={300}>
-                        <div className="flex justify-center mt-4">
-                            <CustomButton
-                                text="Habla conmigo"
-                                path="/contacto"
-                            />
+                            <img src={heart} alt="gofran" className="w-full" />
                         </div>
                     </Grow>
                 </div>
