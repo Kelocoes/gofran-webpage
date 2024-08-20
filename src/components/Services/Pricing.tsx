@@ -18,10 +18,10 @@ export default function Pricing(): JSX.Element {
             <Grow in={currentIndex >= 2} timeout={300}>
                 <img src={plant2} alt="Plant-2" className="absolute top-32 right-0" />
             </Grow>
-            <div className="w-[90%] grid grid-cols-4 gap-4">
+            <div className="w-[85%] grid grid-cols-4 gap-4">
                 <div className="col-span-4">
                     <Grow in={currentIndex >= 1} timeout={300}>
-                        <h1 className="font-title text-4xl sm:text-5xl text-[#4d4b44] font-bold mt-10 drop-shadow-lg mb-8 text-center lg:text-left">
+                        <h1 className="font-title text-3xl sm:text-4xl text-[#4d4b44] font-bold mt-10 drop-shadow-lg mb-8 text-center lg:text-left">
                             <div className="flex items-center justify-center">
                                 Tarifas de terapia para adultos online
                                 {/* <img src={horizontalDiamond} alt="Horizontal Diamond" className="w-1/12 ml-1 hidden sm:block" /> */}
@@ -29,7 +29,7 @@ export default function Pricing(): JSX.Element {
                         </h1>
                     </Grow>
                     <Grow in={currentIndex >= 2} timeout={300}>
-                        <h2 className="font-body text-[#4e5e9d] text-lg sm:text-2xl rounded-xl drop-shadow-md text-justify">
+                        <h2 className="font-body text-[#4e5e9d] text-lg sm:text-lg rounded-xl drop-shadow-md text-left">
                             Sabemos que cuidar tu salud mental es una de las decisiones más importantes que puedes tomar. Por eso, ofrecemos tarifas
                             transparentes que reflejan el valor excepcional y la atención personalizada que recibirás. Aunque el bienestar no se puede medir
                             en dinero, merece una inversión consciente y bien pensada.
@@ -38,7 +38,7 @@ export default function Pricing(): JSX.Element {
                     <div className="col-span-4 flex justify-center">
                         <Grow in={currentIndex >= 3} timeout={300}>
                             <div>
-                                <div className="flex items-center w-[100%]">
+                                <div className="flex items-center w-[80%] ml-0 sm:ml-20">
                                     <img src={Brain} alt="gofran" />
                                 </div>
                             </div>

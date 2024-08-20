@@ -40,7 +40,7 @@ export default function Education(): JSX.Element {
     ];
 
     return (
-        <div ref={ref} className="w-[90%] z-10 mt-[400px] sm:mt-[200px]">
+        <div ref={ref} className="w-[85%] z-10 mt-[400px] sm:mt-[200px]">
             <div className="flex justify-center mb-4">
                 <button
                     onClick={toggleOpen}
@@ -70,14 +70,14 @@ export default function Education(): JSX.Element {
                     <div className="col-span-6 md:col-span-3 flex items-center justify-center">
                         <Grow in={currentIndex >= 3} timeout={300}>
                             <div className="flex items-center justify-center w-full mt-44 hidden md:block">
-                                <img src={educationGofran} alt="gofran" className="w-[80%]" />
+                                <img src={educationGofran} alt="gofran" className="w-[100%]" />
                             </div>
                         </Grow>
                     </div>
                     <div className="mt-2 col-span-6 md:col-span-3 flex flex-col justify-end space-y-4 row-span-2 md:mr-auto md:ml-8 mt-20">
                         <div className="col-span-6">
                             <Grow in={currentIndex >= 1} timeout={300}>
-                                <h1 className="font-title text-4xl sm:text-5xl text-[#4d4b44] font-bold drop-shadow-lg text-left lg:text-left">
+                                <h1 className="font-title text-4xl sm:text-4xl text-[#4d4b44] font-bold drop-shadow-lg text-left lg:text-left">
                                     <div className="flex items-center justify-left">
                                         Formaciones
                                         <img src={horizontalDiamond} alt="Horizontal Diamond" className="w-1/12 ml-1 hidden sm:block" />
@@ -86,33 +86,33 @@ export default function Education(): JSX.Element {
                             </Grow>
                         </div>
                         <Grow in={currentIndex >= 4} timeout={300}>
-                            <h2 className="font-body text-[#4e5e9d] text-lg sm:text-2xl rounded-xl drop-shadow-md text-justify">
+                            <h2 className="font-body text-[#4e5e9d] text-lg sm:text-lg rounded-xl drop-shadow-md text-left">
                                 Me gustaría compartir contigo de manera más detallada mis estudios, cabe
                                 mencionar que estoy participando en un programa de investigación en
                                 ECEERS sobre los efectos neuropsicológicos de los psicodélicos.
                             </h2>
                         </Grow>
-                        <div className="font-title flex items-center text-xl sm:text-3xl leading-[5rem] text-[#7087ff] drop-shadow-sm text-left mb-0 md:mb-2 mt-8">
+                        <div className="font-title flex items-center text-xl sm:text-2xl leading-[5rem] text-[#7087ff] drop-shadow-sm text-left mb-0 md:mb-2 mt-8">
                             <strong>Formaciones Oficiales </strong>
                         </div>
                         {phrasesOficial.map((phrase, index) => (
                             <Grow in={currentIndex >= 3 + index} timeout={300} key={index}>
                                 <div className="flex items-center">
                                     <img src={orangeStar} alt="Orange Star" className="w-[2%]" />
-                                    <h2 className="font-body text-[#6543AD] text-md sm:text-xl ml-2">
+                                    <h2 className="font-body text-[#6543AD] text-md sm:text-lg ml-2">
                                         {phrase}
                                     </h2>
                                 </div>
                             </Grow>
                         ))}
-                        <div className="font-title flex items-center text-xl sm:text-3xl leading-[5rem] text-[#7087ff] drop-shadow-sm text-left mb-0 md:mb-2 mt-8">
+                        <div className="font-title flex items-center text-xl sm:text-2xl leading-[5rem] text-[#7087ff] drop-shadow-sm text-left mb-0 md:mb-2 mt-8">
                             <strong>Formaciones Especificas </strong>
                         </div>
                         {phrasesSpecific.map((phrase, index) => (
                             <Grow in={currentIndex >= 3 + index} timeout={300} key={index}>
                                 <div className="flex items-center">
                                     <img src={orangeStar} alt="Orange Star" className="w-[2%]" />
-                                    <h2 className="font-body text-[#6543AD] text-md sm:text-xl ml-2">
+                                    <h2 className="font-body text-[#6543AD] text-md sm:text-lg ml-2">
                                         {phrase}
                                     </h2>
                                 </div>

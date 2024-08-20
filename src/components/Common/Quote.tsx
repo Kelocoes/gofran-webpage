@@ -20,7 +20,7 @@ const Quote = ({
                 backgroundColor: background,
             }}
         >
-            <h1 className="justify-items-center font-title text-2xl sm:text-3xl drop-shadow-lg text-center w-[75%]">
+            <h1 className="justify-items-center font-title text-2xl sm:text-2xl drop-shadow-lg text-center w-[75%]">
                 {children}
             </h1>
             <img src={QuoteLogo} alt="Main post" />

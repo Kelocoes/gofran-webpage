@@ -28,7 +28,7 @@ const CustomButton: React.FC<CustomButtonProps> = ({
 
     return (
         <button
-            className={"font-body text-base sm:text-2xl py-3 sm:py-3 px-20 md:px-10 text-center flex items-center justify-center"}
+            className={"font-body text-base sm:text-lg py-3 sm:py-3 px-20 md:px-10 text-center flex items-center justify-center"}
             style={{
                 color: textColor,
                 backgroundColor: bgColor,

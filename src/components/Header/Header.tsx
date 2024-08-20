@@ -25,7 +25,6 @@ export default function Header(): JSX.Element {
             <Grow in={true} timeout={300}>
                 {matches ? (
                     <div className="w-full bg-[#ECEFFF] flex justify-between items-center px-4 py-4">
-
                         <div className="flex items-end space-x-8">
                             <button onClick={() => navigate("/")}>
                                 <img 
@@ -48,7 +47,15 @@ export default function Header(): JSX.Element {
                                         className="font-body font-semibold text-lg transition duration-300 ease-in-out transform hover:text-[#7087FF] hover:underline"
                                         onClick={() => navigate("/sobre-mi")}
                                     >
-                                        Sobre mi
+                                        Quien soy
+                                    </button>
+                                </li>
+                                <li>
+                                    <button 
+                                        className="font-body font-semibold text-lg transition duration-300 ease-in-out transform hover:text-[#7087FF] hover:underline"
+                                        onClick={() => navigate("/EMDR")}
+                                    >
+                                        EMDR
                                     </button>
                                 </li>
                                 <li>
@@ -56,15 +63,7 @@ export default function Header(): JSX.Element {
                                         className="font-body font-semibold text-lg truncate transition duration-300 ease-in-out transform hover:text-[#7087FF] hover:underline"
                                         onClick={() => navigate("/servicios")}
                                     >
-                                        Tratamientos / Servicios
-                                    </button>
-                                </li>
-                                <li>
-                                    <button 
-                                        className="font-body font-semibold text-lg transition duration-300 ease-in-out transform hover:text-[#7087FF] hover:underline"
-                                        onClick={() => navigate("/contacto")}
-                                    >
-                                        Contáctame
+                                        Servicios y Tarifas
                                     </button>
                                 </li>
                                 <li>
@@ -78,9 +77,9 @@ export default function Header(): JSX.Element {
                                 <li>
                                     <button 
                                         className="font-body font-semibold text-lg transition duration-300 ease-in-out transform hover:text-[#7087FF] hover:underline"
-                                        onClick={() => navigate("/EMDR")}
+                                        onClick={() => navigate("/contacto")}
                                     >
-                                        EMDR
+                                        Pedir cita
                                     </button>
                                 </li>
                             </ul>
@@ -93,37 +92,39 @@ export default function Header(): JSX.Element {
                         />
                     </div>
                 ) : (
-                    <Accordion
-                        square={true}
-                        sx={{ borderRadius: "20px" }}
-                        expanded={expandedAccordion}
-                        onClick={() => setExpandedAccordion(prevState => !prevState)}
-                    >
-                        <AccordionSummary
-                            expandIcon={<ExpandMoreIcon />}
-                            aria-controls="panel1a-content"
-                            id="panel1a-header"
+                    <div className="flex justify-center items-center w-full">
+                        <Accordion
+                            square={true}
+                            sx={{ borderRadius: "20px", width: "75%" }}
+                            expanded={expandedAccordion}
+                            onClick={() => setExpandedAccordion(prevState => !prevState)}
                         >
-                            <div className="items-center flex flex-row">
-                                <img
-                                    style={{ width: "50px" }}
-                                    src={logo}
-                                    alt="Logo"
-                                />
-                                <h2 className="font-body font-semibold text-lg">
-                                    Menú
-                                </h2>
+                            <AccordionSummary
+                                expandIcon={<ExpandMoreIcon />}
+                                aria-controls="panel1a-content"
+                                id="panel1a-header"
+                            >
+                                <div className="items-center flex flex-row">
+                                    <img
+                                        style={{ width: "50px" }}
+                                        src={logo}
+                                        alt="Logo"
+                                    />
+                                    <h2 className="font-body font-semibold text-lg">
+                                        Menú
+                                    </h2>
+                                </div>
+                            </AccordionSummary>
+                            <div>
+                                <MenuItem onClick={() => navigate("/")}><h2 className="font-body font-semibold text-lg">Inicio</h2></MenuItem>
+                                <MenuItem onClick={() => navigate("/sobre-mi")}><h2 className="font-body font-semibold text-lg">Quien soy</h2></MenuItem>
+                                <MenuItem onClick={() => navigate("/EMDR")}><h2 className="font-body font-semibold text-lg">EMDR</h2></MenuItem>
+                                <MenuItem onClick={() => navigate("/servicios")}><h2 className="font-body font-semibold text-lg">Servicios</h2></MenuItem>
+                                <MenuItem onClick={() => navigate("/hablemos")}><h2 className="font-body font-semibold text-lg">Hablemos</h2></MenuItem>
+                                <MenuItem onClick={() => navigate("/contacto")}><h2 className="font-body font-semibold text-lg">Pedir cita</h2></MenuItem>
                             </div>
-                        </AccordionSummary>
-                        <div>
-                            <MenuItem onClick={() => navigate("/")}><h2 className="font-body font-semibold text-lg">Inicio</h2></MenuItem>
-                            <MenuItem onClick={() => navigate("/sobre-mi")}><h2 className="font-body font-semibold text-lg">Sobre mi</h2></MenuItem>
-                            <MenuItem onClick={() => navigate("/servicios")}><h2 className="font-body font-semibold text-lg">Servicios</h2></MenuItem>
-                            <MenuItem onClick={() => navigate("/contacto")}><h2 className="font-body font-semibold text-lg">Contáctame</h2></MenuItem>
-                            <MenuItem onClick={() => navigate("/hablemos")}><h2 className="font-body font-semibold text-lg">Hablemos</h2></MenuItem>
-                            <MenuItem onClick={() => navigate("/EMDR")}><h2 className="font-body font-semibold text-lg">EMDR</h2></MenuItem>
-                        </div>
-                    </Accordion>
+                        </Accordion>
+                    </div>
                 )}
             </Grow>
         </div>

@@ -4,7 +4,7 @@ import LetsTalk from "./LetsTalk";
 
 export default function Contact(): JSX.Element {
     return (
-        <div data-theme="mythemeAlt" className="bg-[#ffeedd] flex flex-col items-center justify-center min-h-screen">
+        <div>
             <LetsTalk />
         </div>
     );

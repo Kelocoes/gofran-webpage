@@ -31,7 +31,7 @@ export default function Considering(): JSX.Element {
     ];
 
     return (
-        <div ref={ref} className="w-[90%] my-6 z-10 flex justify-center relative mt-0 sm:mt-32">
+        <div ref={ref} className="w-[85%] my-6 z-10 flex justify-center relative mt-0 sm:mt-32">
             <Grow in={currentIndex >= 2} timeout={300}>
                 <img src={plant} alt="Plant" className="absolute top-22 -left-56 md:-left-24" />
             </Grow>
@@ -41,12 +41,12 @@ export default function Considering(): JSX.Element {
             <div className="w-full grid grid-cols-6 gap-4">
                 <div className="col-span-6">
                     <Grow in={currentIndex >= 1} timeout={300}>
-                        <h1 className="font-title text-4xl sm:text-5xl text-[#4d4b44] font-bold mt-10 drop-shadow-lg text-left lg:text-left">
+                        <h1 className="font-title text-4xl sm:text-4xl text-[#4d4b44] font-bold mt-10 drop-shadow-lg text-left lg:text-left">
                             <div className="flex items-center justify-left">
                                 ¿Todavia estas considerando ir?
                                 <img src={horizontalDiamond} alt="Horizontal Diamond" className="w-1/12 ml-1 hidden sm:block" />
                             </div>
-                            <div className="flex items-center text-3xl sm:text-3xl leading-[5rem] text-[#7087ff] drop-shadow-sm text-left mb-2 mt-8">
+                            <div className="flex items-center text-2xl sm:text-2xl leading-[5rem] text-[#7087ff] drop-shadow-sm text-left mb-2 mt-8">
                                 <strong>Si tienes malestar y vas, consigues: </strong> 
                             </div>
                         </h1>
@@ -60,7 +60,7 @@ export default function Considering(): JSX.Element {
                         <Grow in={currentIndex >= 3 + index} timeout={300} key={index}>
                             <div className="flex items-center">
                                 <img src={orangeStar} alt="Orange Star" className="w-[3%]" />
-                                <h2 className="font-body text-[#6543AD] text-md sm:text-3xl ml-2">
+                                <h2 className="font-body text-[#6543AD] text-md sm:text-lg ml-2">
                                     {phrase}
                                 </h2>
                             </div>

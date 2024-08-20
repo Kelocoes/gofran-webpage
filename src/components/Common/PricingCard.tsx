@@ -25,7 +25,7 @@ const Card = ({
             }}
         >
             <div>
-                <h1 className="font-title text-xl sm:text-3xl drop-shadow-lg text-left font-bold">
+                <h1 className="font-title text-xl sm:text-2xl drop-shadow-lg text-left font-bold">
                     {title}
                 </h1>
                 <p className="text-sm">{description}</p>

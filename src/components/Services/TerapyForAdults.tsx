@@ -19,19 +19,19 @@ export default function TerapyForAdults(): JSX.Element {
             <Grow in={currentIndex >= 2} timeout={300}>
                 <img src={plant2} alt="Plant-2" className="absolute top-32 right-0" />
             </Grow>
-            <div className="w-[90%] grid grid-cols-6 gap-4">
+            <div className="w-[85%] grid grid-cols-6 gap-4">
 
 
-                <div className="col-span-6 md:col-span-2 flex flex-col items-center justify-center space-y-4 hidden mt-12 md:block w-[70%]">
+                <div className="col-span-6 md:col-span-2 flex flex-col items-center justify-center space-y-4 hidden mt-12 md:block w-[80%]">
                     <Grow in={currentIndex >= 5} timeout={300}>
                         <div className="flex items-center justify-center">
-                            <img src={TreeWoman} alt="gofran" className="w-[50]" />
+                            <img src={TreeWoman} alt="gofran" className="w-full" />
                         </div>
                     </Grow>
                 </div>
                 <div className="mt-2 sm:ml-4 col-span-6 md:col-span-4 flex flex-col justify-center space-y-4 row-span-2">
                     <Grow in={currentIndex >= 1} timeout={300}>
-                        <h1 className="font-title text-4xl sm:text-5xl text-[#4d4b44] font-bold mt-10 drop-shadow-lg text-left lg:text-left">
+                        <h1 className="font-title text-3xl sm:text-4xl text-[#4d4b44] font-bold mt-10 drop-shadow-lg text-left lg:text-left">
                             <div className="flex items-center justify-left">
                                 Terapia para adultos
                                 <img src={horizontalDiamond} alt="Horizontal Diamond" className="w-1/12 ml-1 hidden sm:block" />
@@ -40,14 +40,14 @@ export default function TerapyForAdults(): JSX.Element {
                         </h1>
                     </Grow>
                     <Grow in={currentIndex >= 1} timeout={300}>
-                        <div className="flex items-center text-3xl sm:text-3xl text-[#7087ff] drop-shadow-sm text-left mb-2 mt-8">
+                        <div className="flex items-center text-2xl sm:text-2xl text-[#7087ff] drop-shadow-sm text-left mb-2 mt-8">
                             <strong>¿Sientes que tus problemas se acumulan sin encontrar el
                             momento adecuado para enfrentarlos?</strong>
                         </div>
                     </Grow>
 
                     <Grow in={currentIndex >= 2} timeout={300}>
-                        <h2 className="font-body text-[#4e5e9d] text-lg sm:text-2xl rounded-xl drop-shadow-md text-justify">
+                        <h2 className="font-body text-[#4e5e9d] text-lg sm:text-lg rounded-xl drop-shadow-md text-justify">
                             Si es así, esta terapia para Adultos Online podría ser justo lo que necesitas.
                             En el mundo acelerado de hoy, enfrentamos desafíos que a menudo nos
                             dejan abrumados y desconectados. Imagina un espacio seguro y privado

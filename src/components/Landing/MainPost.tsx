@@ -14,11 +14,11 @@ export default function MainPost(): JSX.Element {
     const currentIndex = useIncrementalIndexEffect(inView, 7, 150);
 
     return (
-        <div ref={ref} className="w-[90%] my-6 z-10 mt-10">
+        <div ref={ref} className="w-[85%] my-6 z-10 mt-10">
             <div className="grid grid-cols-1 sm:grid-cols-6 gap-4">
                 <div className="col-span-1 sm:col-span-6">
                     <Grow in={currentIndex >= 1} timeout={300}>
-                        <h1 className="font-title text-4xl sm:text-5xl leading-[5rem] text-[#7087ff] drop-shadow-lg text-left mb-2">
+                        <h1 className="font-title text-4xl sm:text-4xl leading-[5rem] text-[#7087ff] drop-shadow-lg text-left mb-2">
                             <div className="flex items-center">
                                 <strong>Tus heridas no te definen</strong> 
                                 <img src={horizontalDiamond} alt="Horizontal Diamond" className="w-1/12 ml-1 hidden sm:block" />
@@ -28,7 +28,7 @@ export default function MainPost(): JSX.Element {
                 </div>
                 <div className="col-span-1 sm:col-span-4 flex flex-col py-9">
                     <Grow in={currentIndex >= 2} timeout={300}>
-                        <h2 className="font-body text-[#4e5e9d] text-lg sm:text-2xl rounded-xl drop-shadow-md text-justify">
+                        <h2 className="font-body text-[#4e5e9d] text-lg sm:text-lg rounded-xl drop-shadow-md text-justify">
                             Aprende a trabajar desde la raíz del problema con la psicología online,
                             aprovechando la flexibilidad y accesibilidad que te permite conectarte
                             con profesionales desde la comodidad dese cualquier sitio.
@@ -36,12 +36,12 @@ export default function MainPost(): JSX.Element {
                     </Grow>
                     <br></br>
                     <Grow in={currentIndex >= 3} timeout={300}>
-                        <h2 className="font-body text-[#4e5e9d] text-lg sm:text-2xl rounded-xl drop-shadow-md text-justify">
+                        <h2 className="font-body text-[#4e5e9d] text-lg sm:text-lg rounded-xl drop-shadow-md text-justify">
                             Empieza hoy este viaje hacia una mente más saludable y equilibrada,
                             y desbloquea todo tu potencial.
                         </h2>
                     </Grow>
-                    <div className="col-span-1 sm:col-span-2 flex justify-center sm:justify-end sm:w-[80%] md:hidden">
+                    <div className="col-span-1 sm:col-span-2 flex justify-center sm:justify-end sm:w-full md:hidden">
                         <div className="relative">
                             <Grow in={currentIndex >= 4} timeout={300}>
                                 <img src={gofranMain} alt="Main post" className="max-w-full"/>

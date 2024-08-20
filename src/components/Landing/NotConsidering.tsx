@@ -31,7 +31,7 @@ export default function NotConsidering(): JSX.Element {
     ];
 
     return (
-        <div ref={ref} className="w-[90%] my-6 z-10 mt-0 sm:mt-32">
+        <div ref={ref} className="w-[85%] my-6 z-10 mt-0 sm:mt-32">
             <Grow in={currentIndex >= 2} timeout={300}>
                 <img src={plant} alt="Plant" className="absolute top-22 -left-56 md:-left-24" />
             </Grow>
@@ -42,7 +42,7 @@ export default function NotConsidering(): JSX.Element {
 
                 <div className="col-span-6 md:col-span-3 flex flex-col items-center justify-center space-y-4 hidden md:block w-[66%]">
                     <Grow in={currentIndex >= 3} timeout={300}>
-                        <div className="flex items-center justify-center">
+                        <div className="flex items-center justify-center mt-24">
                             <img src={heart} alt="gofran" className="w-full" />
                         </div>
                     </Grow>
@@ -50,7 +50,7 @@ export default function NotConsidering(): JSX.Element {
                 <div className="mt-2 col-span-6 md:col-span-3 flex flex-col justify-end space-y-4 row-span-2 md:mr-auto md:ml-8">
                     <Grow in={currentIndex >= 1} timeout={300}>
                         <h1 className="font-title text-4xl sm:text-5xl text-[#4d4b44] font-bold mt-10 drop-shadow-lg text-left">
-                            <div className="flex items-center text-3xl sm:text-3xl leading-[5rem] text-[#7087ff] drop-shadow-sm mb-2 mt-8">
+                            <div className="flex items-center text-2xl sm:text-2xl leading-[5rem] text-[#7087ff] drop-shadow-sm mb-2 mt-8">
                                 <strong>Tienes malestar y no vas: </strong>
                             </div>
                         </h1>
@@ -59,7 +59,7 @@ export default function NotConsidering(): JSX.Element {
                         <Grow in={currentIndex >= 3 + index} timeout={300} key={index}>
                             <div className="flex items-center">
                                 <img src={orangeStar} alt="Orange Star" className="w-[3%]" />
-                                <h2 className="font-body text-[#6543AD] text-md sm:text-3xl ml-2">
+                                <h2 className="font-body text-[#6543AD] text-md sm:text-lg ml-2">
                                     {phrase}
                                 </h2>
                             </div>
@@ -68,7 +68,7 @@ export default function NotConsidering(): JSX.Element {
                     <div className="col-span-6 md:col-span-2 flex flex-col items-center justify-center space-y-4 md:hidden">
                         <Grow in={currentIndex >= 3} timeout={300}>
                             <div className="flex items-center justify-center">
-                                <img src={heart} alt="gofran" className="w-full" />
+                                <img src={heart} alt="gofran" className="w-full mr-12" />
                             </div>
                         </Grow>
                     </div>
@@ -85,7 +85,7 @@ export default function NotConsidering(): JSX.Element {
                 </div>
                 <div className="col-span-6 mt-6">
                     <Grow in={currentIndex >= 13} timeout={300}>
-                        <h2 className="font-body text-[#4e5e9d] text-lg sm:text-2xl rounded-xl drop-shadow-md text-justify" >
+                        <h2 className="font-body text-[#4e5e9d] text-lg sm:text-lg rounded-xl drop-shadow-md text-justify" >
                         Solo tú tienes el poder y la capacidad de entender completamente tus propias necesidades, sentimientos y deseos.
                         Nadie más puede conocer tu situación interna tan profundamente como tú mismo. Al tomar la iniciativa, te empoderas
                         y tomas control de tu vida, lo que es el primer y más crucial paso hacia cualquier cambio positivo. Reconoce tu 

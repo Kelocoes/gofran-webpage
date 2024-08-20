@@ -14,7 +14,7 @@ export default function Tree(): JSX.Element {
     const currentIndex = useIncrementalIndexEffect(inView, 15, 150);
 
     return (
-        <div ref={ref} className="w-[90%] my-6 z-10 relative">
+        <div ref={ref} className="w-[85%] my-6 z-10 relative">
             <Grow in={currentIndex >= 2} timeout={300}>
                 <img src={plant2} alt="Plant-2" className="absolute top-32 right-0" />
             </Grow>
@@ -26,7 +26,7 @@ export default function Tree(): JSX.Element {
                 </Grow>
                 <div className="text-center p-2 flex flex-col items-end md:hidden">
                     <Grow in={currentIndex >= 3} timeout={300}>
-                        <h2 className="font-body text-[#4e5e9d] text-lg sm:text-xl rounded-xl drop-shadow-md mb-2">
+                        <h2 className="font-body text-[#4e5e9d] text-lg sm:text-lg rounded-xl drop-shadow-md mb-2">
                             &quot;La raíz de toda la salud está en el cerebro.<br />
                             El tronco del árbol son las emociones.<br />
                             Las ramas y las hojas son el cuerpo.<br />

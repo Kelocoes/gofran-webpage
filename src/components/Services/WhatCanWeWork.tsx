@@ -27,7 +27,7 @@ export default function WhatWeCanWork(): JSX.Element {
             <div className="w-[90%] grid grid-cols-4 gap-4">
                 <div className="col-span-4">
                     <Grow in={currentIndex >= 1} timeout={300}>
-                        <h1 className="font-title text-4xl sm:text-5xl text-[#4d4b44] font-bold mt-10 drop-shadow-lg text-left lg:text-left">
+                        <h1 className="font-title text-3xl sm:text-4xl text-[#4d4b44] font-bold mt-10 drop-shadow-lg text-left lg:text-left">
                             <div className="flex items-center justify-center">
                                 ¿Qué podemos trabajar?
                                 {/* <img src={horizontalDiamond} alt="Horizontal Diamond" className="w-1/12 ml-1 hidden sm:block" /> */}
@@ -43,7 +43,7 @@ export default function WhatWeCanWork(): JSX.Element {
                             <div className="flex items-center justify-center">
                                 <img src={SelfKnow} alt="gofran" className="w-full" />
                             </div>
-                            <div className="items-center text-sm sm:text-2xl text-[#7087ff] drop-shadow-sm text-center mb-2 mt-8">
+                            <div className="items-center text-sm sm:text-xl text-[#7087ff] drop-shadow-sm text-center mb-2 mt-8">
                                 <strong>Autoconocimiento</strong>
                             </div>
                         </div>
@@ -55,7 +55,7 @@ export default function WhatWeCanWork(): JSX.Element {
                             <div className="flex items-center justify-center">
                                 <img src={SelfSteem} alt="gofran" className="w-full" />
                             </div>
-                            <div className="items-center text-sm sm:text-2xl text-[#ffddb9] drop-shadow-sm text-center mb-2 mt-8">
+                            <div className="items-center text-sm sm:text-xl text-[#ffddb9] drop-shadow-sm text-center mb-2 mt-8">
                                 <strong>Autoestima</strong>
                             </div>
                         </div>
@@ -67,7 +67,7 @@ export default function WhatWeCanWork(): JSX.Element {
                             <div className="flex items-center justify-center">
                                 <img src={Anxiety} alt="gofran" className="w-full" />
                             </div>
-                            <div className="items-center text-sm sm:text-2xl text-[#7087ff] drop-shadow-sm text-center mb-2 mt-8">
+                            <div className="items-center text-sm sm:text-xl text-[#7087ff] drop-shadow-sm text-center mb-2 mt-8">
                                 <strong>Ansiedad y Estrés</strong>
                             </div>
                         </div>
@@ -79,7 +79,7 @@ export default function WhatWeCanWork(): JSX.Element {
                             <div className="flex items-center justify-center">
                                 <img src={Dependency} alt="gofran" className="w-full" />
                             </div>
-                            <div className="items-center text-sm sm:text-2xl text-[#ffddb9] drop-shadow-sm text-center mb-2 mt-8">
+                            <div className="items-center text-sm sm:text-xl text-[#ffddb9] drop-shadow-sm text-center mb-2 mt-8">
                                 <strong>Dependencia Emocional</strong>
                             </div>
                         </div>
@@ -93,7 +93,7 @@ export default function WhatWeCanWork(): JSX.Element {
                             <div className="flex items-center justify-center">
                                 <img src={TOC} alt="gofran" className="w-full" />
                             </div>
-                            <div className="items-center text-sm sm:text-2xl text-[#7087ff] drop-shadow-sm text-center mb-2 mt-8">
+                            <div className="items-center text-sm sm:text-xl text-[#7087ff] drop-shadow-sm text-center mb-2 mt-8">
                                 <strong>T.O.C</strong>
                             </div>
                         </div>
@@ -105,7 +105,7 @@ export default function WhatWeCanWork(): JSX.Element {
                             <div className="flex items-center justify-center">
                                 <img src={Neuro} alt="gofran" className="w-full" />
                             </div>
-                            <div className="items-center text-sm sm:text-2xl text-[#ffddb9] drop-shadow-sm text-center mb-2 mt-8">
+                            <div className="items-center text-sm sm:text-xl text-[#ffddb9] drop-shadow-sm text-center mb-2 mt-8">
                                 <strong>Neuropsicología</strong>
                             </div>
                         </div>
@@ -117,7 +117,7 @@ export default function WhatWeCanWork(): JSX.Element {
                             <div className="flex items-center justify-center">
                                 <img src={Fhobia} alt="gofran" className="w-full" />
                             </div>
-                            <div className="items-center text-sm sm:text-2xl text-[#7087ff] drop-shadow-sm text-center mb-2 mt-8">
+                            <div className="items-center text-sm sm:text-xl text-[#7087ff] drop-shadow-sm text-center mb-2 mt-8">
                                 <strong>Fobias/ Traumas</strong>
                             </div>
                         </div>
@@ -129,7 +129,7 @@ export default function WhatWeCanWork(): JSX.Element {
                             <div className="flex items-center justify-center">
                                 <img src={Other} alt="gofran" className="w-full" />
                             </div>
-                            <div className="items-center text-sm sm:text-2xl text-[#ffddb9] drop-shadow-sm text-center mb-2 mt-8">
+                            <div className="items-center text-sm sm:text-xl text-[#ffddb9] drop-shadow-sm text-center mb-2 mt-8">
                                 <strong>Otros (consultame)</strong>
                             </div>
                         </div>
