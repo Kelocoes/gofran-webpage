@@ -5,7 +5,6 @@ import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import logo from "../../assets/images/logo.png";
 import threads from "../../assets/images/threads-icon.png";
 import tiktok from "../../assets/images/tiktok-color-icon.svg";
-import Gofranlogo from "../../assets/images/gofran-logo-mini.png";
 
 export default function Footer (): JSX.Element {
     return (
@@ -14,7 +13,6 @@ export default function Footer (): JSX.Element {
                 <img src={logo} alt="Logo Psic Gofran" className="w-auto h-12" />
             </div>
             <p className="text-slate-600 font-body text-center text-xs">
-                <img src={Gofranlogo} alt="Main post" className="mx-auto w-[17%]" />
                 @2024 Psicóloga Gofran.<br />
                 Todos los Derechos Reservados.<br />
                 <a href="mailto:gofranpsicologa@gmail.com" target="_blank" rel="noopener noreferrer">

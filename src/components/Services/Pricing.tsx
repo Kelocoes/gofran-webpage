@@ -45,9 +45,9 @@ export default function Pricing (): JSX.Element {
                     </div>
                 </div>
             </div>
-            <div className="w-[90%] md:w-[90%] grid grid-cols-4 gap-x-20 gap-y-10">
+            <div className="w-[90%] md:w-[90%] grid grid-cols-4 gap-x-5 gap-y-10">
 
-                <div className="col-span-4 md:col-span-2">
+                <div className="col-span-4 md:col-span-1">
                     <Grow in={currentIndex >= 5} timeout={300}>
                         <div>
                             <Card
@@ -59,7 +59,7 @@ export default function Pricing (): JSX.Element {
                     </Grow>
                 </div>
 
-                <div className="col-span-4 md:col-span-2">
+                <div className="col-span-4 md:col-span-1">
                     <Grow in={currentIndex >= 6} timeout={300}>
                         <div>
                             <Card
@@ -71,7 +71,7 @@ export default function Pricing (): JSX.Element {
                     </Grow>
                 </div>
 
-                <div className="col-span-4 md:col-span-2">
+                <div className="col-span-4 md:col-span-1">
                     <Grow in={currentIndex >= 7} timeout={300}>
                         <div>
                             <Card
@@ -82,7 +82,7 @@ export default function Pricing (): JSX.Element {
                         </div>
                     </Grow>
                 </div>
-                <div className="col-span-4 md:col-span-2">
+                <div className="col-span-4 md:col-span-1">
                     <Grow in={currentIndex >= 8} timeout={300}>
                         <div>
                             <Card

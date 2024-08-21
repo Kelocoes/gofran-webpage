@@ -50,7 +50,7 @@ export default function NeedTherapyIf (): JSX.Element {
                         <Grow in={currentIndex >= 3 + index} timeout={300} key={index}>
                             <div className="flex items-center">
                                 <img src={orangeStar} alt="Orange Star" className="w-[3%]" />
-                                <h2 className="font-body text-[#6543AD] text-md sm:text-lg ml-2">
+                                <h2 className="font-body text-[#4e5e9d] text-md sm:text-lg ml-2">
                                     {phrase}
                                 </h2>
                             </div>

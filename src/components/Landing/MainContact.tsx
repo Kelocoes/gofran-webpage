@@ -26,14 +26,14 @@ export default function MainContact (): JSX.Element {
     // ];
 
     return (
-        <div ref={ref} className="w-[85%] my-6 z-10 flex justify-center relative mt-30 sm:mt-30">
+        <div ref={ref} className="w-[85%] my-6 z-10 flex justify-center relative mt-30 sm:mt-30 mb-10">
             <Grow in={currentIndex >= 2} timeout={300}>
                 <img src={plant} alt="Plant" className="absolute top-22 -left-56 md:-left-24" />
             </Grow>
             <Grow in={currentIndex >= 2} timeout={300}>
                 <img src={plant2} alt="Plant-2" className="absolute top-32 right-0" />
             </Grow>
-            <div className="w-full grid grid-cols-6 gap-0">
+            <div className="w-full grid grid-cols-6 gap-0 items-center">
 
                 <div className="col-span-6 md:col-span-3 flex flex-col items-center justify-center md:block w-[90%]">
                     <Grow in={currentIndex >= 3} timeout={300}>

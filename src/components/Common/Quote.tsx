@@ -15,13 +15,13 @@ const Quote = ({
 }: QuoteProps): JSX.Element => {
     return (
         <div
-            className="absolute left-0 w-full flex flex-col items-center justify-center px-5 pt-9"
+            className="absolute left-0 w-full flex flex-col items-center justify-center px-5 pt-3"
             style={{
                 color: textColor,
                 backgroundColor: background
             }}
         >
-            <h1 className="justify-items-center font-title text-2xl sm:text-2xl drop-shadow-lg text-center w-[75%]">
+            <h1 className="justify-items-center font-title text-xl sm:text-xl drop-shadow-lg text-center w-[75%]">
                 {children}
             </h1>
             <img src={QuoteLogo} alt="Main post" />

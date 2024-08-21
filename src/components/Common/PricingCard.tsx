@@ -15,21 +15,21 @@ const Card = ({
 }: CardProps): JSX.Element => {
     return (
         <div
-            className="flex justify-between items-center p-10"
+            className="flex justify-between items-center p-6"
             style={{
                 backgroundColor: background,
-                borderRadius: "10px",
+                borderRadius: "50px",
                 color: textColor
             }}
         >
             <div>
-                <h1 className="font-title text-xl sm:text-2xl drop-shadow-lg text-left font-bold">
+                <h1 className="font-title text-xl sm:text-lg drop-shadow-lg text-left font-bold">
                     {title}
                 </h1>
                 <p className="text-sm">{description}</p>
             </div>
             <div>
-                <p className="text-2xl md:text-4xl font-bold text-right">{price}€</p>
+                <p className="text-2xl md:text-2xl font-bold text-right">{price}€</p>
             </div>
         </div>
     );

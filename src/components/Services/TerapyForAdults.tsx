@@ -78,7 +78,7 @@ export default function TerapyForAdults (): JSX.Element {
                 <div className="mb-10 mt-[75px] w-full">
                     <Quote>
                         <strong>
-                            «La primera virtud del conocimiento es la capacidad de enfrentarse a lo que no es evidente.» - JacquesLacan
+                            «La primera virtud del conocimiento es la capacidad de enfrentarse a lo que no es evidente.» - Jacques Lacan
                         </strong>
                     </Quote>
                 </div>

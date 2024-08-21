@@ -55,7 +55,7 @@ export default function NotConsidering (): JSX.Element {
                         <Grow in={currentIndex >= 3 + index} timeout={300} key={index}>
                             <div className="flex items-center">
                                 <img src={orangeStar} alt="Orange Star" className="w-[3%]" />
-                                <h2 className="font-body text-[#6543AD] text-md sm:text-lg ml-2">
+                                <h2 className="font-body text-[#4e5e9d] text-md sm:text-lg ml-2">
                                     {phrase}
                                 </h2>
                             </div>
@@ -81,7 +81,7 @@ export default function NotConsidering (): JSX.Element {
                 </div>
                 <div className="col-span-6 mt-6">
                     <Grow in={currentIndex >= 13} timeout={300}>
-                        <h2 className="font-body text-[#6543AD] text-lg sm:text-lg rounded-xl drop-shadow-md text-justify" >
+                        <h2 className="font-body text-[#4e5e9d] text-lg sm:text-lg rounded-xl drop-shadow-md text-justify" >
                         Solo tú tienes el poder y la capacidad de entender completamente tus propias necesidades, sentimientos y deseos.
                         Nadie más puede conocer tu situación interna tan profundamente como tú mismo. Al tomar la iniciativa, te empoderas
                         y tomas control de tu vida, lo que es el primer y más crucial paso hacia cualquier cambio positivo. Reconoce tu
