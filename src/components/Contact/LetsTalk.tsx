@@ -26,8 +26,8 @@ export default function LetsTalk (): JSX.Element {
             <Grow in={currentIndex >= 2} timeout={300}>
                 <img src={plant2} alt="Plant-2" className="absolute top-32 right-0" />
             </Grow>
-            <div className="w-[85%] max-w-7xl grid grid-cols-6 gap-4">
-                <div className="col-span-6 md:col-span-2 flex flex-col items-center justify-center space-y-4 mt-16 hidden md:block">
+            <div className="w-[85%] max-w-7xl grid grid-cols-6 gap-4 items-center">
+                <div className="col-span-6 md:col-span-2 flex flex-col items-center justify-center space-y-4 mt-16 hidden md:block row-span-2 ">
                     <Grow in={currentIndex >= 5} timeout={300}>
                         <div className="flex items-center justify-center">
                             <img src={Contact} alt="gofran" className="w-[90%]" />
@@ -36,7 +36,7 @@ export default function LetsTalk (): JSX.Element {
                 </div>
                 <div className="mt-2 sm:ml-4 col-span-6 md:col-span-4 flex flex-col justify-center space-y-4 row-span-2 w-[90%] md:w-[100%] ml-4">
                     <Grow in={currentIndex >= 1} timeout={300}>
-                        <h1 className="font-title text-4xl sm:text-4xl text-[#4d4b44] font-bold mt-10 drop-shadow-lg text-left lg:text-left">
+                        <h1 className="font-title text-4xl sm:text-2xl text-[#4d4b44] font-bold mt-10 drop-shadow-lg text-left lg:text-left">
                             <div className="flex items-center justify-left">
                                 Conversemos
                                 <img src={horizontalDiamond} alt="Horizontal Diamond" className="w-1/12 ml-1 hidden sm:block" />

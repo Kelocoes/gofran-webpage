@@ -39,7 +39,7 @@ export default function Header (): JSX.Element {
                                 <ul className="flex items-end space-x-4 mb-2 mt-16">
                                     <li>
                                         <button
-                                            className="font-body font-semibold text-lg transition duration-300 ease-in-out transform hover:text-[#7087FF] hover:underline"
+                                            className="font-body text-lg transition duration-300 ease-in-out transform hover:text-[#7087FF] hover:underline"
                                             onClick={() => navigate("/")}
                                         >
                                         Inicio
@@ -47,7 +47,7 @@ export default function Header (): JSX.Element {
                                     </li>
                                     <li>
                                         <button
-                                            className="font-body font-semibold text-lg transition duration-300 ease-in-out transform hover:text-[#7087FF] hover:underline"
+                                            className="font-body text-lg transition duration-300 ease-in-out transform hover:text-[#7087FF] hover:underline"
                                             onClick={() => navigate("/quien-soy")}
                                         >
                                         Quien soy
@@ -55,7 +55,7 @@ export default function Header (): JSX.Element {
                                     </li>
                                     <li>
                                         <button
-                                            className="font-body font-semibold text-lg transition duration-300 ease-in-out transform hover:text-[#7087FF] hover:underline"
+                                            className="font-body text-lg transition duration-300 ease-in-out transform hover:text-[#7087FF] hover:underline"
                                             onClick={() => navigate("/emdr")}
                                         >
                                         EMDR
@@ -63,7 +63,7 @@ export default function Header (): JSX.Element {
                                     </li>
                                     <li>
                                         <button
-                                            className="font-body font-semibold text-lg truncate transition duration-300 ease-in-out transform hover:text-[#7087FF] hover:underline"
+                                            className="font-body text-lg truncate transition duration-300 ease-in-out transform hover:text-[#7087FF] hover:underline"
                                             onClick={() => navigate("/servicios")}
                                         >
                                         Servicios y Tarifas
@@ -71,7 +71,7 @@ export default function Header (): JSX.Element {
                                     </li>
                                     <li>
                                         <button
-                                            className="font-body font-semibold text-lg transition duration-300 ease-in-out transform hover:text-[#7087FF] hover:underline"
+                                            className="font-body text-lg transition duration-300 ease-in-out transform hover:text-[#7087FF] hover:underline"
                                             onClick={() => navigate("/hablemos")}
                                         >
                                         Hablemos
@@ -79,7 +79,7 @@ export default function Header (): JSX.Element {
                                     </li>
                                     <li>
                                         <button
-                                            className="font-body font-semibold text-lg transition duration-300 ease-in-out transform hover:text-[#7087FF] hover:underline"
+                                            className="font-body text-lg transition duration-300 ease-in-out transform hover:text-[#7087FF] hover:underline"
                                             onClick={() => navigate("/pedir-cita")}
                                         >
                                         Pedir cita
@@ -107,7 +107,7 @@ export default function Header (): JSX.Element {
                                     expandIcon={<ExpandMoreIcon />}
                                     aria-controls="panel1a-content"
                                     id="panel1a-header"
-                                    sx={{backgroundColor:"#FFFBED"}}
+                                    sx={{ backgroundColor: "#FFFBED" }}
                                 >
                                     <div className="items-center flex flex-row">
                                         <img
@@ -115,18 +115,18 @@ export default function Header (): JSX.Element {
                                             src={logo}
                                             alt="Logo"
                                         />
-                                        <h2 className="font-body font-semibold text-lg">
+                                        <h2 className="font-body text-lg">
                                         Menú
                                         </h2>
                                     </div>
                                 </AccordionSummary>
                                 <div className="bg-[#FFFBED]">
-                                    <MenuItem onClick={() => navigate("/")}><h2 className="font-body font-semibold text-lg">Inicio</h2></MenuItem>
-                                    <MenuItem onClick={() => navigate("/quien-soy")}><h2 className="font-body font-semibold text-lg">Quien soy</h2></MenuItem>
-                                    <MenuItem onClick={() => navigate("/EMDR")}><h2 className="font-body font-semibold text-lg">EMDR</h2></MenuItem>
-                                    <MenuItem onClick={() => navigate("/servicios")}><h2 className="font-body font-semibold text-lg">Servicios</h2></MenuItem>
-                                    <MenuItem onClick={() => navigate("/hablemos")}><h2 className="font-body font-semibold text-lg">Hablemos</h2></MenuItem>
-                                    <MenuItem onClick={() => navigate("/pedir-cita")}><h2 className="font-body font-semibold text-lg">Pedir cita</h2></MenuItem>
+                                    <MenuItem onClick={() => navigate("/")}><h2 className="font-body text-lg">Inicio</h2></MenuItem>
+                                    <MenuItem onClick={() => navigate("/quien-soy")}><h2 className="font-body text-lg">Quien soy</h2></MenuItem>
+                                    <MenuItem onClick={() => navigate("/EMDR")}><h2 className="font-body text-lg">EMDR</h2></MenuItem>
+                                    <MenuItem onClick={() => navigate("/servicios")}><h2 className="font-body text-lg">Servicios</h2></MenuItem>
+                                    <MenuItem onClick={() => navigate("/hablemos")}><h2 className="font-body text-lg">Hablemos</h2></MenuItem>
+                                    <MenuItem onClick={() => navigate("/pedir-cita")}><h2 className="font-body text-lg">Pedir cita</h2></MenuItem>
                                 </div>
                             </Accordion>
                         </div>
