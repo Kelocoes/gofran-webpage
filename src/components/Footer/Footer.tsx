@@ -9,9 +9,9 @@ import Gofranlogo from "../../assets/images/gofran-logo-mini.png";
 
 export default function Footer (): JSX.Element {
     return (
-        <div className="bg-[#FFFFFF] grid grid-rows-3 sm:grid-cols-3 sm:grid-rows-1 justify-center items-center z-10 w-full space-y-4 sm:space-y-0 py-2">
+        <div className="bg-[#FFFBED] grid grid-rows-3 sm:grid-cols-3 sm:grid-rows-1 justify-center items-center z-10 w-full space-y-4 sm:space-y-0 py-2">
             <div className="flex justify-center items-center">
-                <img src={logo} alt="Logo Psic Gofran" className="w-auto w-[15%]" />
+                <img src={logo} alt="Logo Psic Gofran" className="w-auto h-12" />
             </div>
             <p className="text-slate-600 font-body text-center text-xs">
                 <img src={Gofranlogo} alt="Main post" className="mx-auto w-[17%]" />

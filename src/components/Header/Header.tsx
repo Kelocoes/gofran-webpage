@@ -22,11 +22,11 @@ export default function Header (): JSX.Element {
     };
 
     return (
-        <div className="relative w-full z-20">
-            <Grow in={true} timeout={300} className="bg-white">
+        <div className="relative w-full z-20 ">
+            <Grow in={true} timeout={300} className="bg-[#FFFBED]">
                 {matches
                     ? (
-                        <div className="w-full bg-[#ECEFFF] flex justify-between items-center px-4
+                        <div className="w-full bg-[#FFFBED] flex justify-between items-center px-4
                         ">
                             <div className="flex items-end space-x-8 ml-6">
                                 <button onClick={() => navigate("/")}>
@@ -96,7 +96,7 @@ export default function Header (): JSX.Element {
                         </div>
                     )
                     : (
-                        <div className="flex justify-center items-center w-full">
+                        <div className="flex justify-center items-center w-full header-mobile">
                             <Accordion
                                 square={true}
                                 sx={{ borderRadius: "10px", width: "100%" }}
@@ -107,6 +107,7 @@ export default function Header (): JSX.Element {
                                     expandIcon={<ExpandMoreIcon />}
                                     aria-controls="panel1a-content"
                                     id="panel1a-header"
+                                    sx={{backgroundColor:"#FFFBED"}}
                                 >
                                     <div className="items-center flex flex-row">
                                         <img
@@ -119,7 +120,7 @@ export default function Header (): JSX.Element {
                                         </h2>
                                     </div>
                                 </AccordionSummary>
-                                <div>
+                                <div className="bg-[#FFFBED]">
                                     <MenuItem onClick={() => navigate("/")}><h2 className="font-body font-semibold text-lg">Inicio</h2></MenuItem>
                                     <MenuItem onClick={() => navigate("/quien-soy")}><h2 className="font-body font-semibold text-lg">Quien soy</h2></MenuItem>
                                     <MenuItem onClick={() => navigate("/EMDR")}><h2 className="font-body font-semibold text-lg">EMDR</h2></MenuItem>
