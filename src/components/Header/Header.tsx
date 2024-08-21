@@ -22,20 +22,21 @@ export default function Header (): JSX.Element {
     };
 
     return (
-        <div className="relative w-[85%] z-20">
-            <Grow in={true} timeout={300}>
+        <div className="relative w-full z-20">
+            <Grow in={true} timeout={300} className="bg-white">
                 {matches
                     ? (
-                        <div className="w-full bg-[#ECEFFF] flex justify-between items-center px-4 py-4">
-                            <div className="flex items-end space-x-8">
+                        <div className="w-full bg-[#ECEFFF] flex justify-between items-center px-4
+                        ">
+                            <div className="flex items-end space-x-8 ml-6">
                                 <button onClick={() => navigate("/")}>
                                     <img
                                         src={logo}
                                         alt="Logo Psic Gofran"
-                                        className="max-w-[150px] max-h-[60px] w-auto h-auto mt-16"
+                                        className="max-w-[150px] max-h-[60px] w-auto h-auto"
                                     />
                                 </button>
-                                <ul className="flex items-end space-x-4">
+                                <ul className="flex items-end space-x-4 mb-2 mt-16">
                                     <li>
                                         <button
                                             className="font-body font-semibold text-lg transition duration-300 ease-in-out transform hover:text-[#7087FF] hover:underline"
@@ -90,7 +91,7 @@ export default function Header (): JSX.Element {
                             <img
                                 src={Logo}
                                 alt="Firma Gofran"
-                                className="absolute top-0 right-4 max-w-[300px] max-h-[150px] w-auto h-auto"
+                                className="absolute top-0 right-4 max-w-[220px] max-h-[110px] w-auto h-auto"
                             />
                         </div>
                     )
@@ -98,7 +99,7 @@ export default function Header (): JSX.Element {
                         <div className="flex justify-center items-center w-full">
                             <Accordion
                                 square={true}
-                                sx={{ borderRadius: "20px", width: "75%" }}
+                                sx={{ borderRadius: "10px", width: "100%" }}
                                 expanded={expandedAccordion}
                                 onClick={() => setExpandedAccordion(prevState => !prevState)}
                             >

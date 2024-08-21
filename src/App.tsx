@@ -30,7 +30,9 @@ function App (): JSX.Element {
                 ? <SplashScreen setChange={setChange}/>
                 : <React.Fragment>
 
-                    <div className="flex justify-left md:justify-center mb-4">
+                    <div className="flex justify-left md:justify-center
+                     
+                    ">
                         <Header />
                     </div>
                     <Routes>
