@@ -1,5 +1,3 @@
-import React from "react";
-
 import MainPageLetsTalk from "./MainPageLetsTalk";
 export default function LetsTalk (): JSX.Element {
     return (
