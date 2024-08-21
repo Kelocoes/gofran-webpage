@@ -1,5 +1,3 @@
-import React from "react";
-
 import TerapyForAdults from "./TerapyForAdults";
 import WhatWeCanWork from "./WhatCanWeWork";
 import Pricing from "./Pricing";

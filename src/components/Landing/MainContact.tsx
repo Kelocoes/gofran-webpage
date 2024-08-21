@@ -1,12 +1,8 @@
-import React from "react";
 import Grow from "@mui/material/Grow";
 import { useInView } from "react-intersection-observer";
 
 import plant from "../../assets/images/plant.png";
 import plant2 from "../../assets/images/plant-2.png";
-// import heart from "../../assets/images/not-considering-heart.png";
-// import orangeStar from "../../assets/images/orange-star.png";
-// import CustomButton from "../Common/CustomButton";
 import logo from "../../assets/images/logo.png";
 import ContactForm from "../Contact/ContactForm";
 import { EnvProvider } from "../EnvContext";

@@ -1,4 +1,3 @@
-import React from "react";
 import Grow from "@mui/material/Grow";
 import { useInView } from "react-intersection-observer";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";

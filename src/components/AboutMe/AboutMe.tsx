@@ -1,5 +1,3 @@
-import React from "react";
-
 import WhoAmI from "./WhoAmI";
 import Education from "./Education";
 import JobPerspective from "./JobPerspective";
