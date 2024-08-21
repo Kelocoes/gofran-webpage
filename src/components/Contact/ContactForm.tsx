@@ -60,7 +60,7 @@ export default function ContactForm (): JSX.Element {
                     <Grow in={currentIndex2 >= 2} timeout={300}>
                         <div className="relative flex justify-center pt-6 w-full lg:w-[80%] xl:w-[90%]">
                             <div className="border-4 border-white bg-[#d8dffe] text-[#6543AD] font-body text-xl  p-5 z-10 w-[80%] text-center">
-                                <h1 className="font-title text-2xl sm:text-6xl text-[#4d4b44] font-bold mb-5 drop-shadow-lg text-left lg:text-left divide-y divide-solid">
+                                <h1 className="font-title text-2xl sm:text-4xl text-[#4d4b44] font-bold mb-5 drop-shadow-lg text-left lg:text-left divide-y divide-solid">
                                     <div className="flex items-center justify-center">
                                         Contacto
                                     </div>

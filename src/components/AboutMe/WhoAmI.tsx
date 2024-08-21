@@ -22,7 +22,7 @@ export default function WhoAmI (): JSX.Element {
                 <img src={plant2} alt="Plant-2" className="absolute top-32 right-0" />
             </Grow>
             <div className="w-[85%] grid grid-cols-6 gap-0">
-                <div className="col-span-6">
+                <div className="col-span-6 mb-4">
                     <Grow in={currentIndex >= 1} timeout={300}>
                         <h1 className="font-title text-4xl sm:text-4xl text-[#4d4b44] font-bold mt-10 drop-shadow-lg text-left lg:text-left">
                             <div className="flex items-center justify-left">
@@ -34,7 +34,7 @@ export default function WhoAmI (): JSX.Element {
                 </div>
                 <div className="mt-2 sm:ml-4 col-span-6 md:col-span-4 flex flex-col justify-center space-y-4 row-span-2">
                     <Grow in={currentIndex >= 2} timeout={300}>
-                        <h2 className="font-body text-[#4e5e9d] text-lg sm:text-lg rounded-xl drop-shadow-md text-left">
+                        <h2 className="font-body text-[#4e5e9d] text-lg sm:text-lg rounded-xl drop-shadow-md text-left mb-4">
                             Hola, soy Gofran y quiero compartir un poco sobre mí. Desde pequeña, siempre
                             tuve claro que quería dedicarme a algo relacionado con las personas. Durante el
                             bachillerato, tuve la oportunidad de cursar filosofía, una asignatura que me
@@ -44,7 +44,7 @@ export default function WhoAmI (): JSX.Element {
                         </h2>
                     </Grow>
                     <Grow in={currentIndex >= 3} timeout={300}>
-                        <h2 className="font-body text-[#4e5e9d] text-lg sm:text-lg rounded-xl drop-shadow-md text-left">
+                        <h2 className="font-body text-[#4e5e9d] text-lg sm:text-lg rounded-xl drop-shadow-md text-left mb-4">
                             Nací y crecí en Barcelona, pero mis raíces son Sirias. Por ello, hablo castellano,
                             árabe (sirio y entiendo el marroquí) y catalán. Esta diversidad cultural me ha
                             permitido desarrollar una comprensión más amplia y empática de las personas,
@@ -52,7 +52,7 @@ export default function WhoAmI (): JSX.Element {
                         </h2>
                     </Grow>
                     <Grow in={currentIndex >= 4} timeout={300}>
-                        <h2 className="font-body text-[#4e5e9d] text-lg sm:text-lg rounded-xl drop-shadow-md text-left">
+                        <h2 className="font-body text-[#4e5e9d] text-lg sm:text-lg rounded-xl drop-shadow-md text-left mb-4">
                             Estoy comprometida con el bienestar mental y emocional de mis pacientes, y
                             busco constantemente nuevas formas de apoyarles en su camino hacia una vida
                             más equilibrada y plena. Mi curiosidad por la mente humana crece día a día, y la
@@ -70,8 +70,10 @@ export default function WhoAmI (): JSX.Element {
                     <Grow in={currentIndex >= 6} timeout={300}>
                         <div className="flex justify-left mt-4 ml-12 md:ml-0">
                             <CustomButton
+                                bgColor="#ffddb9"
+                                borderColor="#ffca92"
                                 text="Pedir cita"
-                                path="/contacto"
+                                path="/pedir-cita"
                             />
                         </div>
                     </Grow>

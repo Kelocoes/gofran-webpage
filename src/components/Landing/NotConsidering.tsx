@@ -74,14 +74,14 @@ export default function NotConsidering (): JSX.Element {
                                 bgColor="#ffddb9"
                                 borderColor="#ffca92"
                                 text="Hablar conmigo"
-                                path="/contacto"
+                                path="/hablemos"
                             />
                         </div>
                     </Grow>
                 </div>
                 <div className="col-span-6 mt-6">
                     <Grow in={currentIndex >= 13} timeout={300}>
-                        <h2 className="font-body text-[#4e5e9d] text-lg sm:text-lg rounded-xl drop-shadow-md text-justify" >
+                        <h2 className="font-body text-[#6543AD] text-lg sm:text-lg rounded-xl drop-shadow-md text-justify" >
                         Solo tú tienes el poder y la capacidad de entender completamente tus propias necesidades, sentimientos y deseos.
                         Nadie más puede conocer tu situación interna tan profundamente como tú mismo. Al tomar la iniciativa, te empoderas
                         y tomas control de tu vida, lo que es el primer y más crucial paso hacia cualquier cambio positivo. Reconoce tu
@@ -95,7 +95,7 @@ export default function NotConsidering (): JSX.Element {
                     <Quote textColor="#7087ff">
                         <strong>
                             &quot;Eres la <strong className="underline" style={{ color: "#ffad57" }}>única persona</strong> que puede dar el primer paso,
-                            <strong className="underline" style={{ color: "#ffad57" }}>para ayudarte</strong>; no esperes a nadie más.&quot;
+                            <strong className="underline" style={{ color: "#ffad57", marginLeft: 8 }}>para ayudarte</strong>; no esperes a nadie más.&quot;
                         </strong>
                     </Quote>
                 </div>
@@ -104,7 +104,7 @@ export default function NotConsidering (): JSX.Element {
                 <div className="flex justify-center col-span-6 mt-64 ms-8">
                     <CustomButton
                         text="Pedir cita"
-                        path="/contacto"
+                        path="/pedir-cita"
                     />
                 </div>
             </Grow>

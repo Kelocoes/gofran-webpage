@@ -120,11 +120,11 @@ export default function Header (): JSX.Element {
                                 </AccordionSummary>
                                 <div>
                                     <MenuItem onClick={() => navigate("/")}><h2 className="font-body font-semibold text-lg">Inicio</h2></MenuItem>
-                                    <MenuItem onClick={() => navigate("/sobre-mi")}><h2 className="font-body font-semibold text-lg">Quien soy</h2></MenuItem>
+                                    <MenuItem onClick={() => navigate("/quien-soy")}><h2 className="font-body font-semibold text-lg">Quien soy</h2></MenuItem>
                                     <MenuItem onClick={() => navigate("/EMDR")}><h2 className="font-body font-semibold text-lg">EMDR</h2></MenuItem>
                                     <MenuItem onClick={() => navigate("/servicios")}><h2 className="font-body font-semibold text-lg">Servicios</h2></MenuItem>
                                     <MenuItem onClick={() => navigate("/hablemos")}><h2 className="font-body font-semibold text-lg">Hablemos</h2></MenuItem>
-                                    <MenuItem onClick={() => navigate("/contacto")}><h2 className="font-body font-semibold text-lg">Pedir cita</h2></MenuItem>
+                                    <MenuItem onClick={() => navigate("/pedir-cita")}><h2 className="font-body font-semibold text-lg">Pedir cita</h2></MenuItem>
                                 </div>
                             </Accordion>
                         </div>

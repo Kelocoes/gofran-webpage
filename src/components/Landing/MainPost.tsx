@@ -28,7 +28,7 @@ export default function MainPost (): JSX.Element {
                     <Grow in={currentIndex >= 2} timeout={300}>
                         <h2 className="font-body text-[#4e5e9d] text-lg sm:text-lg rounded-xl drop-shadow-md text-justify">
                             Aprende a trabajar desde la raíz del problema con la psicología online,
-                            aprovechando la flexibilidad y accesibilidad que te permite conectarte
+                            aprovechando la flexibilidad y accesibilidad que te permite conectar
                             con profesionales desde la comodidad dese cualquier sitio.
                         </h2>
                     </Grow>
@@ -50,21 +50,21 @@ export default function MainPost (): JSX.Element {
                         <Grow in={currentIndex >= 5} timeout={300}>
                             <div className="flex items-stretch w-full">
                                 <div className="grid grid-cols-1 md:grid-cols-3 w-full">
-                                    <div className="justify-center my-2">
+                                    <div className="justify-center my-2 flex">
                                         <CustomButton
                                             text="Leer más sobre mí"
-                                            path="/sobre-mi"
+                                            path="/quien-soy"
                                         />
                                     </div>
-                                    <div className="justify-center my-2">
+                                    <div className="justify-center my-2 flex">
                                         <CustomButton
                                             bgColor="#ffddb9"
                                             borderColor="#ffca92"
                                             text="Hablar conmigo"
-                                            path="/contacto"
+                                            path="/hablemos"
                                         />
                                     </div>
-                                    <div className="justify-center my-2">
+                                    <div className="justify-center my-2 flex">
                                         <CustomButton
                                             text="Tratamientos"
                                             path="/servicios"

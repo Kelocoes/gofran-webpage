@@ -19,7 +19,7 @@ export default function JobPerspective (): JSX.Element {
                 <img src={plant2} alt="Plant-2" className="absolute top-32 right-0" />
             </Grow>
             <div className="w-full grid grid-cols-6 grid-row-1 gap-4">
-                <div className="mt-2 col-span-6 md:col-span-6 flex flex-col justify-end space-y-4 row-span-2 md:mr-auto md:ml-8 mt-20">
+                <div className="mt-2 col-span-6 md:col-span-6 flex flex-col justify-end space-y-4 row-span-2 md:mr-auto md:ml-8">
                     <div className="col-span-6">
                         <Grow in={currentIndex >= 1} timeout={300}>
                             <h1 className="font-title text-4xl sm:text-4xl text-[#4d4b44] font-bold drop-shadow-lg text-left lg:text-left">
@@ -31,7 +31,7 @@ export default function JobPerspective (): JSX.Element {
                         </Grow>
                     </div>
                     <Grow in={currentIndex >= 2} timeout={300}>
-                        <h2 className="font-body text-[#4e5e9d] text-lg sm:text-lg rounded-xl drop-shadow-md text-justify">
+                        <h2 className="font-body text-[#4e5e9d] text-lg sm:text-lg rounded-xl drop-shadow-md text-justify pt-6">
                             Me he formado en diversas corrientes y orientaciones de la psicología, incluyendo la Terapia Cognitivo Conductual, la
                             perspectiva del trauma, el apego y las emociones, el trabajo con heridas de la infancia y el niño interior. Esto me permite
                             definir mi estilo de terapia como <strong>integrador</strong>. Combino mis conocimientos teóricos y prácticos para crear terapias únicas,

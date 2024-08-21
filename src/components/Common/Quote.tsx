@@ -15,7 +15,7 @@ const Quote = ({
 }: QuoteProps): JSX.Element => {
     return (
         <div
-            className="absolute left-0 w-full flex flex-col items-center justify-center p-5"
+            className="absolute left-0 w-full flex flex-col items-center justify-center px-5 pt-9"
             style={{
                 color: textColor,
                 backgroundColor: background

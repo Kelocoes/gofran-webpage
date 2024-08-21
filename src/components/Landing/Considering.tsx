@@ -42,7 +42,7 @@ export default function Considering (): JSX.Element {
                                 ¿Todavia estas considerando ir?
                                 <img src={horizontalDiamond} alt="Horizontal Diamond" className="w-1/12 ml-1 hidden sm:block" />
                             </div>
-                            <div className="flex items-center text-2xl sm:text-2xl leading-[5rem] text-[#7087ff] drop-shadow-sm text-left mb-2 mt-8">
+                            <div className="flex items-center text-2xl sm:text-2xl leading-[5rem] text-[#7087ff] drop-shadow-sm text-left mb-2 mt-8 ml-8">
                                 <strong>Si tienes malestar y vas, consigues: </strong>
                             </div>
                         </h1>
@@ -50,7 +50,7 @@ export default function Considering (): JSX.Element {
                     </Grow>
                 </div>
 
-                <div className="mt-2 md:col-start-2 col-span-6 md:col-span-2 flex flex-col justify-center space-y-4 row-span-2">
+                <div className="mt-2 col-span-6 md:col-span-3 flex flex-col justify-center space-y-4 row-span-2">
                     {phrases.map((phrase, index) => (
                         <Grow in={currentIndex >= 3 + index} timeout={300} key={index}>
                             <div className="flex items-center">
@@ -69,12 +69,12 @@ export default function Considering (): JSX.Element {
                         </Grow>
                     </div>
                     <Grow in={currentIndex >= 12} timeout={300}>
-                        <div className="flex justify-left mt-4 ms-8">
+                        <div className="flex justify-left pt-4 ms-4">
                             <CustomButton
                                 bgColor="#ffddb9"
                                 borderColor="#ffca92"
                                 text="Pedir cita"
-                                path="/contacto"
+                                path="/pedir-cita"
                             />
                         </div>
                     </Grow>

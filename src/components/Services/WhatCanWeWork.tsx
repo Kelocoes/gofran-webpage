@@ -18,7 +18,7 @@ export default function WhatWeCanWork (): JSX.Element {
     const currentIndex = useIncrementalIndexEffect(inView, 12, 50);
 
     return (
-        <div ref={ref} className="w-full md:w-[80%] my-6 z-10 flex flex-col items-center justify-center mt-[300px] sm:mt-8">
+        <div ref={ref} className="w-full md:w-[80%] my-6 z-10 flex flex-col items-center justify-center mt-[300px] sm:mt-8 md:mt-36">
             <Grow in={currentIndex >= 2} timeout={300}>
                 <img src={plant2} alt="Plant-2" className="absolute top-32 right-0" />
             </Grow>
@@ -28,7 +28,6 @@ export default function WhatWeCanWork (): JSX.Element {
                         <h1 className="font-title text-3xl sm:text-4xl text-[#4d4b44] font-bold mt-10 drop-shadow-lg text-left lg:text-left">
                             <div className="flex items-center justify-center">
                                 ¿Qué podemos trabajar?
-                                {/* <img src={horizontalDiamond} alt="Horizontal Diamond" className="w-1/12 ml-1 hidden sm:block" /> */}
                             </div>
                         </h1>
                     </Grow>
@@ -53,7 +52,7 @@ export default function WhatWeCanWork (): JSX.Element {
                             <div className="flex items-center justify-center">
                                 <img src={SelfSteem} alt="gofran" className="w-full" />
                             </div>
-                            <div className="items-center text-sm sm:text-xl text-[#ffddb9] drop-shadow-sm text-center mb-2 mt-8">
+                            <div className="items-center text-sm sm:text-xl text-[#fcbf7f] drop-shadow-sm text-center mb-2 mt-8">
                                 <strong>Autoestima</strong>
                             </div>
                         </div>
@@ -77,7 +76,7 @@ export default function WhatWeCanWork (): JSX.Element {
                             <div className="flex items-center justify-center">
                                 <img src={Dependency} alt="gofran" className="w-full" />
                             </div>
-                            <div className="items-center text-sm sm:text-xl text-[#ffddb9] drop-shadow-sm text-center mb-2 mt-8">
+                            <div className="items-center text-sm sm:text-xl text-[#fcbf7f] drop-shadow-sm text-center mb-2 mt-8">
                                 <strong>Dependencia Emocional</strong>
                             </div>
                         </div>
@@ -103,7 +102,7 @@ export default function WhatWeCanWork (): JSX.Element {
                             <div className="flex items-center justify-center">
                                 <img src={Neuro} alt="gofran" className="w-full" />
                             </div>
-                            <div className="items-center text-sm sm:text-xl text-[#ffddb9] drop-shadow-sm text-center mb-2 mt-8">
+                            <div className="items-center text-sm sm:text-xl text-[#fcbf7f] drop-shadow-sm text-center mb-2 mt-8">
                                 <strong>Neuropsicología</strong>
                             </div>
                         </div>
@@ -127,7 +126,7 @@ export default function WhatWeCanWork (): JSX.Element {
                             <div className="flex items-center justify-center">
                                 <img src={Other} alt="gofran" className="w-full" />
                             </div>
-                            <div className="items-center text-sm sm:text-xl text-[#ffddb9] drop-shadow-sm text-center mb-2 mt-8">
+                            <div className="items-center text-sm sm:text-xl text-[#fcbf7f] drop-shadow-sm text-center mb-2 mt-8">
                                 <strong>Otros (consultame)</strong>
                             </div>
                         </div>

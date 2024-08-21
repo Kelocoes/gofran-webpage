@@ -51,7 +51,7 @@ export default function AskForDate (): JSX.Element {
                         </h1>
                     </Grow>
                     <Grow in={currentIndex >= 6} timeout={300}>
-                        <h2 className="font-body text-[#4e5e9d] text-lg sm:text-2xl rounded-xl drop-shadow-md text-justify" >
+                        <h2 className="font-body text-[#4e5e9d] text-lg rounded-xl drop-shadow-md text-justify leading-[2]" >
                             Paso 1: Rellenar y enviar el formulario. <br></br>
                             Paso 2: Cuadrar día y hora para empezar la terapia.<br></br>
                             Paso 3: La reserva se finaliza cuando se realice el pago.<br></br>
