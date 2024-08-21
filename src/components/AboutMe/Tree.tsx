@@ -23,7 +23,7 @@ export default function Tree (): JSX.Element {
                 </Grow>
                 <div className="text-center p-2 flex flex-col items-end md:hidden">
                     <Grow in={currentIndex >= 3} timeout={300}>
-                        <h2 className="font-body text-[#4e5e9d] text-lg sm:text-lg rounded-xl drop-shadow-md mb-2">
+                        <h2 className="font-body text-[#4e5e9d] text-lg sm:text-lg rounded-xl drop-shadow-md mb-4">
                             &quot;La raíz de toda la salud está en el cerebro.<br />
                             El tronco del árbol son las emociones.<br />
                             Las ramas y las hojas son el cuerpo.<br />
@@ -38,14 +38,14 @@ export default function Tree (): JSX.Element {
                                 bgColor="#ffddb9"
                                 borderColor="#ffca92"
                                 text="Reservar Cita"
-                                path="/contacto"
+                                path="/pedir-cita"
                             />
                         </div>
                     </Grow>
                 </div>
                 <div className="absolute bottom-4 right-4 text-right p-2 flex flex-col items-end hidden md:block">
                     <Grow in={currentIndex >= 3} timeout={300}>
-                        <h2 className="font-body text-[#4e5e9d] text-lg sm:text-xl rounded-xl drop-shadow-md mb-2">
+                        <h2 className="font-body text-[#4e5e9d] text-lg sm:text-lg rounded-xl drop-shadow-md mb-4">
                             &quot;La raíz de toda la salud está en el cerebro.<br />
                             El tronco del árbol son las emociones.<br />
                             Las ramas y las hojas son el cuerpo.<br />
@@ -60,7 +60,7 @@ export default function Tree (): JSX.Element {
                                 bgColor="#ffddb9"
                                 borderColor="#ffca92"
                                 text="Reservar Cita"
-                                path="/contacto"
+                                path="/pedir-cita"
                             />
                         </div>
                     </Grow>

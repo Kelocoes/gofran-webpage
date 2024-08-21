@@ -59,7 +59,7 @@ export default function Process (): JSX.Element {
                                 consulta.<br></br>
                                 Si tienes cualquier duda, ponte en contacto conmigo:
                                 <a href="https://wa.me/message/EEMGNA7SL4S5P1" target="_blank" rel="noopener noreferrer">
-                                    <WhatsAppIcon sx={{ fontSize: 34, "&:hover": { transform: "scale(1.5)" }, transition: "transform  0.2s ease" }} />
+                                    <WhatsAppIcon sx={{ fontSize: 34, "&:hover": { transform: "scale(1.5)" }, transition: "transform  0.2s ease", mx: 1 }} />
                                 </a>
                                 <a href="mailto:psicologagofran@gmail.com" target="_blank" rel="noopener noreferrer">
                                     <MailOutlinedIcon sx={{ fontSize: 34, "&:hover": { transform: "scale(1.5)" }, transition: "transform  0.2s ease" }} />
@@ -112,7 +112,7 @@ export default function Process (): JSX.Element {
                     </div>
                 </div>
             </div>
-            <div className="w-[90%] grid grid-cols-6">
+            <div className="w-[90%] grid grid-cols-6 mt-4">
                 <div className="col-span-6 md:col-span-2 flex flex-col items-center justify-center space-y-4 hidden mt-12 md:block w-[100%] ml-0 md:ml-64">
                     <Grow in={currentIndex >= 5} timeout={300}>
                         <div className="flex items-center justify-center">
@@ -140,7 +140,7 @@ export default function Process (): JSX.Element {
                                             bgColor="#ffddb9"
                                             borderColor="#ffca92"
                                             text="Reservar cita"
-                                            path="/contacto"
+                                            path="/pedir-cita"
                                         />
                                     </div>
                                 </Grow>
@@ -160,7 +160,7 @@ export default function Process (): JSX.Element {
                                     bgColor="#ffddb9"
                                     borderColor="#ffca92"
                                     text="Reservar cita"
-                                    path="/contacto"
+                                    path="/pedir-cita"
                                 />
                             </div>
                         </Grow>

@@ -6,6 +6,7 @@ import plant2 from "../../assets/images/plant-2.png";
 import Brain from "../../assets/images/brain-heavies.png";
 import Card from "../Common/PricingCard";
 import { useIncrementalIndexEffect } from "../../utils/UseIncrementalEffect";
+import CustomButton from "../Common/CustomButton";
 
 export default function Pricing (): JSX.Element {
     const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.15 });
@@ -87,11 +88,22 @@ export default function Pricing (): JSX.Element {
                             <Card
                                 title="Pack Ahorro Mensual"
                                 description="4 sesiones de 45-50 minutos"
-                                price="190"
+                                price="200"
                             />
                         </div>
                     </Grow>
-
+                </div>
+                <div className="col-span-4 flex justify-center">
+                    <Grow in={currentIndex >= 9} timeout={300}>
+                        <div className="flex justify-left ms-4">
+                            <CustomButton
+                                bgColor="#ffddb9"
+                                borderColor="#ffca92"
+                                text="Pedir cita"
+                                path="/pedir-cita"
+                            />
+                        </div>
+                    </Grow>
                 </div>
             </div>
 

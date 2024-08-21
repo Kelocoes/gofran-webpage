@@ -38,7 +38,7 @@ export default function Education (): JSX.Element {
 
     return (
         <div ref={ref} className="w-[85%] z-10 mt-[400px] sm:mt-[200px]">
-            <div className="flex justify-center mb-4">
+            <div className="flex justify-center">
                 <button
                     onClick={toggleOpen}
                     className="relative text-xl p-3 rounded-lg bg-[#5f3c87] text-white shadow-lg hover:bg-[#6b459b] transition duration-300 ease-in-out flex items-center justify-center"
@@ -71,7 +71,7 @@ export default function Education (): JSX.Element {
                             </div>
                         </Grow>
                     </div>
-                    <div className="mt-2 col-span-6 md:col-span-3 flex flex-col justify-end space-y-4 row-span-2 md:mr-auto md:ml-8 mt-20">
+                    <div className="col-span-6 md:col-span-3 flex flex-col justify-end space-y-4 row-span-2 md:mr-auto md:ml-8 mt-8">
                         <div className="col-span-6">
                             <Grow in={currentIndex >= 1} timeout={300}>
                                 <h1 className="font-title text-4xl sm:text-4xl text-[#4d4b44] font-bold drop-shadow-lg text-left lg:text-left">
@@ -128,7 +128,7 @@ export default function Education (): JSX.Element {
                                     bgColor="#ffddb9"
                                     borderColor="#ffca92"
                                     text="Hablar conmigo"
-                                    path="/contacto"
+                                    path="/hablemos"
                                 />
                             </div>
                         </Grow>

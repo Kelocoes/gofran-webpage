@@ -52,14 +52,19 @@ export default function MainContact (): JSX.Element {
                         </h2>
                     </Grow>
                     <Grow in={currentIndex >= 5} timeout={300}>
+                        <div className="flex justify-center">
+                            <img src={logo} alt="Logo Psic Gofran" className="w-auto h-20 p-0 mt-10" />
+                        </div>
+                    </Grow>
+                    <Grow in={currentIndex >= 6} timeout={300}>
                         <h1 className="font-title text-2xl sm:text-2xl text-[#4d4b44] font-bold mt-10 drop-shadow-lg text-left lg:text-left">
                             <div className="flex items-center justify-left">
                                 Pasos a seguir para reservar
                             </div>
                         </h1>
                     </Grow>
-                    <Grow in={currentIndex >= 6} timeout={300}>
-                        <h2 className="font-body text-[#4e5e9d] text-lg sm:text-lg rounded-xl drop-shadow-md text-justify" >
+                    <Grow in={currentIndex >= 7} timeout={300}>
+                        <h2 className="font-body text-[#4e5e9d] text-lg rounded-xl drop-shadow-md text-justify leading-[2]" >
                             Paso 1: Rellenar y enviar el formulario. <br></br>
                             Paso 2: Cuadrar día y hora para empezar la terapia.<br></br>
                             Paso 3: La reserva se finaliza cuando se realice el pago.<br></br>
@@ -68,11 +73,6 @@ export default function MainContact (): JSX.Element {
                             datos.<br></br>
                             Paso 5: Comenzar el proceso.<br></br>
                         </h2>
-                    </Grow>
-                    <Grow in={currentIndex >= 7} timeout={300}>
-                        <div className="flex justify-center">
-                            <img src={logo} alt="Logo Psic Gofran" className="w-auto h-20 p-0 mt-10" />
-                        </div>
                     </Grow>
                 </div>
 

@@ -101,7 +101,7 @@ export default function WhatIsTheEMDR (): JSX.Element {
                 <div className="flex justify-center col-span-6 mt-[400px] md:mt-64  ms-8">
                     <CustomButton
                         text="Reservar Cita"
-                        path="/contacto"
+                        path="/pedir-cita"
                     />
                 </div>
             </Grow>

@@ -33,8 +33,8 @@ export default function NeedTherapyIf (): JSX.Element {
             <Grow in={currentIndex >= 2} timeout={300}>
                 <img src={plant2} alt="Plant-2" className="absolute top-32 right-0" />
             </Grow>
-            <div className="w-full grid grid-cols-6 gap-4">
-                <div className="col-span-6">
+            <div className="w-full grid grid-cols-12 gap-4">
+                <div className="col-span-12">
                     <Grow in={currentIndex >= 1} timeout={300}>
                         <h1 className="font-title text-4xl sm:text-4xl text-[#4d4b44] font-bold mt-10 drop-shadow-lg text-left lg:text-left">
                             <div className="flex items-center justify-left">
@@ -45,7 +45,7 @@ export default function NeedTherapyIf (): JSX.Element {
                     </Grow>
                 </div>
 
-                <div className="mt-2 md:col-start-2 col-span-3 md:col-span-3 flex flex-col justify-center space-y-4 row-span-2">
+                <div className="mt-2 md:col-start-2 col-span-12 md:col-span-6 flex flex-col justify-center space-y-4 row-span-2">
                     {phrases.map((phrase, index) => (
                         <Grow in={currentIndex >= 3 + index} timeout={300} key={index}>
                             <div className="flex items-center">
@@ -58,7 +58,7 @@ export default function NeedTherapyIf (): JSX.Element {
                     ))}
                 </div>
 
-                <div className="col-span-6 md:col-span-2 flex flex-col items-center justify-center space-y-4">
+                <div className="col-span-12 md:col-span-4 flex flex-col items-center justify-center space-y-4">
                     <Grow in={currentIndex >= 4} timeout={300}>
                         <div className="flex items-center justify-center">
                             <img src={gofran} alt="gofran" className="w-full" />
@@ -67,8 +67,8 @@ export default function NeedTherapyIf (): JSX.Element {
                     <Grow in={currentIndex >= 10} timeout={300}>
                         <div className="flex justify-center mt-4 ml-0 sm:mr-14">
                             <CustomButton
-                                text="Habla conmigo"
-                                path="/contacto"
+                                text="Hablar conmigo"
+                                path="/hablemos"
                             />
                         </div>
                     </Grow>

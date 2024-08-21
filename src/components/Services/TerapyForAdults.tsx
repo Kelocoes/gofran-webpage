@@ -67,7 +67,7 @@ export default function TerapyForAdults (): JSX.Element {
                                 bgColor="#ffddb9"
                                 borderColor="#ffca92"
                                 text="Reservar cita"
-                                path="/contacto"
+                                path="/pedir-cita"
                             />
                         </div>
                     </Grow>
