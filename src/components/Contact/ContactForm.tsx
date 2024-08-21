@@ -1,17 +1,11 @@
 import React from "react";
-
 import { useInView } from "react-intersection-observer";
-
 import Grow from "@mui/material/Grow";
-
-import { useIncrementalIndexEffect } from "../../utils/UseIncrementalEffect";
-
 import emailjs from "@emailjs/browser";
-
-import { useEnv } from "../EnvContext";
-
 import { useForm } from "react-hook-form";
 
+import { useIncrementalIndexEffect } from "../../utils/UseIncrementalEffect";
+import { useEnv } from "../EnvContext";
 import orangeStar from "../../assets/images/orange-star.png";
 
 type FormValues = {
@@ -22,9 +16,9 @@ type FormValues = {
     message: string;
 };
 
-export default function ContactForm(): JSX.Element {
+export default function ContactForm (): JSX.Element {
     const [ref2, inView2] = useInView({ triggerOnce: true, threshold: 0.15 });
-    const currentIndex2 = useIncrementalIndexEffect(inView2, 4, 150);
+    const currentIndex2 = useIncrementalIndexEffect(inView2, 4, 50);
     const { serviceId, templateId, mailPublicKey } = useEnv();
     const [isActive, setIsActive] = React.useState(true);
     const { handleSubmit: getInfo, register: registro, reset } = useForm();
@@ -34,35 +28,30 @@ export default function ContactForm(): JSX.Element {
         "Responsable: Gofran Rawas Karbouje.",
         "Finalidad del tratamiento de los datos para la que usted da su consentimiento será la de gestionar los datos de los pacientes que accedan al formulario de contacto de la página web de la entidad, contestar sus consultas.",
         "CESIONES: No se prevén cesiones, excepto por obligación legal o requerimiento judicial.",
-        "Cualquier duda pueden ponerse en contacto conmigo a través de gofranpsicologa@gmail.com.",
+        "Cualquier duda pueden ponerse en contacto conmigo a través de gofranpsicologa@gmail.com."
     ];
     const toggleOpen = ():void => {
         setIsOpen(!isOpen);
     };
     const sendEmail = (data: object): void => {
-
         try {
             const dataTyped = data as FormValues;
-            console.log(data);
 
             const currentForm = form.current;
             if (currentForm == null || dataTyped.subject === "Horario") return;
             reset();
             setIsActive(false);
-            
+
             emailjs.sendForm(serviceId, templateId, currentForm, mailPublicKey)
                 .then((result) => {
                     console.log(result.text);
                 }, (error) => {
                     console.log(error.text);
                 });
-            
         } catch (error) {
             console.error(error);
         }
-
     };
-
 
     return (
         <div className="flex flex-col items-center justify-center">

@@ -14,25 +14,25 @@ const CustomButton: React.FC<CustomButtonProps> = ({
     borderColor = "#7189f8",
     textColor = "#4d4b44",
     text,
-    path,
+    path
 }) => {
     const nav = useNavigate();
 
     const navigate = (path: string): void => {
         window.scrollTo({
             top: 0,
-            behavior: "auto",
+            behavior: "auto"
         });
         nav(path);
     };
 
     return (
         <button
-            className={"font-body text-base sm:text-2xl py-3 sm:py-3 px-20 md:px-10 text-center flex items-center justify-center"}
+            className={"font-body text-base sm:text-lg py-3 sm:py-3 px-20 md:px-10 text-center flex items-center justify-center"}
             style={{
                 color: textColor,
                 backgroundColor: bgColor,
-                borderColor: borderColor,
+                borderColor,
                 borderWidth: "3px",
                 borderRadius: "8px",
                 borderStyle: "solid"

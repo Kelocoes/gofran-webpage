@@ -1,19 +1,17 @@
 import React from "react";
+import Grow from "@mui/material/Grow";
+import { useInView } from "react-intersection-observer";
+
 import brain from "../../assets/images/brain.png";
 import stars from "../../assets/images/stars.png";
 import brain2 from "../../assets/images/brain 2.png";
 import plant from "../../assets/images/plant.png";
 import plant2 from "../../assets/images/plant-2.png";
-
-import Grow from "@mui/material/Grow";
-
-import { useInView } from "react-intersection-observer";
-
 import { useIncrementalIndexEffect } from "../../utils/UseIncrementalEffect";
 
-export default function QuestionMentalHealth(): JSX.Element {
+export default function QuestionMentalHealth (): JSX.Element {
     const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.15 });
-    const currentIndex = useIncrementalIndexEffect(inView, 7, 150);
+    const currentIndex = useIncrementalIndexEffect(inView, 7, 50);
 
     return (
         <div ref={ref} className="w-[95%] md:w-[65%] my-6 flex justify-center z-10 relative">

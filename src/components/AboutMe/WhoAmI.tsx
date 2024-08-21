@@ -1,4 +1,6 @@
 import React from "react";
+import Grow from "@mui/material/Grow";
+import { useInView } from "react-intersection-observer";
 
 import plant from "../../assets/images/plant.png";
 import plant2 from "../../assets/images/plant-2.png";
@@ -6,15 +8,11 @@ import horizontalDiamond from "../../assets/images/horizontal-diamond.png";
 import aboutmeGofran from "../../assets/images/aboutme-gofran.png";
 import CustomButton from "../Common/CustomButton";
 import Quote from "../Common/Quote";
-import Grow from "@mui/material/Grow";
-
-import { useInView } from "react-intersection-observer";
-
 import { useIncrementalIndexEffect } from "../../utils/UseIncrementalEffect";
 
-export default function WhoAmI(): JSX.Element {
+export default function WhoAmI (): JSX.Element {
     const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.15 });
-    const currentIndex = useIncrementalIndexEffect(inView, 12, 150);
+    const currentIndex = useIncrementalIndexEffect(inView, 12, 50);
 
     return (
         <div ref={ref} className="w-full my-6 z-10 flex flex-col items-center justify-center relative mt-0 sm:mt-8">
@@ -24,10 +22,10 @@ export default function WhoAmI(): JSX.Element {
             <Grow in={currentIndex >= 2} timeout={300}>
                 <img src={plant2} alt="Plant-2" className="absolute top-32 right-0" />
             </Grow>
-            <div className="w-[90%] grid grid-cols-6 gap-4">
+            <div className="w-[85%] grid grid-cols-6 gap-0">
                 <div className="col-span-6">
                     <Grow in={currentIndex >= 1} timeout={300}>
-                        <h1 className="font-title text-4xl sm:text-5xl text-[#4d4b44] font-bold mt-10 drop-shadow-lg text-left lg:text-left">
+                        <h1 className="font-title text-4xl sm:text-4xl text-[#4d4b44] font-bold mt-10 drop-shadow-lg text-left lg:text-left">
                             <div className="flex items-center justify-left">
                                 ¿Quien soy?
                                 <img src={horizontalDiamond} alt="Horizontal Diamond" className="w-1/12 ml-1 hidden sm:block" />
@@ -37,7 +35,7 @@ export default function WhoAmI(): JSX.Element {
                 </div>
                 <div className="mt-2 sm:ml-4 col-span-6 md:col-span-4 flex flex-col justify-center space-y-4 row-span-2">
                     <Grow in={currentIndex >= 2} timeout={300}>
-                        <h2 className="font-body text-[#4e5e9d] text-lg sm:text-2xl rounded-xl drop-shadow-md text-justify">
+                        <h2 className="font-body text-[#4e5e9d] text-lg sm:text-lg rounded-xl drop-shadow-md text-left">
                             Hola, soy Gofran y quiero compartir un poco sobre mí. Desde pequeña, siempre
                             tuve claro que quería dedicarme a algo relacionado con las personas. Durante el
                             bachillerato, tuve la oportunidad de cursar filosofía, una asignatura que me
@@ -47,7 +45,7 @@ export default function WhoAmI(): JSX.Element {
                         </h2>
                     </Grow>
                     <Grow in={currentIndex >= 3} timeout={300}>
-                        <h2 className="font-body text-[#4e5e9d] text-lg sm:text-2xl rounded-xl drop-shadow-md text-justify">
+                        <h2 className="font-body text-[#4e5e9d] text-lg sm:text-lg rounded-xl drop-shadow-md text-left">
                             Nací y crecí en Barcelona, pero mis raíces son Sirias. Por ello, hablo castellano,
                             árabe (sirio y entiendo el marroquí) y catalán. Esta diversidad cultural me ha
                             permitido desarrollar una comprensión más amplia y empática de las personas,
@@ -55,7 +53,7 @@ export default function WhoAmI(): JSX.Element {
                         </h2>
                     </Grow>
                     <Grow in={currentIndex >= 4} timeout={300}>
-                        <h2 className="font-body text-[#4e5e9d] text-lg sm:text-2xl rounded-xl drop-shadow-md text-justify">
+                        <h2 className="font-body text-[#4e5e9d] text-lg sm:text-lg rounded-xl drop-shadow-md text-left">
                             Estoy comprometida con el bienestar mental y emocional de mis pacientes, y
                             busco constantemente nuevas formas de apoyarles en su camino hacia una vida
                             más equilibrada y plena. Mi curiosidad por la mente humana crece día a día, y la
@@ -80,7 +78,7 @@ export default function WhoAmI(): JSX.Element {
                     </Grow>
                 </div>
 
-                <div className="col-span-6 md:col-span-2 flex flex-col items-center justify-center space-y-4 hidden md:block w-[90%]">
+                <div className="col-span-6 md:col-span-2 flex flex-col items-center justify-center space-y-4 hidden md:block w-[100%]">
                     <Grow in={currentIndex >= 5} timeout={300}>
                         <div className="flex items-center justify-center">
                             <img src={aboutmeGofran} alt="gofran" className="w-full" />

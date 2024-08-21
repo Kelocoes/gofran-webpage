@@ -13,7 +13,7 @@ const Card = ({
     description,
     price,
     textColor = "#4e5e9d",
-    background = "#ffe5ca",
+    background = "#ffe5ca"
 }: CardProps): JSX.Element => {
     return (
         <div
@@ -21,11 +21,11 @@ const Card = ({
             style={{
                 backgroundColor: background,
                 borderRadius: "10px",
-                color: textColor,
+                color: textColor
             }}
         >
             <div>
-                <h1 className="font-title text-xl sm:text-3xl drop-shadow-lg text-left font-bold">
+                <h1 className="font-title text-xl sm:text-2xl drop-shadow-lg text-left font-bold">
                     {title}
                 </h1>
                 <p className="text-sm">{description}</p>
