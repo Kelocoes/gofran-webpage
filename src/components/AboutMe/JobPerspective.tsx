@@ -1,18 +1,15 @@
 import React from "react";
+import Grow from "@mui/material/Grow";
+import { useInView } from "react-intersection-observer";
 
 import plant from "../../assets/images/plant.png";
 import plant2 from "../../assets/images/plant-2.png";
 import horizontalDiamond from "../../assets/images/horizontal-diamond.png";
-
-import Grow from "@mui/material/Grow";
-
-import { useInView } from "react-intersection-observer";
-
 import { useIncrementalIndexEffect } from "../../utils/UseIncrementalEffect";
 
-export default function JobPerspective(): JSX.Element {
+export default function JobPerspective (): JSX.Element {
     const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.15 });
-    const currentIndex = useIncrementalIndexEffect(inView, 15, 150);
+    const currentIndex = useIncrementalIndexEffect(inView, 15, 50);
 
     return (
         <div ref={ref} className="w-[85%] my-6 z-10">

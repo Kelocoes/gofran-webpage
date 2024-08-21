@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+import { useState } from "react";
+import Grow from "@mui/material/Grow";
+import { useInView } from "react-intersection-observer";
 
 import plant from "../../assets/images/plant.png";
 import plant2 from "../../assets/images/plant-2.png";
@@ -6,16 +8,11 @@ import CustomButton from "../Common/CustomButton";
 import horizontalDiamond from "../../assets/images/horizontal-diamond.png";
 import educationGofran from "../../assets/images/education-gofran.png";
 import orangeStar from "../../assets/images/orange-star.png";
-
-import Grow from "@mui/material/Grow";
-
-import { useInView } from "react-intersection-observer";
-
 import { useIncrementalIndexEffect } from "../../utils/UseIncrementalEffect";
 
-export default function Education(): JSX.Element {
+export default function Education (): JSX.Element {
     const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.15 });
-    const currentIndex = useIncrementalIndexEffect(inView, 15, 150);
+    const currentIndex = useIncrementalIndexEffect(inView, 15, 50);
     const [isOpen, setIsOpen] = useState(false);
 
     const toggleOpen = ():void => {
@@ -26,7 +23,7 @@ export default function Education(): JSX.Element {
         "Grado en Psicologia con mención en Psicologia Sanitaria en la Universitat Oberta de Cataluña. (UOC).",
         "Master en Neuropsicología en la Universitat Oberta de Cataluña. (UOC).",
         "Master en Psicologia General Sanitaria en la Universidad Internacional de la Rioja (UNIR).",
-        "Especialización en apego y Psicología Perinatal en la Universidad Internacional de la Rioja (UNIR).",
+        "Especialización en apego y Psicología Perinatal en la Universidad Internacional de la Rioja (UNIR)."
     ];
     const phrasesSpecific = [
         "Nivel I y II de EMDR por la Asociación Española de EMDR con Anabel Gonzalez.",
@@ -36,7 +33,7 @@ export default function Education(): JSX.Element {
         "Curso de Estrés con David Lanzas",
         "Aplicación de EMDR en situaciones de agresiones sexuales en el ámbito clínico y comunitario con el COPC.",
         "Actualidad de Trauma, Fertilidad y EMDR desde el Dialogo Clínico con el COPC.",
-        "Curso de neurobiología, descripción y tratamiento del TOC con Manuel Hernandez.",
+        "Curso de neurobiología, descripción y tratamiento del TOC con Manuel Hernandez."
     ];
 
     return (

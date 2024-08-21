@@ -1,22 +1,22 @@
 import React from "react";
-
-import plant2 from "../../assets/images/plant-2.png";
 import Grow from "@mui/material/Grow";
 import { useInView } from "react-intersection-observer";
-import Book from "../../assets/images/book.png";
-import Message from "../../assets/images/message-process.png";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import MailOutlinedIcon from "@mui/icons-material/MailOutlined";
+
+import Book from "../../assets/images/book.png";
+import Message from "../../assets/images/message-process.png";
+import plant2 from "../../assets/images/plant-2.png";
 import Explorers from "../../assets/images/explorers.png";
 import { useIncrementalIndexEffect } from "../../utils/UseIncrementalEffect";
 import CustomButton from "../Common/CustomButton";
 
-export default function Process(): JSX.Element {
+export default function Process (): JSX.Element {
     const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.15 });
-    const currentIndex = useIncrementalIndexEffect(inView, 12, 150);
+    const currentIndex = useIncrementalIndexEffect(inView, 12, 50);
 
     return (
-        <div ref={ref} className="w-[85%] my-6 z-10 flex flex-col items-center justify-center mt-16 sm:mt-32">
+        <div ref={ref} className="w-[85%] my-6 z-10 flex flex-col items-center justify-center mt-16 sm:mt-8">
             <Grow in={currentIndex >= 2} timeout={300}>
                 <img src={plant2} alt="Plant-2" className="absolute top-32 right-0" />
             </Grow>
@@ -168,8 +168,6 @@ export default function Process(): JSX.Element {
                     </div>
                 </div>
             </div>
-
-
 
         </div>
     );

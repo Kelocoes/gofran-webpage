@@ -1,4 +1,6 @@
 import React from "react";
+import Grow from "@mui/material/Grow";
+import { useInView } from "react-intersection-observer";
 
 import plant from "../../assets/images/plant.png";
 import plant2 from "../../assets/images/plant-2.png";
@@ -6,15 +8,11 @@ import horizontalDiamond from "../../assets/images/horizontal-diamond.png";
 import aboutmeGofran from "../../assets/images/aboutme-gofran.png";
 import CustomButton from "../Common/CustomButton";
 import Quote from "../Common/Quote";
-import Grow from "@mui/material/Grow";
-
-import { useInView } from "react-intersection-observer";
-
 import { useIncrementalIndexEffect } from "../../utils/UseIncrementalEffect";
 
-export default function WhoAmI(): JSX.Element {
+export default function WhoAmI (): JSX.Element {
     const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.15 });
-    const currentIndex = useIncrementalIndexEffect(inView, 12, 150);
+    const currentIndex = useIncrementalIndexEffect(inView, 12, 50);
 
     return (
         <div ref={ref} className="w-full my-6 z-10 flex flex-col items-center justify-center relative mt-0 sm:mt-8">

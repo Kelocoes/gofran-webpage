@@ -1,17 +1,16 @@
 import React from "react";
 import Grow from "@mui/material/Grow";
+import { useInView } from "react-intersection-observer";
+
 import CustomButton from "../Common/CustomButton";
 import gofranMain from "../../assets/images/gofran-main.png";
 import horizontalDiamond from "../../assets/images/horizontal-diamond.png";
 import Quote from "../Common/Quote";
-
-import { useInView } from "react-intersection-observer";
-
 import { useIncrementalIndexEffect } from "../../utils/UseIncrementalEffect";
 
-export default function MainPost(): JSX.Element {
+export default function MainPost (): JSX.Element {
     const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.15 });
-    const currentIndex = useIncrementalIndexEffect(inView, 7, 150);
+    const currentIndex = useIncrementalIndexEffect(inView, 7, 50);
 
     return (
         <div ref={ref} className="w-[85%] my-6 z-10 mt-10">
@@ -20,7 +19,7 @@ export default function MainPost(): JSX.Element {
                     <Grow in={currentIndex >= 1} timeout={300}>
                         <h1 className="font-title text-4xl sm:text-4xl leading-[5rem] text-[#7087ff] drop-shadow-lg text-left mb-2">
                             <div className="flex items-center">
-                                <strong>Tus heridas no te definen</strong> 
+                                <strong>Tus heridas no te definen</strong>
                                 <img src={horizontalDiamond} alt="Horizontal Diamond" className="w-1/12 ml-1 hidden sm:block" />
                             </div>
                         </h1>
@@ -48,7 +47,6 @@ export default function MainPost(): JSX.Element {
                             </Grow>
                         </div>
                     </div>
-                    {/* Botones debajo ocupando toda la fila */}
                     <div className="flex justify-center py-20">
                         <Grow in={currentIndex >= 5} timeout={300}>
                             <div className="flex items-stretch w-full">
@@ -88,12 +86,12 @@ export default function MainPost(): JSX.Element {
                 </div>
             </div>
 
-            <Grow in={currentIndex>=6} timeout={300}>
+            <Grow in={currentIndex >= 6} timeout={300}>
                 <div className="mb-10 w-[90%]">
                     <Quote>
                         <strong>
                             &quot;El <strong className="underline">verdadero viaje</strong> de descubrimiento no consiste en buscar nuevos paisajes,
-                            sino en tener una <strong className="underline">nueva perspectiva</strong>.&quot;                                    
+                            sino en tener una <strong className="underline">nueva perspectiva</strong>.&quot;
                         </strong>
                     </Quote>
                 </div>
@@ -101,5 +99,4 @@ export default function MainPost(): JSX.Element {
         </div>
     );
 }
-
 

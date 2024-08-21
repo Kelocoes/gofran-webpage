@@ -1,22 +1,22 @@
-import React from "react";
+import Grow from "@mui/material/Grow";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import WhatsAppIcon from "@mui/icons-material/WhatsApp";
+import MailOutlinedIcon from "@mui/icons-material/MailOutlined";
+import { useInView } from "react-intersection-observer";
+
 import plant from "../../assets/images/plant.png";
 import plant2 from "../../assets/images/plant-2.png";
 import horizontalDiamond from "../../assets/images/horizontal-diamond.png";
 import Contact from "../../assets/images/contact-image.png";
-import Grow from "@mui/material/Grow";
 import orangeStar from "../../assets/images/orange-star.png";
-import InstagramIcon from "@mui/icons-material/Instagram";
-import WhatsAppIcon from "@mui/icons-material/WhatsApp";
-import MailOutlinedIcon from "@mui/icons-material/MailOutlined";
 import logo from "../../assets/images/logo.png";
-import { useInView } from "react-intersection-observer";
 import { useIncrementalIndexEffect } from "../../utils/UseIncrementalEffect";
 import { EnvProvider } from "../EnvContext";
 import ContactForm from "../Contact/ContactForm";
 
-export default function LetsTalk(): JSX.Element {
+export default function LetsTalk (): JSX.Element {
     const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.15 });
-    const currentIndex = useIncrementalIndexEffect(inView, 20, 150);
+    const currentIndex = useIncrementalIndexEffect(inView, 20, 50);
 
     return (
         <div ref={ref} className="w-full bg-[#ffeedd] my-0 z-10 flex flex-col items-center justify-center relative mt-0 sm:mt-0">
@@ -50,7 +50,10 @@ export default function LetsTalk(): JSX.Element {
                     </Grow>
                     <Grow in={currentIndex >= 3} timeout={300}>
                         <h2 className="font-body text-[#4e5e9d] text-lg sm:text-lg rounded-xl drop-shadow-md text-justify">
-                            Estás a solo un paso de comenzar un viaje transformador hacia tu bienestar emocional. Aquí encontrarás varias formas de comunicarte conmigo para dar inicio a este importante camino. Estoy ansiosa por escucharte y ser parte de tu camino hacia un bienestar emocional y psicológico más pleno. No lo dejes para después; tu salud emocional es lo más valioso que tienes.
+                            Estás a solo un paso de comenzar un viaje transformador hacia tu bienestar emocional.
+                            Aquí encontrarás varias formas de comunicarte conmigo para dar inicio a este importante camino.
+                            Estoy ansiosa por escucharte y ser parte de tu camino hacia un bienestar emocional y psicológico más pleno.
+                            No lo dejes para después; tu salud emocional es lo más valioso que tienes.
                         </h2>
                     </Grow>
                     <Grow in={currentIndex >= 4} timeout={300}>
@@ -118,7 +121,7 @@ export default function LetsTalk(): JSX.Element {
                     <Grow in={currentIndex >= 14} timeout={300}>
                         <h1 className="font-title text-2xl sm:text-2xl text-[#4d4b44] font-bold mt-10 drop-shadow-lg text-left lg:text-left">
                             <div className="flex items-center justify-left">
-                                ¿En que puedo ayudarte? 
+                                ¿En que puedo ayudarte?
                             </div>
                         </h1>
                     </Grow>
@@ -138,7 +141,7 @@ export default function LetsTalk(): JSX.Element {
                     <Grow in={currentIndex >= 17} timeout={300}>
                         <h1 className="font-title text-2xl sm:text-2xl text-[#4d4b44] font-bold mt-10 drop-shadow-lg text-left lg:text-left">
                             <div className="flex items-center justify-left">
-                                Pasos a seguir para reservar 
+                                Pasos a seguir para reservar
                             </div>
                         </h1>
                     </Grow>
@@ -155,7 +158,7 @@ export default function LetsTalk(): JSX.Element {
                     </Grow>
                 </div>
                 <Grow in={currentIndex >= 19} timeout={300}>
-                    <div className="col-span-6 md:col-span-3 flex flex-col mb-48">
+                    <div className="col-span-6 md:col-span-3 flex flex-col mb-24">
                         <EnvProvider>
                             <ContactForm />
                         </EnvProvider>

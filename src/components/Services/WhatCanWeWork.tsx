@@ -1,8 +1,9 @@
 import React from "react";
+import Grow from "@mui/material/Grow";
+import { useInView } from "react-intersection-observer";
 
 import plant2 from "../../assets/images/plant-2.png";
-//import horizontalDiamond from "../../assets/images/horizontal-diamond.png";
-import Grow from "@mui/material/Grow";
+// import horizontalDiamond from "../../assets/images/horizontal-diamond.png";
 import SelfKnow from "../../assets/images/self-Knowledge.png";
 import SelfSteem from "../../assets/images/self-esteem.png";
 import Anxiety from "../../assets/images/anxiety and stress.png";
@@ -11,16 +12,14 @@ import TOC from "../../assets/images/toc.png";
 import Neuro from "../../assets/images/neuropsychology.png";
 import Fhobia from "../../assets/images/phobias-traumas.png";
 import Other from "../../assets/images/others.png";
-import { useInView } from "react-intersection-observer";
-
 import { useIncrementalIndexEffect } from "../../utils/UseIncrementalEffect";
 
-export default function WhatWeCanWork(): JSX.Element {
+export default function WhatWeCanWork (): JSX.Element {
     const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.15 });
-    const currentIndex = useIncrementalIndexEffect(inView, 12, 150);
+    const currentIndex = useIncrementalIndexEffect(inView, 12, 50);
 
     return (
-        <div ref={ref} className="w-full md:w-[80%] my-6 z-10 flex flex-col items-center justify-center mt-[300px] sm:mt-32">
+        <div ref={ref} className="w-full md:w-[80%] my-6 z-10 flex flex-col items-center justify-center mt-[300px] sm:mt-8">
             <Grow in={currentIndex >= 2} timeout={300}>
                 <img src={plant2} alt="Plant-2" className="absolute top-32 right-0" />
             </Grow>
@@ -137,8 +136,6 @@ export default function WhatWeCanWork(): JSX.Element {
                 </div>
 
                 {/* <div className="mt-2 sm:ml-4 col-span-6 md:col-span-4 flex flex-col justify-center space-y-4 row-span-2">
-
-
 
                 </div> */}
             </div>

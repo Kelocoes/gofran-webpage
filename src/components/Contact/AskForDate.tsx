@@ -1,19 +1,17 @@
 import React from "react";
+import Grow from "@mui/material/Grow";
+import { useInView } from "react-intersection-observer";
 
 import plant from "../../assets/images/plant.png";
 import plant2 from "../../assets/images/plant-2.png";
-import Grow from "@mui/material/Grow";
 import logo from "../../assets/images/logo.png";
 import ContactForm from "../Contact/ContactForm";
 import { EnvProvider } from "../EnvContext";
-
-import { useInView } from "react-intersection-observer";
-
 import { useIncrementalIndexEffect } from "../../utils/UseIncrementalEffect";
 
-export default function AskForDate(): JSX.Element {
+export default function AskForDate (): JSX.Element {
     const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.15 });
-    const currentIndex = useIncrementalIndexEffect(inView, 14, 150);
+    const currentIndex = useIncrementalIndexEffect(inView, 14, 50);
 
     return (
         <div ref={ref} className="w-[90%] my-6 z-10 flex justify-center relative mt-30 sm:mt-30 bg-[#ffeedd] min-h-screen">
@@ -29,7 +27,7 @@ export default function AskForDate(): JSX.Element {
                     <Grow in={currentIndex >= 3} timeout={300}>
                         <h1 className="font-title text-2xl sm:text-3xl text-[#4d4b44] font-bold mt-10 drop-shadow-lg text-left lg:text-left">
                             <div className="flex items-center justify-left">
-                                ¿En que puedo ayudarte? 
+                                ¿En que puedo ayudarte?
                             </div>
                         </h1>
                     </Grow>
@@ -49,7 +47,7 @@ export default function AskForDate(): JSX.Element {
                     <Grow in={currentIndex >= 5} timeout={300}>
                         <h1 className="font-title text-2xl sm:text-3xl text-[#4d4b44] font-bold mt-10 drop-shadow-lg text-left lg:text-left">
                             <div className="flex items-center justify-left">
-                                Pasos a seguir para reservar 
+                                Pasos a seguir para reservar
                             </div>
                         </h1>
                     </Grow>
@@ -75,5 +73,4 @@ export default function AskForDate(): JSX.Element {
         </div>
     );
 }
-
 

@@ -1,4 +1,5 @@
-import React from "react";
+import Grow from "@mui/material/Grow";
+import { useInView } from "react-intersection-observer";
 
 import plant from "../../assets/images/plant.png";
 import plant2 from "../../assets/images/plant-2.png";
@@ -6,16 +7,11 @@ import horizontalDiamond from "../../assets/images/horizontal-diamond.png";
 import heart from "../../assets/images/Considering-heart.png";
 import orangeStar from "../../assets/images/orange-star.png";
 import CustomButton from "../Common/CustomButton";
-
-import Grow from "@mui/material/Grow";
-
-import { useInView } from "react-intersection-observer";
-
 import { useIncrementalIndexEffect } from "../../utils/UseIncrementalEffect";
 
-export default function Considering(): JSX.Element {
+export default function Considering (): JSX.Element {
     const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.15 });
-    const currentIndex = useIncrementalIndexEffect(inView, 12, 150);
+    const currentIndex = useIncrementalIndexEffect(inView, 12, 50);
 
     const phrases = [
         "Apoyo Profesional.",
@@ -31,7 +27,7 @@ export default function Considering(): JSX.Element {
     ];
 
     return (
-        <div ref={ref} className="w-[85%] my-6 z-10 flex justify-center relative mt-0 sm:mt-32">
+        <div ref={ref} className="w-[85%] my-6 z-10 flex justify-center relative mt-0 sm:mt-8">
             <Grow in={currentIndex >= 2} timeout={300}>
                 <img src={plant} alt="Plant" className="absolute top-22 -left-56 md:-left-24" />
             </Grow>
@@ -47,15 +43,14 @@ export default function Considering(): JSX.Element {
                                 <img src={horizontalDiamond} alt="Horizontal Diamond" className="w-1/12 ml-1 hidden sm:block" />
                             </div>
                             <div className="flex items-center text-2xl sm:text-2xl leading-[5rem] text-[#7087ff] drop-shadow-sm text-left mb-2 mt-8">
-                                <strong>Si tienes malestar y vas, consigues: </strong> 
+                                <strong>Si tienes malestar y vas, consigues: </strong>
                             </div>
                         </h1>
 
                     </Grow>
                 </div>
 
-
-                <div className="mt-2 sm:ml-16 col-span-6 md:col-span-4 flex flex-col justify-center space-y-4 row-span-2">
+                <div className="mt-2 md:col-start-2 col-span-6 md:col-span-2 flex flex-col justify-center space-y-4 row-span-2">
                     {phrases.map((phrase, index) => (
                         <Grow in={currentIndex >= 3 + index} timeout={300} key={index}>
                             <div className="flex items-center">
@@ -66,7 +61,7 @@ export default function Considering(): JSX.Element {
                             </div>
                         </Grow>
                     ))}
-                    <div className="col-span-6 md:col-span-2 flex flex-col items-center justify-center space-y-4 md:hidden">
+                    <div className="col-span-6 md:col-span-2 flex flex-col items-center justify-center space-y-4 md:hidden row-span-2">
                         <Grow in={currentIndex >= 3} timeout={300}>
                             <div className="flex items-center justify-center">
                                 <img src={heart} alt="gofran" className="w-full" />
@@ -84,7 +79,6 @@ export default function Considering(): JSX.Element {
                         </div>
                     </Grow>
                 </div>
-
 
                 <div className="col-span-6 md:col-span-2 flex flex-col items-center justify-center space-y-4 hidden md:block">
                     <Grow in={currentIndex >= 3} timeout={300}>

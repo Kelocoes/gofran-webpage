@@ -1,0 +1,71 @@
+{
+    "root": true,
+    "env": {
+        "browser": true,
+        "node": true,
+        "es2020": true,
+        "jest": true
+    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:react-hooks/recommended",
+        "plugin:react/recommended",
+        "standard"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 11,
+        "sourceType": "module",
+        "project": "./tsconfig.json"
+    },
+    "settings": {
+        "react": {
+            "version": "detect"
+        }
+    },
+    "ignorePatterns": ["dist", ".eslintrc", "src/enums", "vite.config.mts"],
+    "plugins": ["react", "@typescript-eslint"],
+    "overrides": [
+        {
+            "files": ["*.ts", "*.tsx"],
+            "parser": "@typescript-eslint/parser",
+            "plugins": ["@typescript-eslint"],
+            "extends": ["plugin:@typescript-eslint/recommended"]
+        }
+    ],
+    "rules": {
+        "react/prop-types": 0,
+        "react/react-in-jsx-scope": "off",
+        "max-len": ["error", { "code": 250 }],
+        "no-unused-vars": ["error", {
+            "vars": "all",
+            "args": "all",
+            "argsIgnorePattern": "^_"
+            }
+        ],
+        "indent": ["error", 4],
+        "no-multiple-empty-lines": ["error", { "max": 1, "maxEOF": 1 }],
+        "block-spacing": "error",
+        "semi": ["error", "always"],
+        "import/order": [
+            "error",
+            {
+                "groups": [
+                    "builtin",
+                    "external",
+                    "internal",
+                    "parent",
+                    "sibling",
+                    "index"
+                ],
+                "newlines-between": "always"
+            }
+        ],
+        "camelcase": "off",
+        "quotes": ["error", "double"]
+    }
+}

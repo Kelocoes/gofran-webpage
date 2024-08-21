@@ -1,14 +1,10 @@
-import React from "react";
-
 import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
-
 import Grow from "@mui/material/Grow";
-
 import { useInView } from "react-intersection-observer";
+import { useNavigate } from "react-router-dom";
 
 import { useIncrementalIndexEffect } from "../../utils/UseIncrementalEffect";
-
 import anxiety from "../../assets/images/anxiety.png";
 import brainpuzzlecolor from "../../assets/images/brain-puzzle-color.png";
 import selfhug from "../../assets/images/self-hug.png";
@@ -21,17 +17,15 @@ import virtualtherapy from "../../assets/images/virtual-therapy.png";
 import plant from "../../assets/images/plant.png";
 import plant2 from "../../assets/images/plant-2.png";
 
-import { useNavigate } from "react-router-dom";
-
-export default function Services(): JSX.Element {
+export default function Services (): JSX.Element {
     const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.15 });
-    const currentIndex = useIncrementalIndexEffect(inView, 2, 150);
+    const currentIndex = useIncrementalIndexEffect(inView, 2, 50);
     const nav = useNavigate();
 
     const navigate = (path: string): void => {
         window.scrollTo({
             top: 0,
-            behavior: "auto",
+            behavior: "auto"
         });
         nav(path);
     };

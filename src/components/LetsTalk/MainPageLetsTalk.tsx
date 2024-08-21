@@ -1,19 +1,16 @@
 import React from "react";
+import Grow from "@mui/material/Grow";
+import { useInView } from "react-intersection-observer";
 
 import plant from "../../assets/images/plant.png";
 import plant2 from "../../assets/images/plant-2.png";
 import ComputerFran from "../../assets/images/gofran-compu.png";
-import Grow from "@mui/material/Grow";
 import Together from "../../assets/images/together.png";
-
-
-import { useInView } from "react-intersection-observer";
-
 import { useIncrementalIndexEffect } from "../../utils/UseIncrementalEffect";
 
-export default function MainPageLetsTalk(): JSX.Element {
+export default function MainPageLetsTalk (): JSX.Element {
     const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.15 });
-    const currentIndex = useIncrementalIndexEffect(inView, 12, 150);
+    const currentIndex = useIncrementalIndexEffect(inView, 12, 50);
 
     return (
         <div ref={ref} className="w-[85%] my-6 z-10 flex flex-col items-center justify-center relative mt-0 sm:mt-8">

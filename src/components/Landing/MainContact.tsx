@@ -1,22 +1,20 @@
 import React from "react";
+import Grow from "@mui/material/Grow";
+import { useInView } from "react-intersection-observer";
 
 import plant from "../../assets/images/plant.png";
 import plant2 from "../../assets/images/plant-2.png";
 // import heart from "../../assets/images/not-considering-heart.png";
 // import orangeStar from "../../assets/images/orange-star.png";
 // import CustomButton from "../Common/CustomButton";
-import Grow from "@mui/material/Grow";
 import logo from "../../assets/images/logo.png";
 import ContactForm from "../Contact/ContactForm";
 import { EnvProvider } from "../EnvContext";
-
-import { useInView } from "react-intersection-observer";
-
 import { useIncrementalIndexEffect } from "../../utils/UseIncrementalEffect";
 
-export default function MainContact(): JSX.Element {
+export default function MainContact (): JSX.Element {
     const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.15 });
-    const currentIndex = useIncrementalIndexEffect(inView, 14, 150);
+    const currentIndex = useIncrementalIndexEffect(inView, 14, 50);
 
     // const phrases = [
     //     "Empeoramiento de los síntomas.",
@@ -45,7 +43,7 @@ export default function MainContact(): JSX.Element {
                     <Grow in={currentIndex >= 3} timeout={300}>
                         <h1 className="font-title text-2xl sm:text-2xl text-[#4d4b44] font-bold mt-10 drop-shadow-lg text-left lg:text-left">
                             <div className="flex items-center justify-left">
-                                ¿En que puedo ayudarte? 
+                                ¿En que puedo ayudarte?
                             </div>
                         </h1>
                     </Grow>
@@ -60,7 +58,7 @@ export default function MainContact(): JSX.Element {
                     <Grow in={currentIndex >= 5} timeout={300}>
                         <h1 className="font-title text-2xl sm:text-2xl text-[#4d4b44] font-bold mt-10 drop-shadow-lg text-left lg:text-left">
                             <div className="flex items-center justify-left">
-                                Pasos a seguir para reservar 
+                                Pasos a seguir para reservar
                             </div>
                         </h1>
                     </Grow>
@@ -91,5 +89,4 @@ export default function MainContact(): JSX.Element {
         </div>
     );
 }
-
 

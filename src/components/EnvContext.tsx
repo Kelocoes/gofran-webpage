@@ -1,8 +1,8 @@
 import React, { createContext, useContext } from "react";
 
-const serviceId = process.env.REACT_APP_SERVICE_ID;
-const templateId = process.env.REACT_APP_TEMPLATE_ID;
-const mailPublicKey = process.env.REACT_APP_MAIL_PUBLIC_KEY;
+const serviceId = import.meta.env.VITE_APP_SERVICE_ID;
+const templateId = import.meta.env.VITE_APP_TEMPLATE_ID;
+const mailPublicKey = import.meta.env.VITE_APP_MAIL_PUBLIC_KEY;
 
 const isEnvValid = serviceId && templateId && mailPublicKey;
 
@@ -19,7 +19,7 @@ type EnvType = {
 const dotenv: EnvType = {
     serviceId,
     templateId,
-    mailPublicKey,
+    mailPublicKey
 };
 
 export const EnvContext = createContext<EnvType | undefined>(undefined);

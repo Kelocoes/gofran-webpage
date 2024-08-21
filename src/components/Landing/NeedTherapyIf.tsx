@@ -1,4 +1,6 @@
 import React from "react";
+import Grow from "@mui/material/Grow";
+import { useInView } from "react-intersection-observer";
 
 import plant from "../../assets/images/plant.png";
 import plant2 from "../../assets/images/plant-2.png";
@@ -6,16 +8,11 @@ import horizontalDiamond from "../../assets/images/horizontal-diamond.png";
 import gofran from "../../assets/images/gofran-needtherapyif.png";
 import orangeStar from "../../assets/images/orange-star.png";
 import CustomButton from "../Common/CustomButton";
-
-import Grow from "@mui/material/Grow";
-
-import { useInView } from "react-intersection-observer";
-
 import { useIncrementalIndexEffect } from "../../utils/UseIncrementalEffect";
 
-export default function NeedTherapyIf(): JSX.Element {
+export default function NeedTherapyIf (): JSX.Element {
     const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.15 });
-    const currentIndex = useIncrementalIndexEffect(inView, 13, 150);
+    const currentIndex = useIncrementalIndexEffect(inView, 13, 50);
 
     const phrases = [
         "Quieres empieza a trabajar en ti, crecer y florecer.",
@@ -49,8 +46,7 @@ export default function NeedTherapyIf(): JSX.Element {
                     </Grow>
                 </div>
 
-
-                <div className="mt-2 sm:ml-16 col-span-6 md:col-span-4 flex flex-col justify-center space-y-4 row-span-2">
+                <div className="mt-2 md:col-start-2 col-span-3 md:col-span-3 flex flex-col justify-center space-y-4 row-span-2">
                     {phrases.map((phrase, index) => (
                         <Grow in={currentIndex >= 3 + index} timeout={300} key={index}>
                             <div className="flex items-center">
@@ -62,7 +58,6 @@ export default function NeedTherapyIf(): JSX.Element {
                         </Grow>
                     ))}
                 </div>
-
 
                 <div className="col-span-6 md:col-span-2 flex flex-col items-center justify-center space-y-4">
                     <Grow in={currentIndex >= 4} timeout={300}>

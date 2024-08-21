@@ -1,15 +1,14 @@
 import React from "react";
-
-import logo from "../../assets/images/logo.png";
-
 import TelegramIcon from "@mui/icons-material/Telegram";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
+
+import logo from "../../assets/images/logo.png";
 import threads from "../../assets/images/threads-icon.svg";
 import tiktok from "../../assets/images/tiktok-color-icon.svg";
 import Gofranlogo from "../../assets/images/gofran-logo-mini.png";
 
-export default function Footer(): JSX.Element {
+export default function Footer (): JSX.Element {
     return (
         <div className="bg-[#edf0ff] grid grid-rows-3 sm:grid-cols-3 sm:grid-rows-1 justify-center items-center z-10 w-full mt-6 xl:mt-10 space-y-4 sm:space-y-0 py-2">
             <div className="flex justify-center items-center">

@@ -1,5 +1,6 @@
 import React from "react";
 import "./App.css";
+import { Routes, Route } from "react-router-dom";
 
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
@@ -11,11 +12,9 @@ import Services from "./components/Services/Services";
 import Contact from "./components/Contact/Contact";
 import EMDR from "./components/EMDR/EMDR";
 import FloatingButton from "./components/Common/FloatingButton";
-
-import { Routes, Route } from "react-router-dom";
 import LetsTalk from "./components/LetsTalk/LetsTalk";
 
-function App(): JSX.Element {
+function App (): JSX.Element {
     const [showHomePage, setShowHomePage] = React.useState<boolean>(true);
     const [change, setChange] = React.useState<boolean>(false);
 
@@ -30,17 +29,17 @@ function App(): JSX.Element {
             {showHomePage
                 ? <SplashScreen setChange={setChange}/>
                 : <React.Fragment>
-                    
+
                     <div className="flex justify-left md:justify-center mb-4">
                         <Header />
                     </div>
                     <Routes>
                         <Route path="/" element={<Landing />} />
-                        <Route path="/sobre-mi" element={<AboutMe />} />
+                        <Route path="/quien-soy" element={<AboutMe />} />
                         <Route path="/servicios" element={<Services />} />
-                        <Route path="/contacto" element={<Contact />} />
+                        <Route path="/pedir-cita" element={<Contact />} />
                         <Route path="/hablemos" element={<LetsTalk />} />
-                        <Route path="/EMDR" element={<EMDR />} />
+                        <Route path="/emdr" element={<EMDR />} />
                     </Routes>
                     <Footer />
                     <CustomParticles />

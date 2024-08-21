@@ -3,7 +3,7 @@ import type { Engine } from "tsparticles-engine";
 import Particles from "react-particles";
 import { loadFull } from "tsparticles";
 
-export default function CustomParticles(): JSX.Element {
+export default function CustomParticles (): JSX.Element {
     const particlesInit = useCallback(async (engine: Engine) => {
         await loadFull(engine);
     }, []);
@@ -17,34 +17,34 @@ export default function CustomParticles(): JSX.Element {
                     fullScreen: true,
                     particles: {
                         color: {
-                            value: "#ffffff",
+                            value: "#ffffff"
                         },
                         links: {
                             color: "#ffffff",
                             distance: 150,
                             enable: true,
                             opacity: 0.7,
-                            width: 0.3,
+                            width: 0.3
                         },
                         number: {
                             density: {
                                 enable: true,
-                                area: 400,
+                                area: 400
                             },
-                            value: 75,
+                            value: 75
                         },
                         opacity: {
-                            value: 0.2,
+                            value: 0.2
                         },
                         shape: {
-                            type: "circle",
+                            type: "circle"
                         },
                         size: {
-                            value: { min: 1, max: 5 },
-                        },
+                            value: { min: 1, max: 5 }
+                        }
                     },
                     background: {
-                        color: "#ECEFFF",
+                        color: "#ECEFFF"
                     }
                 }}
             />

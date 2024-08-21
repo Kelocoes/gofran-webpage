@@ -1,18 +1,17 @@
 import React from "react";
+import Grow from "@mui/material/Grow";
+import { useInView } from "react-intersection-observer";
+
 import plant2 from "../../assets/images/plant-2.png";
 import horizontalDiamond from "../../assets/images/horizontal-diamond.png";
 import TreeWoman from "../../assets/images/services-tree-woman.png";
 import CustomButton from "../Common/CustomButton";
 import Quote from "../Common/Quote";
-import Grow from "@mui/material/Grow";
-
-import { useInView } from "react-intersection-observer";
-
 import { useIncrementalIndexEffect } from "../../utils/UseIncrementalEffect";
 
-export default function TerapyForAdults(): JSX.Element {
+export default function TerapyForAdults (): JSX.Element {
     const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.15 });
-    const currentIndex = useIncrementalIndexEffect(inView, 12, 150);
+    const currentIndex = useIncrementalIndexEffect(inView, 12, 50);
 
     return (
         <div ref={ref} className="w-full my-6 z-10 flex flex-col items-center justify-center relative mt-0 sm:mt-8">
@@ -20,7 +19,6 @@ export default function TerapyForAdults(): JSX.Element {
                 <img src={plant2} alt="Plant-2" className="absolute top-32 right-0" />
             </Grow>
             <div className="w-[85%] grid grid-cols-6 gap-4">
-
 
                 <div className="col-span-6 md:col-span-2 flex flex-col items-center justify-center space-y-4 hidden mt-12 md:block w-[80%]">
                     <Grow in={currentIndex >= 5} timeout={300}>

@@ -1,17 +1,14 @@
-import React from "react";
+import Grow from "@mui/material/Grow";
+import { useInView } from "react-intersection-observer";
+
 import plant2 from "../../assets/images/plant-2.png";
 import tree from "../../assets/images/magic-tree.png";
 import CustomButton from "../Common/CustomButton";
-
-import Grow from "@mui/material/Grow";
-
-import { useInView } from "react-intersection-observer";
-
 import { useIncrementalIndexEffect } from "../../utils/UseIncrementalEffect";
 
-export default function Tree(): JSX.Element {
+export default function Tree (): JSX.Element {
     const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.15 });
-    const currentIndex = useIncrementalIndexEffect(inView, 15, 150);
+    const currentIndex = useIncrementalIndexEffect(inView, 15, 50);
 
     return (
         <div ref={ref} className="w-[85%] my-6 z-10 relative">
@@ -20,7 +17,7 @@ export default function Tree(): JSX.Element {
             </Grow>
             <div className="col-span-6 md:col-span-6 flex flex-col items-center justify-center relative">
                 <Grow in={currentIndex >= 5} timeout={300}>
-                    <div className="flex items-center justify-center w-[66%]">
+                    <div className="flex items-center justify-center w-[55%]">
                         <img src={tree} alt="Tree" className="w-full" />
                     </div>
                 </Grow>
@@ -58,7 +55,7 @@ export default function Tree(): JSX.Element {
                         </h2>
                     </Grow>
                     <Grow in={currentIndex >= 4} timeout={300}>
-                        <div className="mt-2">
+                        <div className="mt-2 flex justify-end">
                             <CustomButton
                                 bgColor="#ffddb9"
                                 borderColor="#ffca92"

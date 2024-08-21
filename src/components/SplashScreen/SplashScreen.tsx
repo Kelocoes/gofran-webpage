@@ -1,14 +1,13 @@
 import React from "react";
+import Grow from "@mui/material/Grow";
 
 import logo from "../../assets/images/logo.png";
-
-import Grow from "@mui/material/Grow";
 
 type SplashScreenProps = {
     readonly setChange: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
-export default function SplashScreen({ setChange }: SplashScreenProps): JSX.Element {
+export default function SplashScreen ({ setChange }: SplashScreenProps): JSX.Element {
     const [show, setShow] = React.useState<boolean>(true);
 
     React.useEffect(() => {

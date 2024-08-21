@@ -1,22 +1,20 @@
-import React from "react";
+import Grow from "@mui/material/Grow";
+import { useInView } from "react-intersection-observer";
 
 import plant from "../../assets/images/plant.png";
 import plant2 from "../../assets/images/plant-2.png";
 import horizontalDiamond from "../../assets/images/horizontal-diamond.png";
 import orangeStar from "../../assets/images/orange-star.png";
 import Quote from "../Common/Quote";
-import Grow from "@mui/material/Grow";
 import CustomButton from "../Common/CustomButton";
-import { useInView } from "react-intersection-observer";
-
 import { useIncrementalIndexEffect } from "../../utils/UseIncrementalEffect";
 
-export default function WhatIsTheEMDR(): JSX.Element {
+export default function WhatIsTheEMDR (): JSX.Element {
     const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.15 });
-    const currentIndex = useIncrementalIndexEffect(inView, 15, 150);
+    const currentIndex = useIncrementalIndexEffect(inView, 15, 50);
 
     return (
-        <div ref={ref} className="w-[85%] my-6 z-10 mb-[100px]">
+        <div ref={ref} className="w-[85%] my-6 z-10 mb-10">
             <Grow in={currentIndex >= 2} timeout={300}>
                 <img src={plant} alt="Plant" className="absolute top-22 -left-56 md:-left-24" />
             </Grow>
@@ -24,7 +22,7 @@ export default function WhatIsTheEMDR(): JSX.Element {
                 <img src={plant2} alt="Plant-2" className="absolute top-32 right-0" />
             </Grow>
             <div className="w-full grid grid-cols-6 grid-row-1 gap-4">
-                <div className="mt-2 col-span-6 md:col-span-6 flex flex-col justify-end space-y-4 row-span-2 md:mr-auto md:ml-8 mt-20">
+                <div className="col-span-6 md:col-span-6 flex flex-col justify-end space-y-4 row-span-2 md:mr-auto md:ml-8 mt-20">
                     <div className="col-span-6">
                         <Grow in={currentIndex >= 1} timeout={300}>
                             <h1 className="font-title text-4xl sm:text-4xl text-[#4d4b44] font-bold drop-shadow-lg text-left lg:text-left">
@@ -89,12 +87,12 @@ export default function WhatIsTheEMDR(): JSX.Element {
                     </Grow>
                 </div>
             </div>
-            <Grow in={currentIndex>=14} timeout={300}>
+            <Grow in={currentIndex >= 14} timeout={300}>
                 <div className="absolute left-0 w-full mb-10 col-span-6 mt-6">
                     <Quote textColor="#7087ff">
                         <strong>
-                            &quot;Eres la <strong className="underline" style={{color:"#ffad57"}}>única persona</strong> que puede dar el primer paso,
-                            <strong className="underline" style={{color:"#ffad57"}}>para ayudarte</strong>; no esperes a nadie más.&quot;                                    
+                            &quot;Eres la <strong className="underline" style={{ color: "#ffad57" }}>única persona</strong> que puede dar el primer paso,
+                            <strong className="underline" style={{ color: "#ffad57" }}>para ayudarte</strong>; no esperes a nadie más.&quot;
                         </strong>
                     </Quote>
                 </div>
