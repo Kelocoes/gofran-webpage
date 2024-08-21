@@ -1,8 +1,8 @@
 import React, { createContext, useContext } from "react";
 
-const serviceId = import.meta.env.VITE_APP_SERVICE_ID;
-const templateId = import.meta.env.VITE_APP_TEMPLATE_ID;
-const mailPublicKey = import.meta.env.VITE_APP_MAIL_PUBLIC_KEY;
+const serviceId = import.meta.env.VITE_SERVICE_ID;
+const templateId = import.meta.env.VITE_TEMPLATE_ID;
+const mailPublicKey = import.meta.env.VITE_MAIL_PUBLIC_KEY;
 
 const isEnvValid = serviceId && templateId && mailPublicKey;
 
