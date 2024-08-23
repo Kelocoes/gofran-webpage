@@ -158,7 +158,7 @@ export default function LetsTalk (): JSX.Element {
                     </Grow>
                 </div>
                 <Grow in={currentIndex >= 19} timeout={300}>
-                    <div className="col-span-6 md:col-span-3 flex flex-col mb-24">
+                    <div className="col-span-6 md:col-span-3 flex flex-col md:mt-10">
                         <EnvProvider>
                             <ContactForm />
                         </EnvProvider>
