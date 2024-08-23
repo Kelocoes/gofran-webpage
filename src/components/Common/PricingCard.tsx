@@ -19,7 +19,8 @@ const Card = ({
             style={{
                 backgroundColor: background,
                 borderRadius: "50px",
-                color: textColor
+                color: textColor,
+                minHeight: "125px"
             }}
         >
             <div>

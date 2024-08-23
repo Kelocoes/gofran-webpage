@@ -37,7 +37,7 @@ export default function Education (): JSX.Element {
     ];
 
     return (
-        <div ref={ref} className="w-[85%] z-10 mt-[400px] sm:mt-[200px]">
+        <div ref={ref} className="w-[85%] z-10 mt-[250px] sm:mt-[100px]">
             <div className="flex justify-center">
                 <button
                     onClick={toggleOpen}
