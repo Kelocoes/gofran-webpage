@@ -42,11 +42,11 @@ export default function ContactForm (): JSX.Element {
             reset();
             setIsActive(false);
 
-            emailjs.sendForm(serviceId, templateId, currentForm, mailPublicKey)
+            emailjs.send(serviceId, templateId, dataTyped, mailPublicKey)
                 .then((result) => {
-                    console.log(result.text);
+                    console.log(result);
                 }, (error) => {
-                    console.log(error.text);
+                    console.log(error);
                 });
         } catch (error) {
             console.error(error);
