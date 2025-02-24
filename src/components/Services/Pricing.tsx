@@ -53,7 +53,7 @@ export default function Pricing (): JSX.Element {
                             <Card
                                 title="Primera Sesión"
                                 description="45-50 minutos"
-                                price="50"
+                                price="60"
                             />
                         </div>
                     </Grow>
