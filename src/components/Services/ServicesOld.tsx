@@ -290,7 +290,7 @@ export default function Services (): JSX.Element {
                             <img src={virtualtherapy} alt="Virtual Therapy" className="float-start w-1/3" />
                             <h2 className="font-body text-right" style={{ color: "#475569", fontSize: "17px" }}>
                                 <strong>Consulta Online:</strong> <br />
-                                45 minutos/40€ <br />
+                                45 minutos/60€ <br />
                                 <button className="btn btn-sm btn-neutral text-white" onClick={() => navigate("/pedir-cita")}>Pedir cita</button>
                             </h2>
                         </div>
