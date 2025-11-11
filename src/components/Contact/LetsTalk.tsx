@@ -65,7 +65,7 @@ export default function LetsTalk (): JSX.Element {
                         <div className="flex items-center">
                             <img src={orangeStar} alt="Orange Star" className="w-[2%]" />
                             <h2 className="font-body text-[#4e5e9d] text-md sm:text-lg ml-2">
-                                Correo electrónico: psicologagofran@gmail.com <a href="mailto:psicologagofran@gmail.com" target="_blank" rel="noopener noreferrer">
+                                Correo electrónico: Gofranpsicologa@gmail.com <a href="mailto:Gofranpsicologa@gmail.com" target="_blank" rel="noopener noreferrer">
                                     <MailOutlinedIcon sx={{ fontSize: 34, "&:hover": { transform: "scale(1.5)" }, transition: "transform  0.2s ease" }} />
                                 </a>
                             </h2>
