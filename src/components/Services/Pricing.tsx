@@ -65,7 +65,7 @@ export default function Pricing (): JSX.Element {
                             <Card
                                 title="Sesiones Individuales"
                                 description="45-50 minutos"
-                                price="55"
+                                price="60"
                             />
                         </div>
                     </Grow>
@@ -77,7 +77,7 @@ export default function Pricing (): JSX.Element {
                             <Card
                                 title="Pruebas Neuropsicológicas"
                                 description="50-60 minutos"
-                                price="85"
+                                price="Desde 85"
                             />
                         </div>
                     </Grow>
@@ -88,7 +88,7 @@ export default function Pricing (): JSX.Element {
                             <Card
                                 title="Pack Ahorro Mensual"
                                 description="4 sesiones de 45-50 minutos"
-                                price="200"
+                                price="220"
                             />
                         </div>
                     </Grow>
